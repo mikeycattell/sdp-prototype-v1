@@ -1,0 +1,25 @@
+{% extends "layouts/_govuk-layout.html" %}
+
+{% block head %}
+  {% include "layouts/includes/styles/styles.html" %}
+{% endblock %}
+
+{% block body_classes %}claimant{% endblock %}
+
+{% block content %}
+  {% include "layouts/partials/_header-claimant.html" %}
+  <main id="wrapper" data-reset-cookie-tab="">
+    <div id="content">
+      {% include "layouts/partials/_banner.html" %}
+      <div class="inner-block">
+        {% block page_content %}{% endblock %}
+      </div>
+    </div>
+  </main>
+{% endblock %}
+
+{% block body_end %}
+  {% include "layouts/includes/scripts/claimant.html" %}
+  {% block page_script %}{% endblock %}
+{% endblock %}
+

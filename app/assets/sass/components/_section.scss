@@ -1,0 +1,13 @@
+.section {
+  margin-top:30px;
+  margin-bottom:90px;
+}
+
+.section__heading {
+  @include bold-24;
+  padding-bottom: 15px;
+}
+
+.statement-section {
+  margin-bottom: 30px;
+}

@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<a href="notify-claimant-hub" class="govuk-back-link">Back</a>
+
+  <div class="govuk-width-container">
+
+<main class="govuk-main-wrapper">
+<div class="case-header">
+
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+    <span class="govuk-caption-l">Claimant details</span>
+    QQ123456
+  </h1>
+<strong class="govuk-tag">notify of single payment</strong>
+<hr>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h2 class="govuk-fieldset__heading">
+      What's the claimant's full name in Universal Credit?
+    </h2>
+  </legend>
+
+<p class="govuk-body govuk-!-margin-top-2"></p>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="telephone-number">
+    Full name
+  </label>
+  <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel">
+</div>
+
+</form>
+</div>
+<a href="notify-claimant-2" id="nextpagelink">
+<button class="govuk-button">Continue</button>
+</a>
+      </div>
+
+    </main>
+  </div>
+
+  <script type="text/javascript">
+  function routeYes() {
+    document.getElementById("nextpagelink").href="authorise-payment-2.html";
+  };
+  function routeNo() {
+    document.getElementById("nextpagelink").href="#";
+  };
+  </script>
+
+{% endblock %}

@@ -1,0 +1,108 @@
+.accordion {
+  margin: 0;
+  border-top: 1px solid #bfc1c3;
+  border-left: 1px solid #bfc1c3;
+  border-right: 1px solid #bfc1c3;
+}
+
+.accordion--last {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #bfc1c3;
+  box-shadow: 0px 4px #E6E6E6;
+}
+
+.accordion__button {
+  @include bold-19;
+  color: $govuk-blue;
+  border: 0;
+  padding-left: 15px;
+  text-align: left;
+
+  display: block;
+  position: relative;
+  padding-top: 14px;
+  padding-bottom: 12px;
+  text-decoration: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  width:100%;
+  background: #fff;
+
+  &:hover {
+    cursor: pointer;
+    background: $grey-4;
+  }
+
+  &:focus {
+    z-index:5;
+  }
+
+  &:before {
+    @extend .fa;
+    @extend .fa-plus;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    height: 16px;
+    width: 16px;
+    margin-top: -8px;
+    background-repeat: no-repeat;
+    background-position: 0 -16px;
+    color: $black;
+  }
+
+  &.active {
+    &:before {
+      @extend .fa-minus;
+    }
+  }
+}
+
+.accordion__content {
+  margin-top: 5px;
+  padding: 0 15px 0;
+}
+
+.accordion__section {
+  margin-bottom: $gutter;
+  position: relative;
+  @include contain-floats;
+}
+
+.accordion__section--last {
+  margin-bottom:0;
+}
+
+.accordion__section-heading {
+  @include bold-16;
+  float:left;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+.accordion__section-content {
+  @include core-16($line-height: 1.5, $line-height-640: 1.5);
+  clear:both;
+  word-wrap: break-word;
+}
+
+.accordion__section-content--last {
+  margin-bottom: 0;
+  padding-bottom: 15px;
+}
+
+.accordion__section-link {
+  @include core-16;
+  top: -2px;
+  position: relative;
+}
+
+@media print {
+  .accordion__content {
+    display: block !important;
+  }
+  .accordion__icon {
+    display: none;
+  }
+}

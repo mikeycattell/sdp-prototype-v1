@@ -1,0 +1,51 @@
+.switch-with-dropdown {
+  margin-top: 30px;
+  margin-bottom:30px;
+}
+
+.switch-with-dropdown__status__heading {
+  @extend .form-label-bold;
+  margin-bottom:10px;
+}
+
+.switch-with-dropdown__status__button {
+  @extend .link-style;
+}
+
+.switch-with-dropdown__status__value {
+  font-weight:bold;
+  margin-right:10px;
+}
+
+.switch-with-dropdown__editable__input-wrapper {
+  display:inline-block;
+  margin-right:10px;
+  min-width: 250px;
+
+  .form-group {
+    margin-bottom:0;
+    float:none;
+  }
+
+  .has-errors {
+    padding-bottom:0;
+  }
+}
+
+.switch-with-dropdown__editable__input-wrapper--wide {
+  min-width: 370px;
+}
+
+.switch-with-dropdown__editable__controls {
+  display:inline-block;
+  vertical-align: bottom;
+}
+
+.switch-with-dropdown__editable__controls__submit {
+  @extend .button-secondary;
+}
+
+.switch-with-dropdown__editable__controls__cancel {
+  @extend .link-style;
+  margin-left:10px;
+}

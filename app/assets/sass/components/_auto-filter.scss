@@ -1,0 +1,16 @@
+.auto-filter__loading-state {
+  text-align:center;
+  span {
+    display:inline-block;
+  }
+}
+
+.auto-filter__controls {
+  display: none;
+}
+
+.js-enabled {
+  .auto-filter__controls {
+    display:block;
+  }
+}

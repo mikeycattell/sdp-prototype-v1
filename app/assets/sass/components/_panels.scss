@@ -1,0 +1,144 @@
+$icon-font-size:40px;
+
+.panel {
+  border: 1px solid $border-colour;
+  margin: $gutter 0;
+  padding: $gutter-half $gutter;
+
+  .heading {
+    margin-bottom:$gutter;
+    @extend .form-label-bold;
+  }
+
+  dl {
+    margin-bottom:$gutter;
+    &:last-child {
+      margin-bottom:0;
+    }
+
+    dt {
+      margin-top:$gutter-half;
+    }
+  }
+}
+
+// Clearfix for panel, IE8 and above
+// http://css-tricks.com/snippets/css/clear-fix/
+.panel:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.validation-summary.with-icon,
+.panel.with-icon {
+  > * {
+    margin-left:$icon-font-size + $gutter-half;
+  }
+  i {
+    margin-left:0;
+    text-align:left;
+  }
+}
+
+.panel.with-icon {
+  &:after {
+    clear:none;
+  }
+}
+
+.with-icon {
+  > * {
+    margin-left:$icon-font-size + $gutter;
+  }
+  ul, ol {
+    list-style-position:inside;
+  }
+  i {
+    margin:0;
+    font-size:$icon-font-size;
+    float:left;
+    padding-top:0;
+    speak:none;
+  }
+  .icon-text {
+    line-height:$icon-font-size;
+  }
+}
+
+.with-icon--padding {
+  padding-top: $gutter / 2;
+}
+
+.panel-heading {
+  @include bold-19();
+  margin-top: em(5, 16 );
+  margin-bottom: em(20, 16);
+
+  @include media(tablet) {
+    margin-top: em(5);
+    margin-bottom: em(20);
+  }
+}
+
+.panel-grey {
+  background-color:#dee0e2;
+  border:none;
+}
+
+.panel-warning {
+  background-color:$error-background;
+  border:1px solid $error-colour;
+}
+
+.panel-info {
+  background-color:$info-colour;
+  border:none;
+  color:#fff;
+  clear: both;
+}
+
+.panel-call-with-contract-select {
+  i:before {
+    display: inline-block;
+    padding: 0 $gutter-third;
+    font-size: 30px;
+    vertical-align: middle;
+    color: $page-colour;
+  }
+  a {
+    color: $page-colour;
+    font-weight:bold;
+  }
+  select {
+    width: auto;
+  }
+  background-color:$turquoise;
+  font-weight:bold;
+  display: table-cell;
+  width: 1%;
+  padding: 10px 15px 8px 15px;
+  color: $page-colour;
+}
+
+.contractSelect {
+  max-width: 350px;
+}
+
+.panel-todo-list {
+  margin-bottom:0;
+}
+
+.panel-indent .form-group:first-child {
+  margin-bottom:$gutter;
+}
+
+.panel-black {
+  border:1px solid black;
+  padding:3px 6px;
+  font-size:16px;
+  background-color:$black;
+  color:white;
+  font-weight:bold;
+  line-height:20px;
+}

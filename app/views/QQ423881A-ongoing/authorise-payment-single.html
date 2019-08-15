@@ -1,0 +1,184 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+
+<div class="govuk-width-container">
+
+<main class="govuk-main-wrapper">
+<div class="key-details-bar">
+<h1 class="key-details-ni">
+
+  <span class="key-details-claimant-ni">QQ423881A</span>
+  <div class="key-details-tag" style="float: right;">AUTHORISE PAYMENT - MONTHLY</div>
+  <p class="govuk-body govuk-!-margin-bottom-1"></p>
+</h1>
+
+<hr class="key-details-line">
+<p class="govuk-body govuk-!-margin-bottom-3"></p>
+
+<div class="key-details-link"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61"
+  target="_blank">View claimant in Universal Credit</a>
+</div>
+<!-- <div class="key-details-working-on" style="float: right;"><strong>Working on this case:</strong> You</div> -->
+</div>
+
+
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="" class="active" aria-current="section">Next case action</a>
+          </li>
+          <li>
+            <a href="authorise-payment-single-history">Case history</a>
+          </li>
+          <!-- <li>
+            <a href="payment-history">Payment history</a>
+          </li> -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+</main>
+
+  <p class="govuk-body govuk-!-margin-bottom-8"></p>
+
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+          <h2 class="govuk-heading-xl">Authorise a monthly payment of SDP</h2>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+
+
+                      <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                          <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="col"></th>
+                            <th class="govuk-table__header" scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="row">Getting Universal Credit payments</th>
+                            <td class="govuk-table__cell">Yes</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="row">Couple status changed</th>
+                            <td class="govuk-table__cell">No</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="row">Work group</th>
+                            <td class="govuk-table__cell">Intensive work search</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="row">Last AP ended</th>
+                            <td class="govuk-table__cell">31 October 2018</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="row">Last AP started</th>
+                            <td class="govuk-table__cell">1 October 2018</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="row">Monthly payment amount</th>
+                            <td class="govuk-table__cell">£80</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <p class="govuk-body govuk-!-margin-top-2"></p>
+                      {% set reasonsWhyNot %}
+                        <p class="govuk-body govuk-!-margin-top-2"></p>
+
+                        {{ govukButton({
+                          text: 'Submit decision',
+                          href: 'authorise-payment-task-list',
+                          classes: 'govuk-button'
+                        }) }}
+                      {% endset -%}
+
+                      {% set cpsReference %}
+                        {{ govukInput({
+                          id: "cpsReference",
+                          name: "cpsReference",
+                          type: "number",
+                          classes: "govuk-input govuk-input--width-10",
+                          label: {
+                            text: "Enter the payment reference number from CPS."
+                          }
+                        }) }}
+                        <p class="govuk-body govuk-!-margin-top-2"></p>
+
+                        {{ govukButton({
+                          text: 'Submit decision',
+                          href: 'authorise-payment-task-list',
+                          classes: 'govuk-button'
+                        }) }}
+
+                      {%endset -%}
+
+                      {{ govukRadios({
+                        idPrefix: "auth-payment-conditional",
+                        name: "auth-payment",
+                        fieldset: {
+                          legend: {
+                            text: "Did you authorise the payment?",
+                            isPageHeading: false,
+                            classes: "govuk-fieldset__legend--m"
+                          }
+                        },
+                        hint: {
+                          text: "Select one option."
+                        },
+                        items: [
+                          {
+                            value: "no",
+                            text: "No",
+                            conditional: {
+                              html: reasonsWhyNot
+                            }
+                          },
+                          {
+                            value: "yes",
+                            text: "Yes",
+                            conditional: {
+                              html: cpsReference
+                            }
+                          }
+                        ]
+                      }) }}
+                      </div>
+                    </div>
+
+
+                  </main>
+                </div>
+              </div>
+
+            </div>
+
+
+            </div>
+
+                  </div>
+
+                </main>
+              </div>
+
+
+
+        {% endblock %}

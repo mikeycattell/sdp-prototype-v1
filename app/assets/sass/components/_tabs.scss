@@ -1,0 +1,127 @@
+ul.js-tabs{
+  display: none;
+  list-style-type: none;
+  margin:$gutter 0 0 0;
+  @extend %contain-floats;
+  &.tabs-2 li { width:49%; }
+  li {
+    display:inline-block;
+    margin-bottom: 0;
+    padding:0;
+    word-break:break-all;
+
+    a {
+      &:hover {
+        background-color: $grey-3;
+        color: $govuk-blue;
+      }
+    }
+
+    &.active {
+      &:focus {
+        outline: 3px solid $yellow;
+      }
+      .tab-heading, a {
+        color: $text-colour;
+        text-decoration: none;
+        background: $white;
+        border: 1px solid $border-colour;
+        border-bottom: 1px solid $white;
+        padding: 10px $gutter-half;
+        font-weight: bold;
+      }
+    }
+    a {
+      display: block;
+      padding: 5px $gutter-half;
+      border: 5px solid $white;
+    }
+
+    .tab-temporary {
+      display: block;
+      padding: 5px $gutter-half;
+      color: $grey-2;
+      background: $grey-4;
+      border: 5px solid $white;
+      margin: 0;
+    }
+  }
+}
+
+.js-enabled {
+  ul.js-tabs {
+    display: block;
+  }
+}
+
+.tab-panel{
+  border: 1px solid $border-colour;
+  padding: $gutter-half $gutter-half 0;
+  margin: -1px 0 $gutter-half 0;
+}
+
+.tab-section{
+  border-top: 1px solid $border-colour;
+  padding: $gutter-half;
+  margin: -1px -15px $gutter-half -15px;
+}
+
+@for $i from 1 through 10 {
+  .tabs-#{$i} li { width: 100% / $i; }
+}
+
+/**
+* New tabs component
+**/
+
+.tabs {
+  margin:0;
+}
+
+.tabs__link {
+  border: solid 1px $white;
+  border-bottom: none;
+  float: left;
+  height: 2.25em;
+  line-height: 2.25em;
+  margin-bottom: -1px;
+  padding: 0 1em 0 1em;
+  position: relative;
+  text-align: center;
+  top: 0;
+
+  &:focus {
+    outline: 3px solid $yellow;
+    z-index: 3;
+  }
+
+  &:hover {
+    background-color: $grey-3;
+    color: $govuk-blue;
+  }
+}
+
+.tabs__item {
+  display:inline;
+  margin-bottom: 0;
+  padding:0;
+  word-break:break-all;
+
+  &.active {
+    .tabs__link {
+      background-color: $white;
+      border: solid 1px $border-colour;
+      border-bottom: solid 1px $white;
+      color: $black;
+      position: relative;
+      text-decoration: none;
+      z-index: 2;
+    }
+  }
+}
+
+.tabs__pane {
+  border-top: 1px solid $border-colour;
+  clear: both;
+  width: auto;
+}

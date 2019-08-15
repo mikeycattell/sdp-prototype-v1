@@ -1,0 +1,141 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+  .dashboard__metric-value {line-height: 1; padding-right: 50px}
+  a.counter-carer {color: #912b88; text-decoration: none;}
+  a.counter-carer:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+  a.counter-eligibility {text-decoration: none;}
+  a.counter-eligibility:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+  a.counter-pay {color: #85994b; text-decoration: none;}
+  a.counter-pay:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+  a.counter-notify{color: #005ea5; text-decoration: none;}
+  a.counter-notify:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+</style>
+
+<div class="govuk-width-container">
+<main class="govuk-main-wrapper">
+<div id="content">
+    <div class="inner-block cf js-search-filter" style="max-width: 1440px">
+
+      <div id="id-caseload-summary">
+
+
+        <div class="">
+          <div class="">
+            <h1 class="govuk-heading-xl inline-heading f-left">
+                Your cases to process
+            </h1>
+          </div>
+
+
+        <div class="clearfix">
+
+              <hr>
+
+
+              <div class="clearfix">
+
+              </div>
+              <h3 class="govuk-heading-m">Monthly payments</h3>
+              <div class="dashboard">
+
+
+              <div class="dashboard__metric dashboard__metric--OUTSTANDING_PAYMENT">
+                <h2 class="dashboard__metric-heading">Check eligibility</h2>
+
+                <div class="dashboard__metric-value " class="counter-eligibility">
+                15
+                </div>
+                  <a href="../QQ423881A-ongoing/check-eligibility-task-list" class="govuk-link">View</a>
+
+              </div>
+
+              <div class="dashboard__metric dashboard__metric--PAYMENT_ACCURACY">
+                <h2 class="dashboard__metric-heading">Raise a payment</h2>
+
+                <div class="dashboard__metric-value" class="counter-pay">
+                  56
+                </div>
+                <a href="../QQ423881A-ongoing/raise-payment-task-list" class="govuk-link">View</a>
+
+              </div>
+
+
+              <div class="dashboard__metric dashboard__metric--OUTSTANDING_JOURNAL_ENTRY">
+                <h2 class="dashboard__metric-heading">Notify claimants</h2>
+                <div class="dashboard__metric-value" class="counter-notify">
+                  19
+              </div>
+                <a href="../QQ423881A-ongoing/notify-claimants-task-list" class="govuk-link">View</a>
+              </div>
+
+            </div>
+            <br>
+<hr>
+
+          </div>
+          <h3 class="govuk-heading-m">Single payments</h3>
+          <div class="dashboard">
+
+
+          <div class="dashboard__metric dashboard__metric--OUTSTANDING_JOURNAL_ENTRY">
+            <h2 class="dashboard__metric-heading">Check carer element</h2>
+            <div class="dashboard__metric-value " class="counter-carer">
+                1
+            </div>
+              <a href="../task-lists/check-carer-element-task-list" class="govuk-link">View</a>
+          </div>
+
+
+
+
+          <div class="dashboard__metric dashboard__metric--OUTSTANDING_PAYMENT">
+            <h2 class="dashboard__metric-heading">Check eligibility</h2>
+
+            <div class="dashboard__metric-value " class="counter-eligibility">
+            5
+            </div>
+              <a href="../task-lists/check-eligibility-task-list" class="govuk-link">View</a>
+
+          </div>
+
+          <div class="dashboard__metric dashboard__metric--PAYMENT_ACCURACY">
+            <h2 class="dashboard__metric-heading">Raise a payment</h2>
+
+            <div class="dashboard__metric-value" class="counter-pay">
+              11
+            </div>
+            <a href="../task-lists/raise-payment-task-list" class="govuk-link">View</a>
+
+          </div>
+
+
+          <div class="dashboard__metric dashboard__metric--OUTSTANDING_JOURNAL_ENTRY">
+            <h2 class="dashboard__metric-heading">Notify claimants</h2>
+            <div class="dashboard__metric-value" class="counter-notify">
+              14
+          </div>
+            <a href="../task-lists/notify-claimants-task-list" class="govuk-link">View</a>
+          </div>
+
+        </div>
+        <br>
+
+
+
+          </div>
+
+    </main>
+
+
+  </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,172 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<a href="" class="govuk-back-link">Back</a>
+
+  <div class="govuk-width-container">
+
+<main class="govuk-main-wrapper">
+<div class="case-header">
+
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+    <span class="govuk-caption-l">Claimant details</span>
+    QQ123456
+  </h1>
+<strong class="govuk-tag">RAISE PAYMENT</strong>
+<hr>
+
+
+
+<div class="govuk-tabs" data-module="tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#past-day">
+        UC claim
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-week">
+        Initial checks
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#carer-element">
+        Carer element
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#elig-checks">
+        Eligibility checks
+      </a>
+    </li>
+
+  </ul>
+
+<section class="govuk-tabs__panel" id="past-day">
+    <h2 class="govuk-heading-l">UC claim live</h2>
+
+<p class="govuk-body govuk-!-margin-top-4"></p>
+
+<span class="govuk-caption-m">1 September</span>
+
+<table class="govuk-table" width="400" border="0">
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row" width="80%">Was SDP payment within 1 month of the current UC claim starting</th>
+      <td class="govuk-table__cell">Yes</td>
+    </tr>
+</table>
+
+<p class="govuk-body govuk-!-font-size-16">Claimants were eligible for a Transitional Payment if they had Severe Disability Premium in payment, on a Legacy claim (JSA, ESA, IS or HB) within 1 month of their current UC claim starting.</p>
+
+</section>
+
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+    <h2 class="govuk-heading-l">Intial checks</h2>
+
+    <p class="govuk-body govuk-!-margin-top-4"></p>
+    <span class="govuk-caption-m">6 September</span>
+    <h3 class="govuk-heading-m">Inital checks</h3>
+    <table class="govuk-table">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="row">Couple status</th>
+        <td class="govuk-table__cell">Single</td>
+      </tr>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">SDP</th>
+          <td class="govuk-table__cell">Yes</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">PIP (standard living)</th>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">AFIP</th>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">DLA (middle or higher)</th>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">AA</th>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">CAA paid with IIDB or WP</th>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+      </tbody>
+    </table>
+
+<p class="govuk-body govuk-!-font-size-16">Claimants were eligible for a Transitional Payment if they were in receipt of ONE of the following 5 benefits when the entitlement to Transitional Payments was considered (Date of Determination – 16/01/19)</p>
+
+  </section>
+
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="carer-element">
+    <h2 class="govuk-heading-l">Carer element</h2>
+
+    <p class="govuk-body govuk-!-margin-top-4"></p>
+    <span class="govuk-caption-m">20 September</span>
+    <table class="govuk-table" width="400" border="0">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row" width="80%">Does the claimant have a carer who gets Carer's Element?</th>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+    </table>
+    <p class="govuk-body govuk-!-font-size-16">Claimants were eligible for a Transitional Payment if no-one was receiving either Carer’s Allowance or UC Carer Element in regard to the claimant when entitlement to Transitional Payments was considered.</p>
+
+  </section>
+
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="elig-checks">
+    <h2 class="govuk-heading-l">Eligiblity checks</h2>
+
+    <p class="govuk-body govuk-!-margin-top-4"></p>
+    <span class="govuk-caption-m">20 September</span>
+    <table class="govuk-table" width="400" border="0">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row" width="80%">UC claim live</th>
+          <td class="govuk-table__cell">Yes</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row" width="80%">Couple status changed</th>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row" width="80%">Is the claimant in LCWRA group</th>
+          <td class="govuk-table__cell">Yes</td>
+        </tr>
+    </table>
+    <p class="govuk-body govuk-!-font-size-16">Claimants were eligible for a Transitional Payment if they had a UC claim in payment when entitlement to Transitional Payments was considered</p>
+    <p class="govuk-body govuk-!-font-size-16">Claimants were eligible for a Transitional Payment if their couple status was the same when their current claim to UC began, and when their entitlement to Transitional Payments was considered (Date of Determination – 16/ 01/19)</p>
+
+  </section>
+
+  </div>
+
+</div>
+
+
+</div>
+
+      </div>
+
+    </main>
+  </div>
+
+
+
+{% endblock %}

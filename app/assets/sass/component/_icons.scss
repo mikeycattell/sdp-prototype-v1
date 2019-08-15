@@ -1,0 +1,42 @@
+.upload {
+  color:$button-colour;
+  font-size:1.5em;
+  margin-right:$gutter-third;
+  float:left;
+  position:relative;
+  top:-3px;
+}
+
+.upload-pending {
+  font-size:1.5em;
+  bottom:-4px;
+  position:relative;
+  margin-right:$gutter-third;
+}
+
+.spinner-icon {
+  background-image: url(#{$uc_images_path}/spinner.gif);
+  width: 26px;
+  height: 26px;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -ms-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+}
+
+.filter-spinner-icon {
+  background-image:url(#{$uc_images_path}/spinner.gif);
+  background-color:#fff;
+  width: 11px;
+  height: 11px;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -ms-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+}
+
+.svg-icon {
+  color: #0b0c0c;
+}

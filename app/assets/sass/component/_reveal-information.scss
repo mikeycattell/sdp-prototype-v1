@@ -1,0 +1,8 @@
+.reveal-information {
+  @include important-information;
+  border-width:5px;
+}
+
+.reveal-information__last-element {
+	margin-bottom: 0;
+}

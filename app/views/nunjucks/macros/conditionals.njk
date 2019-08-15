@@ -1,0 +1,25 @@
+{% macro radios(id, label, radios, hintText) %}
+<div class="govuk-form-group">
+  <fieldset id="{{ id }}" class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        {{ label }}
+      </h1>
+    </legend>
+    {% if hintText %}
+    <span id="how-contacted-conditional-hint" class="govuk-hint">
+      {{ hintText }}
+    </span>
+    {% endif %}
+    <div class="govuk-radios govuk-radios" data-module="radios">
+      {% for item in radios %}
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input conditional-radio" id="{{ id }}-{{ loop.index }}" name="{{ id }}" type="radio" value="{{ item.value }}" data-aria-controls="{{ id }}-{{ loop.index }}" {% if item.target %}data-target="{{ item.target }}"{% endif %} {% if item.hide %}data-hide="{{ item.hide }}"{% endif %}>
+            <label class="govuk-label govuk-radios__label" for="{{ id }}-{{ loop.index }}">
+              {{ item.label }}
+            </label>
+          </div>
+      {% endfor %}
+  </div>
+</div>
+{% endmacro %}

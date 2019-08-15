@@ -1,0 +1,28 @@
+.pagination__controls__next {
+  float:right;
+}
+
+.pagination__controls__back {
+  float:left;
+}
+
+.pagination__controls__back__icon {
+  font-size:22px;
+  padding-right:5px;
+}
+
+.pagination__controls__next__icon {
+  font-size:22px;
+  padding-left:5px;
+}
+
+.pagination__controls__load-more {
+  display:none;
+  clear:both;
+}
+
+.js-enabled {
+  .pagination__controls__load-more {
+    display:inline-block;
+  }
+}

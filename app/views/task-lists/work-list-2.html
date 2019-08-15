@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-tabs" data-module="tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#past-day">
+        Lump sum payments
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-week">
+        Ongoing monthly payments
+      </a>
+    </li>
+  </ul>
+
+  <section class="govuk-tabs__panel" id="past-day">
+    <h2 class="govuk-heading-l">Lump sum payments</h2>
+    <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Claimant ID</th>
+          <th class="govuk-table__header govuk-table__header" scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-table__cell" width="30%"><a href="check-ce-hub" class="govuk-link govuk-link--no-visited-state">QQ123456</a></th>
+          <td class="govuk-table__cell govuk-table__cell">Carers element unconfirmed</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-table__cell"><a href="check-eligible-hub" class="govuk-link govuk-link--no-visited-state">PL123456</a></th>
+          <td class="govuk-table__cell govuk-table__cell">Eligibility checks required</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-table__cell"><a href="raise-payment-hub" class="govuk-link govuk-link--no-visited-state">PL123456</a></th>
+          <td class="govuk-table__cell govuk-table__cell">Raise payment required</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-table__cell"><a href="authorise-payment-hub" class="govuk-link govuk-link--no-visited-state">SD234567</a></th>
+          <td class="govuk-table__cell govuk-table__cell">Payment authorisation required</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-table__cell"><a href="notify-claimant-hub" class="govuk-link govuk-link--no-visited-state">SD234567</a></th>
+          <td class="govuk-table__cell govuk-table__cell">Notify claimant required</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+  </section>
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+    <h2 class="govuk-heading-l">Ongoing monthly payments</h2>
+  <tbody class="govuk-table__body">
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Claimant ID</th>
+          <th class="govuk-table__header govuk-table__header" scope="col">Status</th>
+        </tr>
+      </thead>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-table__cell" width="30%"><a href="ongoing-payment-hub" class="govuk-link govuk-link--no-visited-state">PL123456</a></th>
+        <td class="govuk-table__cell govuk-table__cell">Eligibility checks required</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-table__cell"><a href="ongoing-raise-payment-hub" class="govuk-link govuk-link--no-visited-state">PL123456</a></th>
+        <td class="govuk-table__cell govuk-table__cell">Raise payment required</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-table__cell"><a href="ongoing-authorise-payment-hub" class="govuk-link govuk-link--no-visited-state">PL123456</a></th>
+        <td class="govuk-table__cell govuk-table__cell">Payment authorisation required</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-table__cell"><a href="ongoing-payment-first-payment-complete-hub" class="govuk-link govuk-link--no-visited-state">PL123456</a></th>
+        <td class="govuk-table__cell govuk-table__cell">Notify claimant required</td>
+      </tr>
+      </tbody>
+    </table>
+
+
+
+  </section>
+</div>
+
+
+
+
+{% endblock %}

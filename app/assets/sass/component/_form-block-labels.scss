@@ -1,0 +1,79 @@
+// Large hit area
+// Radio buttons & checkboxes
+
+// By default, block labels stack vertically
+.block-label {
+
+  display: block;
+  clear: left;
+  position: relative;
+
+  color: $black;
+  background: $panel-colour;
+  border: 1px solid $panel-colour;
+  padding: (18px $gutter $gutter-half $gutter*1.5);
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  cursor: pointer; // Encourage clicking on block labels
+
+  @include media(tablet) {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    // width: 25%; - Test : check that text within labels will wrap
+  }
+
+  // Absolutely position inputs within label, to allow text to wrap
+  input {
+    position: absolute;
+    top: 18px;
+    left: $gutter-half;
+    cursor: pointer;
+  }
+
+  // Change border on hover
+  &:hover {
+    border-color: $black;
+  }
+
+  &.disabled {
+    background: $grey-4;
+    &:hover {
+      border-color: $grey-3;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// To stack horizontally, use .inline on parent, to sit block labels next to each other
+.inline .block-label {
+  clear: none;
+  margin-right: $gutter-half;
+}
+
+// Selected and focused states
+
+// Add selected state
+.js-enabled .selected {
+  background: $white;
+  border-color: $black;
+}
+
+// Add focus to block labels
+.js-enabled label.focused {
+  outline: 3px solid $yellow;
+}
+
+// Remove focus from radio/checkboxes
+.js-enabled .focused input:focus {
+  outline: none;
+}
+
+/* FIX for a GSI helptext plugin injecting CSS to UC page, breaking radio buttons */
+.block-label {
+  input[type="radio"] {
+    position: absolute !important;
+    top: 18px !important;
+  }
+}

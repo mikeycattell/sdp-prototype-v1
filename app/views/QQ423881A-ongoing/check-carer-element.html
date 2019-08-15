@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<a href="../task-lists/check-carer-element-task-list" class="govuk-back-link">Back</a>
+{% from "radios/macro.njk" import govukRadios %}
+{% from "input/macro.njk" import govukInput %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="case-header">
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+        <span class="govuk-caption-l">Claimant details</span>
+        QQ423881A
+      </h1>
+      <p class="govuk-body"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61" target="_blank">View claimant in Universal Credit</a></p>
+      <strong class="govuk-tag">check carer element</strong>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <hr>
+          <h2 class="govuk-heading-l">Check for Carer Element</h2>
+          <p class="govuk-body">You must contact QQ423881A and ask if they currently have a carer who gets the Carer Element of Universal Credit.</p>
+          <hr>
+          {% set speakClaimantNo %}
+            {{ govukButton({
+              text: 'Save and continue',
+              href: '/task-lists/check-carer-element-task-list',
+              classes: 'govuk-button'
+            }) }}
+          {% endset -%}
+
+          {% set checkEligibiltySingle %}
+            {{ govukButton({
+              text: 'Save and continue',
+              href: 'check-eligibility-single',
+              classes: 'govuk-button'
+            }) }}
+
+          {% endset -%}
+
+          {% set notifyMoneyNo %}
+            {{ govukButton({
+              text: 'Save and continue',
+              href: 'notify-claimant-no',
+              classes: 'govuk-button'
+            }) }}
+
+          {% endset -%}
+
+          {% set carerHtml %}
+            {{ govukRadios({
+              idPrefix: "has-carer-conditional",
+              name: "has-carer",
+              fieldset: {
+                legend: {
+                  text: "Do they currently have a carer who gets the Carer Element of Universal Credit?",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--m govuk-fieldset__heading"
+                }
+              },
+              items: [
+                {
+                  value: "no",
+                  text: "No",
+                  conditional: {
+                    html: checkEligibiltySingle
+                  }
+                },
+                {
+                  value: "yes",
+                  text: "Yes",
+                  conditional: {
+                    html: notifyMoneyNo
+                  }
+                }
+              ]
+            }) }}
+          {% endset -%}
+
+          {{ govukRadios({
+            idPrefix: "speak-claimant-conditional",
+            name: "speak-claimant",
+            fieldset: {
+              legend: {
+                text: "Did you speak to the claimant?",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+
+            items: [
+              {
+                value: "no",
+                text: "No",
+                conditional: {
+                  html: speakClaimantNo
+                }
+              },
+              {
+                value: "yes",
+                text: "Yes",
+                conditional: {
+                  html: carerHtml
+                }
+              }
+            ]
+          }) }}
+
+          <p class="govuk-body govuk-!-margin-top-8"></p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-!-margin-top-6"></p>
+          <div class="app-related-items">
+            <h2 class="govuk-heading-s">
+              Actions
+            </h2>
+            <ul class="govuk-list govuk-body-s">
+              <li><a href="check-carer-history" class="govuk-link">Case history</a></li>
+            </ul>
+            <p class="govuk-body govuk-!-margin-top-6"></p>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+</main>
+</div>
+
+
+
+{% endblock %}

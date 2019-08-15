@@ -1,0 +1,579 @@
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+@media print {
+  .hide-print {
+    display:none !important;
+  }
+}
+
+@media screen {
+  .hide-screen {
+    display:none !important;
+  }
+}
+
+.no-wrap {
+  white-space:nowrap;
+}
+@media (min-width: 641px) {
+  .wide-no-wrap {
+    white-space:nowrap;
+  }
+}
+
+.no-margin {
+  margin:0 !important;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.border-top {
+  border-top:solid 1px $border-colour;
+}
+
+.border-bottom {
+  border-bottom:solid 1px $border-colour;
+}
+.gutter-margin {
+  margin:$gutter;
+}
+.gutter-top,
+.form-group.gutter-top {
+  margin-top:$gutter;
+}
+
+.gutter-double-top {
+  margin-top:round($gutter * 2);
+}
+
+.gutter-padding-top {
+  padding-top:$gutter;
+}
+
+.gutter-padding-half-top {
+  padding-top:$gutter-half;
+}
+
+.gutter-padding-half-bottom {
+  padding-bottom:$gutter-half;
+}
+
+.gutter-padding-bottom {
+  padding-bottom:$gutter;
+}
+
+.gutter-padding-sixth-top {
+  padding-top:$gutter/6;
+}
+
+.gutter-padding-quarter-top {
+  padding-top:$gutter/4;
+}
+
+.gutter-negative-top {
+  margin-top:-$gutter;
+}
+
+.gutter-third-top {
+  margin-top:round($gutter / 3);
+}
+
+.gutter-third-left {
+  margin-left:round($gutter / 3);
+}
+
+.gutter-third-right {
+  margin-right:round($gutter / 3);
+}
+
+.gutter-quarter-top {
+  margin-top:round($gutter / 4);
+}
+
+.gutter-sixth-top {
+  margin-top:round($gutter / 6);
+}
+
+.gutter-none-top {
+  margin-top:0 !important;
+}
+
+.gutter-sixth-bottom {
+  margin-bottom:round($gutter / 6);
+}
+
+.gutter-left {
+  margin-left:$gutter;
+}
+
+.gutter-half-left {
+  margin-left:$gutter-half;
+}
+
+.gutter-right {
+  margin-right:$gutter;
+}
+
+.gutter-none-right {
+  margin-right:0 !important;
+}
+
+.gutter-half-right {
+  margin-right:$gutter-half !important;
+}
+
+.gutter-quarter-right {
+  margin-right:round($gutter / 4);
+}
+
+.gutter-two-third-right {
+  margin-right:round($gutter / 1.5);
+}
+
+.gutter-half-top {
+  margin-top:$gutter-half;
+}
+
+.gutter-two-thirds-top {
+  margin-top:round($gutter * 2 / 3);
+}
+
+.gutter-bottom {
+  margin-bottom:$gutter;
+}
+
+.gutter-bottom-and-a-half {
+  margin-bottom:round($gutter * 3 / 2);
+}
+
+.gutter-double-bottom {
+  margin-bottom:round($gutter * 2);
+}
+
+.gutter-half-bottom {
+  margin-bottom:$gutter-half;
+}
+
+.gutter-bottom-none {
+  margin-bottom:0;
+}
+
+.gutter-third-bottom {
+  margin-bottom:$gutter-third;
+}
+.form-group.buttonSpacing {
+  margin-top:45px;
+  margin-bottom:45px;
+}
+.inline {
+  display: inline !important;
+}
+
+.inline-block {
+  display:inline-block;
+}
+
+.border-bottom {
+  border-bottom:1px solid $grey-2;
+}
+
+.no-border {
+  border:none;
+  > * {
+    border:none;
+  }
+}
+
+.text-center {
+  text-align:center;
+}
+
+.text-right {
+  text-align:right;
+}
+
+.text-left {
+  text-align:left !important;
+}
+
+hr {
+  border-top: solid 3px $border-colour;
+}
+
+.right {
+  float:right;
+}
+
+.left {
+  float:left;
+}
+
+.clear {
+  clear:both;
+}
+
+.clear-right {
+  clear:right;
+}
+
+.no-float {
+  float:none;
+}
+
+// Show, only when JavaScript is enabled
+.js-visible {
+  display: none;
+}
+.js-visible-block {
+  display: none !important;
+}
+.js-visible-inline {
+  display: none !important;
+}
+.js-visible-inline-block {
+  display: none !important;
+}
+
+.js-enabled {
+  .js-visible {
+    display: block;
+  }
+  .js-visible-block {
+    display: block !important;
+  }
+  .js-visible-inline {
+    display: inline !important;
+  }
+  .js-visible-inline-block {
+    display: inline-block !important;
+  }
+
+  .button-back,
+  .back-button {
+    margin-left:25px;
+  }
+
+  .restart-button {
+    margin-left:50px;
+  }
+
+  .timestamp-time {
+    color:$secondary-text-colour;
+    padding-left:$gutter-one-third;
+  }
+  @media (max-width: 640px) {
+    .timestamp-time {
+      padding-left:0;
+    }
+  }
+  .clear-none {
+    clear:none !important;
+  }
+  .filter-list li {
+    cursor:pointer;
+  }
+}
+.unform-group {
+  clear:none;
+  float:none;
+  width:auto;
+}
+/* this is for the OSX rendering bug */
+.fa-check-circle, .fa-check-circle:before {
+  text-rendering: optimizeLegibility;
+}
+
+.line-height-50 {
+  line-height:50px;
+}
+
+.visuallyhidden-opacity {
+  opacity:0;
+  filter:alpha(opacity=0);
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.font-black {
+  color:$black !important;
+}
+
+address {
+  font-style:normal;
+}
+
+.info-bar {
+  border-top:5px solid $info-colour;
+}
+
+.align-with-input {
+  margin-top:$gutter + 5px;
+}
+.align-with-select {
+  margin-top:3px;
+}
+.block {
+  display:block !important;
+}
+.make-button-link {
+  background-color:transparent;
+  border-width: 0;
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+  color:$govuk-blue;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: normal;
+  padding: 0;
+  text-decoration:underline;
+}
+.make-button-link:hover {
+  color:$link-active-colour;
+}
+.make-button-link:visited {
+  color:#4c2c92;
+}
+
+.make-button-link--disabled {
+  color: $black;
+  cursor: default;
+  text-decoration: none;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.no-link,
+.no-link:hover,
+.no-link:visited,
+a.no-link,
+a.no-link:hover,
+a.no-link:visited {
+  color:$black;
+  text-decoration:none;
+}
+
+.statement-toggle__toggle {
+  @include bold-24;
+  border: none;
+  cursor: pointer;
+}
+
+.remove-all-button {
+  margin-left: 30px;
+}
+.smaller-size-text {
+  @include core-16;
+}
+.icon-adjust {
+  @include core-14;
+  color:$grey-1;
+  display:inline-block;
+  padding-left:5px;
+}
+.red-text {
+  color:$red !important;
+}
+.black-text {
+  color:$black !important;
+}
+.filter-list {
+  li.whiten {
+    background-color:#fff;
+  }
+}
+.print-show-block {
+  display:block;
+}
+.opaque {
+  opacity: 0.5 !important;
+}
+.nudge-right {
+  margin-left:5px;
+}
+
+.half-width {
+  width:50%;
+}
+
+.three-quarters-width {
+  width:75%;
+}
+
+.full-width {
+  width:100% !important;
+}
+
+.break-all {
+  word-break:break-all;
+  word-wrap:break-word;
+}
+
+.nudge-name {
+  margin-top:12px;
+}
+.nudge-team,
+.button-secondary.nudge-team {
+  margin-top:-5px;
+}
+.nudge-button-as-link {
+  margin-top:8px;
+}
+.nudge-top {
+  margin-top: 25px !important;
+}
+.text-align-with-button {
+  position:relative;
+    top:5px;
+}
+.top-nudge {
+  top:5px;
+}
+form.grid .postfix-group input.searchbox-inline {
+  margin-right:3px;
+  margin-top:1px;
+}
+.inline-searchable-select {
+  display:inline-block;
+  float:left;
+  margin-right:3px;
+}
+.static-width-150 {
+  width:150px;
+}
+.width-90 {
+  width:90%;
+}
+
+@media (max-width: 641px) {
+  .mobile-gutter-third-top {
+    margin-top: $gutter-third;
+  }
+}
+
+.change-role-text {
+  float:left;
+  margin-top:10px;
+  margin-right:10px;
+  margin-bottom:0;
+}
+
+.change-role-select {
+  float:left;
+  margin-top:10px;
+}
+
+@media (max-width: 641px) {
+  .change-role-select, .change-role-text {
+    float: none;
+  }
+}
+
+.disclosure-page .form-group:after {
+  display:inline;
+}
+
+/********
+To stop screen readers erroneonously conflating
+text when the gap between words is non-existent.
+********/
+.visuallyhidden { white-space:nowrap; }
+
+/***
+Work Search - move this after laika feature is live
+**/
+
+.job-list__item {
+  border-top: 1px solid $border-colour;
+  padding-top: 10px;
+}
+
+.job-list__status-text {
+  color: $black;
+  font-size: $font-medium;
+  margin:0;
+  display: inline;
+}
+
+.job-list__status-label {
+  background-color: $grey-3;
+  color: black;
+  display: inline-block;
+  font-size: 14px;
+  padding: 5px 7px;
+  font-weight: 700;
+  margin:0;
+}
+
+.job-list__item-date {
+  color: $grey-1;
+  @include core-14;
+  margin-top: 14px;
+  margin-bottom: 36px;
+}
+
+.job-list__item-heading {
+  @extend .heading-medium;
+  margin: 10px 0 30px;
+}
+
+.job-list__item-subheading {
+  @extend .heading-small;
+  margin: 0 0 5px;
+}
+
+.job-list__item-link {
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.job-list__item-notes {
+  white-space: pre-line;
+  margin-bottom: 10px;
+}
+
+.changes__item {
+  margin: 0 0 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $border-colour;
+}
+
+.changes__type {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.changes__date {
+  margin: 0;
+  @include core-16;
+  color: $grey-1;
+}

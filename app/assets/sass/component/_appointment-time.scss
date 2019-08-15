@@ -1,0 +1,113 @@
+.appt-times {
+  margin-bottom: 30px;
+}
+
+.appt-times--has-errors {
+  border-left: 5px solid #b10e1e;
+  padding: 15px;
+}
+
+.appt-times fieldset {
+  float: none;
+}
+
+.appt-times__legend {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.appt-times__legend-text {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 18px;
+  line-height: 1.2;
+  display: block;
+}
+
+@media (min-width: 641px) {
+  .appt-times__legend-text {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
+.appt-times__errorMessage {
+  font-weight: bold;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: bold;
+  color: #b10e1e;
+  display: block;
+}
+
+@media (min-width: 641px) {
+  .appt-times__errorMessage {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+.appt-times__week-description {
+  font-weight: bold;
+}
+
+.appt-times__field {
+  display: inline-block;
+  padding: 2px;
+  margin-bottom: 4px;
+  margin-right: 5px;
+  width: 5.5em;
+}
+
+.appt-times__item {
+  overflow: hidden;
+  border-bottom: 1px solid #bfc1c3;
+  padding: 0.73684em 1.05263em 0.52632em 0;
+  font-size: 16px;
+}
+
+.appt-times__date {
+  float: left;
+  width: 20%;
+}
+
+.appt-times__date-inner {
+  padding-right: 20px;
+}
+
+.appt-times__morning-times,
+.appt-times__afternoon-times {
+  float: left;
+  width: 40%;
+} 
+
+.appt-times__morning-times-inner,
+.appt-times__afternoon-times-inner {
+  padding-right: 30px;
+}
+
+.appt-times-pagination {
+  margin-bottom: 50px;
+}
+
+.appt-times-pagination__prev {
+  margin-right: 15px;
+}
+
+.appt-times-pagination__choose {
+  @extend .link-style;
+  margin-left: 15px;
+
+  span.add-on i.fa-calendar {
+    position: static;
+    margin-left: 5px;
+  }
+}
+
+.datepicker {
+  tr:hover td {
+      background: #DEE0E2;
+  }
+}

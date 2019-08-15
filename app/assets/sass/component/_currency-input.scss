@@ -1,0 +1,16 @@
+.currency-input__unit-symbol {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    font-weight: bold;
+    content: "\00a3";
+  }
+}
+
+.currency-input__input {
+  padding: 6px 4px 3px 25px;
+  border: 2px solid $black;
+}

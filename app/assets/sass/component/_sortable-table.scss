@@ -1,0 +1,42 @@
+table[data-sortable-table] {
+    thead {
+        th {
+            a {
+                text-decoration:none;
+            }
+            a:hover {
+                text-decoration:none;
+
+                span.js-sort-text {
+                    text-decoration:underline;
+                }
+            }
+        }
+    }
+}
+
+/* New sortable table */
+
+[aria-sort] button {
+  text-align: left;
+  background-color:transparent;
+  border-width: 0;
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+  color:$govuk-blue;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 0;
+  text-decoration:underline;
+}
+
+[aria-sort="ascending"] button:after {
+    content: " \25b2";
+}
+
+[aria-sort="descending"] button:after {
+    content: " \25bc";
+}

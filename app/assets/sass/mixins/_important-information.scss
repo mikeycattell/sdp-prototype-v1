@@ -1,0 +1,8 @@
+@mixin important-information() {
+  border-left: 10px solid $grey-2;
+  padding: $gutter-half;
+  margin-bottom: $gutter;
+  clear: both;
+
+  @include contain-floats;
+}

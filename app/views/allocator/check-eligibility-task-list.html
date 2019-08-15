@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<a href="../dashboards/allocator-dashboard" class="govuk-back-link">Back</a>
+
+<div class="govuk-width-container">
+<main class="govuk-main-wrapper">
+<div class="case-header">
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+    <span class="govuk-caption-l">Claimant details</span>
+    QQ423881A
+  </h1>
+<strong class="govuk-tag">check eligibility</strong>
+
+<br><br>
+
+<table class="govuk-table" border="0">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Assigned to</th>
+      <th class="govuk-table__header govuk-table__header" scope="col">Reassign case</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell govuk-table__cell"><a href="assigned-2">Sarah Jones</a></td>
+      <td class="govuk-table__cell govuk-table__cell">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          </label>
+          </div>
+        </th>
+    </tr>
+
+  </tbody>
+</table>
+<div class="govuk-form-group">
+  <label class="govuk-heading-m" for="sort">
+    Who are you reassigning the case to?
+  </label>
+  <div class="govuk-checkboxes">
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+      <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+        Sarah Roberts (0 cases)
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+        Phil Dickinson (0 cases)
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+        Sue Wright (4 cases)
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+        Sally Bower (2 cases)
+      </label>
+    </div>
+  </div>
+</fieldset>
+</div>
+
+<a href="../dashboards/allocator-dashboard">
+<button type="submit" class="govuk-button">
+  Reassign case
+</button></a>
+
+  </main>
+</div>
+
+
+
+{% endblock %}

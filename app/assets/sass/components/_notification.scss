@@ -1,0 +1,20 @@
+.notification-message {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  @include core-19;
+  background: $grass-green;
+  color: $white;
+  opacity: 0.95;
+  font-weight:bold;
+  margin-bottom: $gutter-half;
+  p {
+    padding: $gutter-half;
+    text-align: center;
+    font-weight: bold;
+  }
+  .js-enabled & {
+    display: none;
+  }
+}

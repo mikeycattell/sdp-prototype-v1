@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<style type="text/css">
+  .dashboard__metric-value {line-height: 1; padding-right: 50px}
+  a.counter-pay {color: #85994b; text-decoration: none;}
+  a.counter-pay:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+
+</style>
+
+<div class="govuk-width-container">
+<main class="govuk-main-wrapper">
+<div id="content">
+    <div class="inner-block cf js-search-filter" style="max-width: 1440px">
+
+      <div id="id-caseload-summary">
+
+
+        <h1 class="govuk-heading-xl">
+            Task dashboard
+        </h1>
+
+        <div class="dashboard">
+
+        <div class="dashboard">
+
+        <div class="dashboard__metric dashboard__metric--PAYMENT_ACCURACY">
+          <h2 class="dashboard__metric-heading">Authorise a payment</h2>
+
+          <div aria-label="Payment accuracy" class="dashboard__metric-value dashboard__metric-value--PAYMENT_ACCURACY">
+            <a class="counter-pay" href="../task-lists/authorise-payment-task-list">
+            1
+          </a>
+          </div>
+
+
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+
+
+{% endblock %}

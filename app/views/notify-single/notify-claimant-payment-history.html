@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<a href="notify-claimant-hub" class="govuk-back-link">Back</a>
+
+  <div class="govuk-width-container">
+
+<main class="govuk-main-wrapper">
+<div class="case-header">
+
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+    <span class="govuk-caption-l">Claimant details</span>
+    QQ123456
+  </h1>
+<strong class="govuk-tag">SINGLE PAYMENT MADE</strong>
+<hr>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+    <h2 class="govuk-fieldset__heading">
+      Payment history
+    </h2>
+  </legend>
+
+<p class="govuk-body govuk-!-margin-top-150"></p>
+
+  <div class="govuk-tabs" data-module="tabs">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#past-day">
+          Lump sum payment
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#past-week">
+          Ongoing payments
+        </a>
+      </li>
+    </ul>
+
+    <section class="govuk-tabs__panel" id="past-day">
+      <h2 class="govuk-heading-l">Lump sum payment</h2>
+
+<p class="govuk-body govuk-!-margin-top-4"></p>
+
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Claim live</th>
+            <td class="govuk-table__cell">Yes</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Couple status changed</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Group</th>
+            <td class="govuk-table__cell">LCWRA</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">AP since first claim date</th>
+            <td class="govuk-table__cell">27</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Rate</th>
+            <td class="govuk-table__cell">£80</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Lump sum</th>
+            <td class="govuk-table__cell">£2,160</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+    <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+      <h2 class="govuk-heading-l">Ongoing payments</h2>
+
+
+<p class="govuk-body govuk-!-margin-top-4"></p>
+
+There are currently no ongoing payments logged for this claimant.
+
+    </section>
+
+  </div>
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+      </div>
+
+    </main>
+  </div>
+
+
+
+{% endblock %}

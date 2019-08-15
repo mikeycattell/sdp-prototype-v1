@@ -1,0 +1,34 @@
+// Validation summary box
+
+.validation-summary ul {
+  margin-top: 10px;
+}
+
+.validation-summary li,
+.validation-summary p {
+  @include core-16;
+}
+
+.validation-summary p {
+  margin-top: $gutter-half;
+  margin-bottom: 5px;
+}
+
+.validation-summary a {
+  color: $error-colour;
+  font-weight: bold;
+  @include ie-lte(6) {
+    color: $error-colour !important;
+  }
+}
+
+.validation-summary .heading-small {
+  margin-top: $gutter-half;
+}
+
+// Validation message
+.validation-message {
+  display: block;
+  @include core-16;
+  color: $error-colour;
+}

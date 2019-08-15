@@ -1,0 +1,38 @@
+.claimant-tabbed-navigation {
+  @include inner-block(margin);
+
+  .claimant-tabbed-navigation__list {
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: $gutter-third;
+    margin-right: -$gutter-half;
+    list-style: none;
+  }
+
+  .claimant-tabbed-navigation__item {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    margin: 0;
+    box-sizing: border-box;
+
+    &.active .claimant-tabbed-navigation__link {
+      background-color: $govuk-blue;
+      color: $white;
+    }
+  }
+
+  .claimant-tabbed-navigation__link {
+    display: block;
+    margin-right: $gutter-half;
+    padding: 10px 15px 8px;
+    background-color: $grey-3;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: $link-colour;
+    }
+  }
+}

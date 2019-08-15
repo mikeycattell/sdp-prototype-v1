@@ -1,0 +1,131 @@
+.autocomplete {
+    max-width: 26em;
+    clear: both;
+    margin-bottom: 30px;
+}
+
+.autocomplete--inline {
+    float: left;
+    width: 80%;
+
+    @include media(desktop) {
+        width: 50%;
+    }
+}
+
+.autocomplete__control {
+    -webkit-appearance: menulist;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    background-color: $white;
+    border: 2px solid #0b0c0c;
+    width: 100%;
+    padding: 3px;
+
+    @include media(desktop) {
+        font-size: 19px;
+    }
+}
+
+.autocomplete__label {
+    font-weight: bold;
+}
+
+.autocomplete__wrapper {
+    position: relative;
+}
+
+.autocomplete__textbox {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: 1.25;
+    padding: 0.3em 2em 0.3em 0.3em;
+    border: 2px solid $black;
+
+    &:focus {
+        outline-offset: 0;
+        outline: 3px solid $yellow;
+    }
+}
+
+.autocomplete__down-arrow {
+    position: absolute;
+    right: 0.2em;
+    width: 1.5em;
+    height: 1.5em;
+    top: 0.6em;
+    color: #222;
+}
+
+.autocomplete__options {
+    margin: 0;
+    max-height: 12em;
+    overflow-y: auto;
+    overflow-y: scroll; /* has to be scroll, not auto */
+  	-webkit-overflow-scrolling: touch;
+    position: relative;
+    font-size: 100%;
+    padding: 0;
+    position: absolute;
+    top: 1.9em;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    z-index: 2;
+    border: 2px solid $black;
+}
+
+.autocomplete__option {
+    line-height: 22px;
+    padding: 0.3em;
+    display: block;
+    border-bottom: 1px solid $grey-2;
+    margin-bottom: 0;
+
+    &:nth-child(even) {
+        background-color: #fafafa;
+    }
+}
+
+.autocomplete__option-no-results {
+    line-height: 22px;
+    padding: 0.5em;
+    display: block;
+    border-bottom: 2px solid $grey-2;
+    cursor: not-allowed;
+}
+
+.autocomplete__option--isactive,
+.autocomplete__option--isactive:nth-child(even) {
+    background-color: $yellow;
+    border-color: $yellow;
+
+    &:focus {
+        outline-color: $yellow;
+    }
+}
+
+.autocomplete__option:hover {
+    background-color: $govuk-blue;
+    border-color: $grey-2;
+    color: $white;
+    outline: none;
+    cursor: default;
+}
+
+.autocomplete__options--ishidden {
+    display: none;
+}
+
+.autocomplete__status {
+    position: absolute;
+    left: -9999em;
+}

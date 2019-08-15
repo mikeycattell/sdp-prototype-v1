@@ -1,0 +1,18 @@
+.heading-nav {
+  margin-bottom: em(90, 32);
+  border-bottom: 1px solid #bfc1c3;
+  @include media(tablet) {
+    margin-bottom: em(90, 48);
+  }
+
+  .button {
+    margin-top: 1.78em;
+    float: right;
+  }
+  .heading-xlarge, .form-group {
+    margin-bottom: 0;
+    @include media(tablet) {
+      margin-bottom: 0;
+    }
+  }
+}

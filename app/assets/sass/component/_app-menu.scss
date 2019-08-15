@@ -1,0 +1,49 @@
+#app-menu {
+  clear:both;
+  padding: 0;
+  border-bottom: 1px solid $grey-2;
+
+  nav{
+    background: #fff;
+  }
+
+  ul{
+    @extend %contain-floats;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  li{
+    display:table-cell;
+    width:1%;
+    list-style-type: none;
+    text-align:center;
+    padding:0;
+    box-sizing: border-box;
+
+    a {
+      background-color: $highlight-colour;
+      padding: 10px 15px 8px 15px;
+      display: block;
+      font-weight:bold;
+
+      span{
+        padding-left: 10px;
+      }
+    }
+  }
+
+  li.active{
+    a {
+      background-color: $govuk-blue;
+      color: #fff;
+      text-decoration: none;
+      span{
+        color: $white;
+      }
+    }
+  }
+}
+

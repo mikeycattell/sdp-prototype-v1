@@ -1,0 +1,220 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- <a href="check-eligibility-single" class="govuk-back-link">Edit eligibility details</a> -->
+<div class="govuk-width-container">
+
+<main class="govuk-main-wrapper">
+<div class="key-details-bar">
+<h1 class="key-details-ni">
+
+  <span class="key-details-claimant-ni">QQ423881A</span>
+  <div class="key-details-tag" style="float: right;">NOTIFY CLAIMANT - SINGLE</div>
+  <p class="govuk-body govuk-!-margin-bottom-1"></p>
+</h1>
+
+<hr class="key-details-line">
+<p class="govuk-body govuk-!-margin-bottom-3"></p>
+
+<div class="key-details-link"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61"
+  target="_blank">View claimant in Universal Credit</a>
+</div>
+<!-- <div class="key-details-working-on" style="float: right;"><strong>Working on this case:</strong> You</div> -->
+</div>
+
+
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="" class="active" aria-current="section">Next case action</a>
+          </li>
+          <li>
+            <a href="check-carer-yes-history">Case history</a>
+          </li>
+          <!-- <li>
+            <a href="payment-history">Payment history</a>
+          </li> -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+</main>
+
+  <p class="govuk-body govuk-!-margin-bottom-8"></p>
+
+
+  <h2 class="govuk-heading-xl">Tell the claimant they are not eligible for SDP</h2>
+  <p class="govuk-body">You need to create a letter to notify the claimant they are not eligible for SDP, and upload it to their journal.</p>
+
+
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h3 class="govuk-fieldset__heading">
+        What are the claimant's contact details in Universal Credit?
+      </h3>
+    </legend>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="full-name">
+        Full name
+      </label>
+      <input class="govuk-input" id="full-name" name="full-name" type="text">
+    </div>
+
+
+
+    <div class="govuk-form-group">
+<label class="govuk-label" for="address-postcode">
+Address and postcode
+</label>
+
+<textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+
+
+
+
+
+
+  </fieldset>
+
+  <ul class="govuk-list">
+    <li>
+      <a class="govuk-link" href="qq423881a-letter-preview" target="_blank">Preview letter</a>
+    </li>
+  </ul>
+
+
+<h3 class="govuk-heading-m">What to do now</h3>
+<a href="../public/images/letter-example.png" download role="button" class="govuk-button govuk-button--secondary govuk-button--small">
+Download the letter PDF</a>
+<p class="govuk-body">The letter will be saved in your 'downloads' folder.</p>
+<p class="govuk-body">Then copy and paste this text to the claimant's journal and upload the letter.</p>
+
+  <div class="app-tabs__container js-tabs__container app-tabs__container--with-close-button" id="example-default-html" role="tabpanel" aria-hidden="false">
+    <button id="copyButton" onclick="copyGeneratedContent()" class="app-copy-button js-copy-button" aria-live="assertive">Copy</button>
+    <textarea id="genText" rows="4" cols="70" style="resize:none;" class="textarea">
+
+      We’ve made a decision about extra Universal Credit payments.
+      Please see the details in the attached letter
+    </textarea>
+  </pre>
+  </div>
+
+<p class="govuk-body govuk-!-margin-top-4">
+  You should notify the claimant when you send them the journal message.</p>
+
+<h3 class="govuk-heading-m">Have you notified the claimant?</h3>
+
+  {% set speakClaimantNo %}
+
+     You'll need to make the eligibility checks again.
+     <br>
+<br>
+    {{ govukButton({
+      text: 'Save and continue',
+      href: 'check-eligibility-single',
+      classes: 'govuk-button'
+    }) }}
+  {% endset -%}
+
+  {% set checkEligibiltySingle %}
+
+    {{ govukButton({
+      text: 'Save and continue',
+      href: 'check-eligibility-single',
+      classes: 'govuk-button'
+    }) }}
+
+  {% endset -%}
+
+  {% set notifyMoneyNo %}
+    {{ govukButton({
+      text: 'Save and continue',
+      href: 'notify-claimant-no',
+      classes: 'govuk-button'
+    }) }}
+
+  {% endset -%}
+
+  {% set carerHtml %}
+    {{ govukRadios({
+      idPrefix: "has-carer-conditional",
+      name: "has-carer",
+      fieldset: {
+        legend: {
+          text: "",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m govuk-fieldset__heading"
+        }
+      },
+      items: [
+
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: 'Save and continue',
+      href: '/dashboards/agent-dashboard',
+      classes: 'govuk-button'
+    }) }}
+
+  {% endset -%}
+
+  {{ govukRadios({
+    idPrefix: "speak-claimant-conditional",
+    name: "speak-claimant",
+    fieldset: {
+      legend: {
+        text: "",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--m"
+
+      }
+    },
+
+    items: [
+      {
+        value: "no",
+        text: "No",
+        conditional: {
+          html: speakClaimantNo
+        }
+      },
+      {
+        value: "yes",
+        text: "Yes",
+        conditional: {
+          html: carerHtml
+        }
+      }
+    ]
+  }) }}
+
+</div>
+
+</div>
+
+
+</div>
+
+    </div>
+
+  </main>
+</div>
+
+
+
+{% endblock %}

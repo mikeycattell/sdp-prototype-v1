@@ -1,0 +1,7 @@
+.important-information {
+  	@include important-information;
+
+	p:last-child {
+	  margin-bottom: 0;
+	}
+}

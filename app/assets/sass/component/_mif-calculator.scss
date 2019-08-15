@@ -1,0 +1,39 @@
+.mif-calculator__status {
+  display: none;
+  max-width: 30em;
+}
+
+.mif-calculator__button {
+  @include button;
+  margin-left: 15px;
+  display: none;
+}
+
+.mif-calculator__loading {
+  padding: 15px 0;
+  height: 25px;
+  margin-bottom: 30px;
+}
+
+.mif-calculator__spinner {
+  display: inline-block;
+  top: 6px;
+  position: relative;
+  @extend .spinner-icon;
+}
+
+.mif-calculator__error-paragraph,
+.mif-calculator__result-paragraph,
+.mif-calculator__loading-paragraph {
+  margin:0;
+}
+
+.js-enabled {
+  .mif-calculator__button {
+    display: inline;
+  }
+
+  .mif-calculator__status {
+    display: block;
+  }
+}

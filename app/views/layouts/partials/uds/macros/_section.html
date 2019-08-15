@@ -1,0 +1,10 @@
+{% macro udsSection(heading, paragraph, linkText, linkUrl) %}
+<section>
+    <h2 class="heading-large">{{heading}}</h2>
+    <p>{{paragraph}}</p>
+
+    {% if linkText %}
+    <a href="{{linkUrl}}">{{linkText}}</a>
+    {% endif %}
+</section>
+{% endmacro %}

@@ -1,0 +1,23 @@
+.labels {
+  float: left;
+}
+
+.label {
+  @include label($black, 4px 5px 0 0);
+}
+
+.label--red {
+  background-color: $red;
+}
+
+.label--black {
+  background-color: $black;
+}
+
+.label--blue {
+  background-color: $govuk-blue;
+}
+
+.label--grey {
+  background-color: $grey-1;
+}

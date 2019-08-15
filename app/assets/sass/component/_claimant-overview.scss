@@ -1,0 +1,81 @@
+.claimant-overview {
+  margin-top:30px;
+  position: relative;
+}
+
+.claimant-overview__main-content,
+.claimant-overview__side-content {
+  width: 100%;
+}
+
+@include media(desktop) {
+  .claimant-overview__side-content {
+    width: 33.333333333%;
+    max-width: 300px;
+    float: left;
+  }
+
+  .claimant-overview__main-content {
+    width: 66.666666667%;
+    max-width: 980px;
+    float: left;
+  }
+
+  .claimant-overview__main-content-wrapper {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1020px) {
+  .claimant-overview__side-content {
+    max-width: 460px;
+  }
+}
+
+.claim-overview__navigation {
+  display: block;
+  margin: 15px 0 30px 0;
+}
+
+.claim-overview__list {
+  list-style: none;
+  list-style-type: none;
+  margin:0;
+}
+
+.claim-overview__list-item {
+  margin-bottom: 1em;
+}
+
+.claim-overview__list-item--last {
+  margin-bottom: 0;
+}
+
+.claimant-overview__nav-link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.claimant-overview__nav-link--disabled {
+  color: $secondary-text-colour;
+  text-decoration:none;
+  margin: 0;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.claimant-overview__skip-link {
+  @include core-16;
+  position: absolute;
+  left: -9999em;
+
+  &:focus {
+    left: 0;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,187 @@
+.agent {
+  .print-show-block {
+    display:none;
+  }
+}
+
+@media print {
+
+  /** Claimant styling for Statement View - quick win **/
+  .header-global {
+    display:inline-block;
+  }
+  .header-proposition {
+    display: inline-block;
+    float: right;
+  }
+  #proposition-link {
+    display: none;
+  }
+
+  .print-hide {
+    display:none;
+
+  }
+  .agent {
+    .print-show-block {
+       display:block;
+    }
+    .print-hide {
+      display:none;
+    }
+    .print-no-margin {
+      margin:0;
+    }
+  }
+  .print-styles {
+
+    h2 {
+      margin:$gutter-half 0;
+    }
+
+    /* clearfix styles added */
+    .panel-print:before,
+    .panel-print:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+    .panel-print:after {
+        clear: both;
+    }
+
+    .panel-print {
+
+      /**
+       * For IE 6/7 only
+       * Include this rule to trigger hasLayout and contain floats.
+       */
+      *zoom: 1;
+      border-width:0;
+      padding:0;
+      margin:0;
+
+      .grid-2-3 {
+        float:left;
+        width:66%;
+        p {
+          margin:0 0 $gutter-third;
+        }
+        .inner-block {
+          padding-left:0;
+          padding-right:0;
+          h3 {
+            margin:0;
+          }
+        }
+      }
+      .grid-1-3 {
+        float:right;
+        width:25%;
+        .inner-block {
+          p {
+            float:right;
+          }
+          p.gutter-right {
+            margin-right:0;
+          }
+          p.gutter-half-top,
+          p.gutter-top,
+          p.bold-xlarge {
+            margin-top:0;
+          }
+        }
+      }
+
+      .grid-1-2 {
+        width:49%;
+        .inner-block {
+          .gutter-right {
+            margin-right:0;
+          }
+          .gutter-half-top,
+          .gutter-top,
+          .bold-large {
+            margin-top:0;
+          }
+        }
+      }
+      .print-left {
+        float:left;
+      }
+      .print-right {
+        float:right;
+      }
+    }
+
+    .panel-print.panel-grey h3 {
+      line-height:30px;
+    }
+
+    .panel-print.panel-info h3 {
+      line-height:40px;
+    }
+
+    #panel-report-change-circs {
+      display:none;
+    }
+
+    #statement-summary {
+      .font-medium {
+        @include core-19;
+      }
+    }
+  }
+  .panel h3 {
+    @include core-19;
+    font-weight:bold;
+  }
+  .panel.panel-grey h3 {
+    @include core-24;
+    font-weight:bold;
+  }
+  .panel.panel-info h3 {
+    @include core-36;
+    font-weight:bold;
+  }
+  body.agent #content {
+    border-width:0;
+  }
+  body.agent #global-header .header-proposition #proposition-link {
+    display:none;
+  }
+  h1.print-style,
+  #statement-summary {
+    margin:0;
+  }
+
+  .agent {
+    .header-logo {
+      a {
+        white-space: nowrap;
+      }
+    }
+
+    .subnav,
+    .side-bar {
+      display: none;
+    }
+
+    #wrapper {
+      display: block;
+    }
+
+    .support-header__controls-support {
+      background: rgb(255, 255, 255);
+    }
+
+    .print-page-break {
+      page-break-after: always;
+      page-break-inside: avoid;
+      padding-top:15px;
+    }
+
+    #content {
+      padding-bottom:0;
+    }
+  }
+}

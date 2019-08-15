@@ -1,0 +1,130 @@
+strong, .bold {
+  font-weight:bold;
+}
+
+.normal {
+  font-weight:normal;
+}
+
+p.font-medium {
+  line-height:1.6;
+}
+
+.grid-wrapper span:focus {
+  background-color:$yellow;
+  outline:$yellow;
+}
+
+.menu-item pre {
+  font-size:inherit;
+  line-height:inherit;
+  border-width:0;
+  background-color:transparent;
+  padding:0;
+}
+
+pre > code,
+code > pre {
+  border:none;
+}
+
+a.default-link:link {
+  color: #005ea5;
+}
+
+a.default-link:visited {
+  color: #4c2c92;
+}
+
+.capitalise {
+  text-transform:uppercase;
+}
+
+.success {
+  color: $button-colour;
+  font-weight: bold;
+}
+
+.name-link {
+  margin-left:$gutter-third;
+  text-decoration:none;
+}
+.name-link:hover {
+  text-decoration:underline;
+}
+.aligned-name-link {
+  text-decoration:none;
+}
+.aligned-name-link:hover {
+  text-decoration:underline;
+}
+.partner-name {
+  display:inline;
+
+  a {
+    text-decoration:none;
+  }
+  a:hover {
+    text-decoration:underline;
+  }
+}
+.secondary-heading {
+  color:$grey-1;
+}
+
+.form-label-normal {
+  @include core-19;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.font-16 {
+  font-size:16px;
+}
+
+// used to preserve formatting when outputting text that has been entered into a textarea, while
+// keeping the look and feel of a regular paragraph.
+pre.preformatted-paragraph {
+  @extend p;
+
+  border: 0;
+  background: 0;
+
+  display: inline-block;
+  overflow-wrap: break-word;
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+
+  // wrap text, see https://css-tricks.com/snippets/css/make-pre-text-wrap/
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+}
+
+pre.break-word {
+  word-wrap:break-word;
+  -ms-word-break: break-all;
+  word-break: normal;
+}
+
+a pre.preformatted-paragraph,
+a:link pre.preformatted-paragraph{
+  color:$link-colour;
+  text-decoration: underline;
+}
+a:active pre.preformatted-paragraph{
+  color:$link-active-colour;
+}
+a:visited pre.preformatted-paragraph{
+  color:#4c2c92;
+}
+a:hover pre.preformatted-paragraph{
+  color:$link-hover-colour;
+}
+a:focus pre.preformatted-paragraph{
+  background-color:$yellow;
+  color:$link-hover-colour;
+}

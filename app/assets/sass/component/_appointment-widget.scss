@@ -1,0 +1,34 @@
+.appointment-list {
+  @extend .list-bullet;
+}
+
+.appointment-item {
+  margin-bottom:15px;
+}
+
+.appointment-list,
+.appointment-item,
+.needed-appointment-heading {
+  font-size: 16px;
+  @include media(desktop-wide) {
+    font-size: 19px;
+  }
+}
+
+.appointment-item__link {
+  font-weight:700;
+}
+
+.appointment-item__date {
+  margin:0;
+}
+
+.appointment-button {
+  @include button;
+}
+
+.appointment__label {
+  @include label($govuk-blue, 0 0 0 10px);
+  top:-1px;
+  position: relative;
+}

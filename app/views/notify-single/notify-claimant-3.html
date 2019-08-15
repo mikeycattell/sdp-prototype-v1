@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            <br>Letter generated
+          </h1>
+          <div class="govuk-panel__body">
+It's been saved in your downloads folder
+
+          </div>
+        </div>
+
+<p class="govuk-body"></p>
+        <h3 class="govuk-heading-m">What happens next?</h3>
+
+        <p class="govuk-body">
+          Copy and paste this text to the journal and upload the letter.
+        </p>
+
+
+        <div class="app-tabs__container js-tabs__container app-tabs__container--with-close-button" id="example-default-html" role="tabpanel" aria-hidden="false">
+          <button id="copyButton" onclick="copyGeneratedContent()" class="app-copy-button js-copy-button" aria-live="assertive">Copy</button>
+          <textarea id="genText" rows="4" cols="70" style="resize:none;" class="textarea">
+
+
+            A single additional payment of £2,160 was made on the 1 September 2018.
+          </textarea>
+        </pre>
+      </div>
+          <br>
+          <p class="govuk-body">
+          <a href="single-payment-first-payment-notified-hub" class="govuk-link">Back to claimant information</a>
+        </p>
+    </div>
+  </main>
+</div>
+
+<script>
+  function copyGeneratedContent() {
+    var copyText = document.getElementById("genText");
+    var copyBtn = document.getElementById("copyButton");
+    copyText.select();
+    document.execCommand("copy");
+    copyBtn.textContent = "Copied!";
+  }
+</script>
+
+
+
+{% endblock %}

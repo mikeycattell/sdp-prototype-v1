@@ -1,0 +1,21 @@
+{% macro udsExample(params) %}
+    {% set example = params.example %}
+    {% set url = params.url %}
+
+    <div class="example__wrapper">
+        <span class="example__label"></span>
+        <div class="example__window">
+            {% include url %}
+        </div>
+        <div class="example__tabs">
+            <div class="example__buttons">
+                <button type="button" value="" class="example__button example__button--html">HTML</button>
+                <button type="button" value="" class="example__button example__button--nunjucks">Nunjucks</button>
+            </div>
+            <pre class="pre-formatter example__tab example__tab--njk hidden">
+                {{ example }}
+            </pre>
+            <pre class="pre-formatter pre-formatter--html example__tab example__tab--html hidden"></pre>
+        </div>
+    </div>
+{% endmacro %}

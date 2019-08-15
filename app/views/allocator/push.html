@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<a href="../dashboards/allocator-dashboard" class="govuk-back-link">Back</a>
+
+<div class="govuk-width-container">
+<main class="govuk-main-wrapper">
+<div class="case-header">
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+    <!-- <span class="govuk-caption-l">Assigned cases</span> -->
+    Assigned cases
+
+
+  </h1>
+
+<br>
+  <table class="govuk-table" border="0">
+
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="col">Name</th>
+        <th class="govuk-table__header govuk-table__header" scope="col">Number of cases</th>
+        <th class="govuk-table__header govuk-table__header" scope="col">Action</th>
+        <th class="govuk-table__header govuk-table__header" scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-table__cell"><a href="../allocator/assigned-2">Sarah Jones</a></th>
+        <td class="govuk-table__cell govuk-table__cell">2</th>
+          <td class="govuk-table__cell govuk-table__cell"><a href="reassign" class="govuk-link">Reassign to an individual</a></th>
+          <td class="govuk-table__cell govuk-table__cell"><a href="push" class="govuk-link">Reassign to a site</a></th>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-heading-m" for="sort">
+      Which site would you like to reassign the cases to?
+    </label>
+
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          Clydebank (240 cases)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Chatham (540 cases)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Chesterfield (140 cases)
+        </label>
+      </div>
+    </div>
+  </fieldset>
+
+  </div>
+
+  <a href="../dashboards/allocator-dashboard">
+  <button type="submit" class="govuk-button">
+    Reassign
+  </button></a>
+
+    </main>
+  </div>
+
+
+
+{% endblock %}

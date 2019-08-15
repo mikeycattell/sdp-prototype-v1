@@ -1,0 +1,28 @@
+.total-calculator__total {
+  @include bold-36();
+}
+
+.total-calculator__total--large {
+  @include bold-80();
+  text-align:center;
+}
+
+.total-calculator__paragraph {
+  margin-top: em(5, 16);
+  margin-bottom: em(20, 16);
+
+  @include media(tablet) {
+    margin-top: em(5);
+    margin-bottom: em(20);
+  }
+}
+
+.total-calculator__big-paragraph {
+  @include bold-24();
+}
+
+@include media(desktop) {
+  .total-calculator__big-paragraph {
+    text-align: right;
+  }
+}

@@ -1,0 +1,426 @@
+$error-background:#FEF7F7;
+
+//supress webkit number spinners
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inline,
+.auto-width {
+  width:auto;
+}
+
+/* Styling added for inline guidance tips for _radio-yes-no pattern */
+fieldset {
+  &.inline {
+    width:100%;
+  }
+}
+
+.single-indent {
+  padding-left:1em;
+}
+
+.radio-option-hint {
+padding-top:$gutter-one-third;
+padding-bottom:$gutter-one-third;
+padding-left: 2.5em;
+}
+
+.form-group {
+  margin-top:0;
+}
+
+select.form-control {
+  @include core-19;
+  padding: 5px 4px 4px;
+}
+
+.form-control-1-4 {
+  width: 25%;
+  @include media(mobile) {
+    width: 50%;
+  }
+}
+
+.form-control-1-8 {
+  width: 12.5%;
+  @include media(mobile) {
+    width: 25%;
+  }
+}
+
+.form-control-4-4 {
+  width: 100%;
+}
+
+//Icon control for client side validation.
+.form-group {
+  i:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    padding: 0 $gutter-third;
+    font-size:30px;
+    vertical-align: middle;
+    color: $panel-colour;
+  }
+}
+
+.pin-number-spacer {
+  display:inline-block;
+  margin-right:$gutter;
+
+  .form-group {
+    clear:none;
+    display:inline-block;
+    float:none;
+    width:auto;
+
+    label {
+      display:block;
+    }
+
+    input {
+      min-width:30px;
+      width:auto;
+    }
+  }
+}
+
+
+//Inline form validation
+.js-enabled form .form-group-icon {
+  @include media("mobile") {
+    padding-right:3em;
+    box-sizing:border-box;
+    position:relative;
+    i {
+      position:absolute;
+      bottom:2px;
+    }
+  }
+}
+
+.js-enabled form .has-errors {
+  @include media("mobile") {
+    i {
+      bottom:$gutter-half + 2px;
+    }
+  }
+}
+
+//http://fortawesome.github.io/Font-Awesome/cheatsheet/
+//icon classes order is important!
+.form-group-invalid {
+  i:before {
+    content: "\f05c";
+    color: $error-colour;
+  }
+}
+
+.form-group-active {
+  i:before {
+    content: "";
+    color: $border-colour;
+  }
+}
+
+.form-group-valid {
+  i:before {
+    content: "\f05d";
+    color: $button-colour;
+  }
+}
+
+.form-group-clean {
+  i:before {
+    color: $panel-colour;
+  }
+}
+
+.form-group-last {
+  margin-bottom:0;
+}
+
+// START to do list header
+form.grid {
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"] {
+    width: 100%;
+    display:block;
+    box-sizing:border-box;
+  }
+  select {
+    box-sizing:border-box;
+    display:block;
+    width:100%;
+  }
+  .prefix-group {
+    margin-top: 5px;
+  }
+  .postfix-group {
+    position:relative;
+    padding:0;
+    input {
+      padding: 6px 4px 4px;
+      width: auto;
+      display: inline-block;
+      margin-right: -3px;
+    }
+    .button {
+      margin:0
+    }
+    .button:focus {
+      outline: 3px solid $yellow;
+    }
+  }
+}
+// END to do list header
+
+select.form-control {
+  -webkit-appearance:menulist;
+  max-width: 26em;
+}
+
+select.form-control.no-appearance {
+  -webkit-appearance:none;
+}
+
+.disguisedInput {
+  background-color:transparent;
+  border-width:0;
+  color:#fff;
+  margin:0;
+}
+
+.secondaryLink {
+  display:inline-block;
+  margin-top:$gutter-third
+}
+
+.rows-and-a-half {
+  height:8em;
+}
+
+// @import: _form-validation.scss
+.validation-summary {
+  margin: $gutter 0;
+  padding: $gutter-half $gutter;
+  border: 5px solid $error-colour;
+}
+
+.validation-summary .button {
+  color:$white;
+}
+
+.validation-summary li,
+.validation-summary p {
+  margin-top: 0;
+  @include core-19;
+  margin-bottom:inherit;
+}
+
+.validation-summary p.no-margin {
+  margin:0;
+}
+
+.has-errors {
+  border-left:5px solid $error-colour;
+  padding:$gutter-half;
+
+  .form-control {
+    border: 4px solid $error-colour;
+  }
+}
+
+.validation-message {
+  @include core-19;
+  font-weight: bold;
+}
+
+.validation-title {
+  @include core-24;
+  color: $error-colour;
+  font-weight: bold;
+}
+
+// @import: _editable-form.scss;
+.editable-section {
+  position:relative;
+}
+
+.editable-field {
+  color:$link-colour;
+  cursor:context-menu;
+  background-color:rgba($highlight-colour, 0.7);
+  border:3px solid transparent;
+  border-bottom:1px dotted $link-colour;
+  &:focus {
+    border:3px solid $yellow;
+    outline:none;
+  }
+}
+
+.editable-field.has-errors {
+  padding:0;
+  color:$red;
+  background-color:rgba($red, 0.1);
+  border-bottom:1px dotted $red;
+}
+
+/* Fix for textarea for webkit on mobile phones */
+textarea {
+ border: 2px solid $black;
+}
+
+textarea:focus {
+  outline-offset: 0;
+  outline: 3px solid #ffbf47;
+}
+
+.editable-textarea {
+  height:7em;
+  width:20em;
+  display:block;
+}
+
+.tooltip {
+  background-color:$highlight-colour;
+  position:absolute;
+  padding:$gutter-half;
+  border:1px solid $border-colour;
+  color:$black;
+  z-index:10;
+  white-space: nowrap;
+  i {
+    padding-left:$gutter-half;
+  }
+  .form-control {
+    width:auto;
+  }
+}
+
+.tooltip {
+  button {
+    border:none;
+    background-color:transparent;
+    border:3px solid transparent;
+    font-size:20px;
+    padding:0 5px;
+    width:40px;
+    i {
+      padding:0;
+    }
+  }
+  button:focus {
+    outline:none;
+    border:3px solid $yellow;
+  }
+}
+
+.tooltip:after, .tooltip:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.tooltip-right:after, .tooltip-right:before {
+  left: 75%;
+}
+
+.tooltip-left:after, .tooltip-left:before {
+  left: 25%;
+}
+
+.tooltip:after {
+  border-color: rgba(248, 248, 248, 0);
+  border-top-color: $highlight-colour;;
+  border-width: 8px;
+  margin-left: -8px;
+}
+.tooltip:before {
+  border-color: rgba(191, 193, 195, 0);
+  border-top-color:  $border-colour;
+  border-width: 9px;
+  margin-left: -9px;
+}
+
+// after imports...
+
+.contract-align {
+  margin: -5px 0 $gutter-third $gutter-third;
+}
+.summary-item-align {
+  float:left;
+  margin-top:$gutter-third;
+  margin-bottom:$gutter-third;
+}
+.inline-select {
+  display:inline-block;
+  
+}
+
+.form-width {
+  max-width:35em;
+}
+.table-cell-section {
+  border-bottom:solid 1px $border-colour;
+  margin-bottom:$gutter;
+  padding-bottom:$gutter;
+}
+
+.add-colleague {
+  margin:5px 0 20px 0;
+
+  fieldset {
+    float:none;
+
+    .form-group {
+      margin:0;
+      width:auto;
+      padding:$gutter-half;
+    }
+    .submit-container {
+      float:right;
+      padding:23px $gutter-half;
+      .button {
+        margin-bottom:0;
+      }
+    }
+  }
+}
+
+.searchable-select {
+  max-width: 25em;
+}
+
+.searchable-select--inline {
+  display: inline;
+}
+
+.additionalpay-help {
+  margin: 15px 0 10px;
+}
+
+.inline-group {
+  white-space: nowrap;
+}

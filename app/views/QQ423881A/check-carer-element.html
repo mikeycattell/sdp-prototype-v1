@@ -1,0 +1,157 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "input/macro.njk" import govukInput %}
+
+
+<div class="govuk-width-container">
+
+<main class="govuk-main-wrapper">
+<div class="key-details-bar">
+<h1 class="key-details-ni">
+  
+  <span class="key-details-claimant-ni">QQ423881A</span>
+  <div class="key-details-tag" style="float: right;">CHECK CARER ELEMENT - SINGLE</div>
+  <p class="govuk-body govuk-!-margin-bottom-1"></p>
+</h1>
+
+<hr class="key-details-line">
+<p class="govuk-body govuk-!-margin-bottom-3"></p>
+
+<div class="key-details-link"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61"
+  target="_blank">View claimant in Universal Credit</a>
+</div>
+<!-- <div class="key-details-working-on" style="float: right;"><strong>Working on this case:</strong> You</div> -->
+</div>
+
+
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="" class="active" aria-current="section">Next case action</a>
+          </li>
+          <li>
+            <a href="check-carer-history">Case history</a>
+          </li>
+          <!-- <li>
+            <a href="find-claimant-payment">Payment history</a>
+          </li> -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+</main>
+
+  <p class="govuk-body govuk-!-margin-bottom-8"></p>
+
+          {% set speakClaimantNo %}
+            {{ govukButton({
+              text: 'Save and continue',
+              href: '/task-lists/check-carer-element-task-list',
+              classes: 'govuk-button'
+            }) }}
+          {% endset -%}
+
+          {% set checkEligibiltySingle %}
+            {{ govukButton({
+              text: 'Save and continue',
+              href: 'check-eligibility-single',
+              classes: 'govuk-button'
+            }) }}
+
+          {% endset -%}
+
+          {% set notifyMoneyNo %}
+            {{ govukButton({
+              text: 'Save and continue',
+              href: 'notify-claimant-no',
+              classes: 'govuk-button'
+            }) }}
+
+          {% endset -%}
+
+          {% set carerHtml %}
+            {{ govukRadios({
+              idPrefix: "has-carer-conditional",
+              name: "has-carer",
+              fieldset: {
+                legend: {
+                  text: "Do they currently have a carer who gets the Carer Element of Universal Credit?",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--m govuk-fieldset__heading"
+                }
+              },
+              items: [
+                {
+                  value: "no",
+                  text: "No",
+                  conditional: {
+                    html: checkEligibiltySingle
+                  }
+                },
+                {
+                  value: "yes",
+                  text: "Yes",
+                  conditional: {
+                    html: notifyMoneyNo
+                  }
+                }
+              ]
+            }) }}
+          {% endset -%}
+
+          {{ govukRadios({
+            idPrefix: "speak-claimant-conditional",
+            name: "speak-claimant",
+            fieldset: {
+              legend: {
+                text: "Did you speak to the claimant?",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--xl"
+              }
+            },
+
+            items: [
+              {
+                value: "no",
+                text: "No",
+                conditional: {
+                  html: speakClaimantNo
+                }
+              },
+              {
+                value: "yes",
+                text: "Yes",
+                conditional: {
+                  html: carerHtml
+                }
+              }
+            ]
+          }) }}
+        </div>
+
+      </div>
+
+
+      </div>
+
+            </div>
+
+          </main>
+        </div>
+
+
+
+      {% endblock %}

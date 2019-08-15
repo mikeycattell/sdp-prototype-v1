@@ -1,0 +1,610 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+// Import GOV.UK Frontend
+@import "node_modules/govuk-frontend/all";
+
+// Patterns that aren't in Frontend
+@import "patterns/check-your-answers";
+@import "patterns/task-list";
+@import "patterns/related-items";
+@import 'main';
+
+// Components that aren't in Frontend
+@import "components/cookie-banner";
+
+
+.circle.teal {
+    background-color: #28a197;
+}
+
+.circle.red {
+    background-color: #df3034;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    background-color: #0b0c0c;
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.circle {
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #0b0c0c;
+    color: #fff;
+    font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.column-two-thirds {
+    padding: 0 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.heading-large {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 24px;
+    line-height: 1.04167;
+    margin-top: 1.04167em;
+    margin-bottom: 0.41667em;
+}
+
+.data-item {
+    display: block;
+    line-height: 1;
+}
+
+.bold-xxlarge {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 53px;
+    line-height: 1.03774;
+}
+
+.bold-xsmall {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1.14286;
+}
+
+hr {
+    background: #bfc1c3;
+}
+
+hr {
+    display: block;
+    background: #bfc1c3;
+    border: 0;
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.app-c-tag {
+  background-color: #005ea5;
+  color: #fff;
+  display: inline-block;
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  padding: 5px 8px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.app-c-tag--success {
+  background-color: #28a197;
+}
+
+.app-c-tag--warning {
+  background-color: #b58840;
+}
+
+.app-c-tag--danger {
+  background-color: #df3034;
+}
+
+.timeline {
+    border-left: 3px solid #005ea5;
+    overflow: visible;
+    position: relative;
+    max-width: 800px;
+}
+
+.timeline .line {
+    position: relative;
+    background-color: #005ea5;
+    width: 2%;
+    height: 3px;
+    display: block;
+    top: 11px;
+    clear: both;
+}
+
+.timeline .timeline__event {
+    float: right;
+    width: 94%;
+    overflow: hidden;
+}
+
+.timeline__heading {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.timeline__title {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.timeline__date {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 100;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 0;
+    color: #6F777B;
+}
+
+.copy__info {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 100;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 0;
+    color: #6F777B;
+}
+
+.timeline_datetime {
+    color: #6f777b;
+    margin-top: 0px;
+}
+
+.govuk-button--secondary {
+    background-color: #d0d3d6;
+    color: #0b0c0c;
+    box-shadow: 0 2px 0 #a8adb2;
+}
+
+.govuk-button--secondary:hover {
+    background-color: #F0F0F0;
+    color: #999999;
+    box-shadow: 0 2px 0 #a8adb2;
+}
+
+.govuk-button--secondary:visited {
+    background-color: #F0F0F0;
+    color: #999999;
+    box-shadow: 0 2px 0 #a8adb2;
+}
+
+
+
+.govuk-button--secondary:link, .govuk-button--secondary:visited, .govuk-button--secondary:active, .govuk-button--secondary:hover {
+    color: #0b0c0c;
+    text-decoration: none;
+}
+
+.app-tabs__container {
+    position: relative;
+    margin-top: -2px;
+    border: 1px solid #bfc1c3;
+    background-color: #F8F8F8;
+}
+
+.app-copy-button {
+    font-family: "nta",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 1.14286;
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 15px;
+    min-width: 80px;
+    padding: 4px 10px 0;
+    border: 1px solid #00823b;
+    color: #00823b;
+    background-color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.app-example-wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "nta",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+.app-tabs__heading--current {
+    background-color: #f0f0f0;
+}
+
+.app-content pre, .app-content code {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+.app-tabs__container pre {
+  font-size: 12px;
+      font-family: "nta",Arial,sans-serif;
+}
+
+.textarea {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 40;
+    text-transform: none;
+    font-size: 17px;
+    line-height: 1.2;
+    margin-bottom: 0;
+    color: #0B0C0C;
+    text-align: left;
+    border: none;
+    background-color: #F8F8F8;
+    width:623px;
+
+}
+
+.pager {
+    margin-top: .3125em;
+    margin-bottom: 1.25em;
+}
+
+.pager-items {
+    display: none;
+}
+
+.pager-prev, .pager-next {
+    margin-right: 10px;
+}
+
+.badge.warning {
+    background: #005ea5;
+}
+
+.badge {
+    background-color: #005ea5;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1em;
+    padding: 7px 7px 5px 7px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 2px;
+    margin-bottom: 2px;
+}
+
+.claimantID {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 800;
+    text-transform: none;
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 0;
+    color: #000000;
+    text-decoration: none;
+}
+
+.claimantID:active {
+  color: #000;
+}
+
+.claimantID:visited {
+  color: #000;
+}
+
+.active, .claimantID:hover {
+  color: #000000;
+  text-decoration: underline;;
+}
+
+.search-customer {
+    position: relative;
+}
+
+.search-customer {
+    margin-bottom: 30px;
+}
+
+.search-customer input {
+    width: 100%;
+    padding-right: 50px;
+}
+
+.gem-c-search__submit {
+    position: absolute;
+    bottom: 1px;
+    right: 0px;
+    background: #005ea5 url(/public/images/search-icon.svg) no-repeat 9px 9px;
+    background-size: 50%;
+    border: none;
+    width: 38px;
+    height: 36px;
+    text-indent: -5000px;
+    border-bottom: 1px solid #003259;
+}
+
+.gem-c-search__submit:hover {
+    cursor: pointer;
+    background-color: #003259;
+}
+
+.f-right {
+  margin-top: -30px;
+  float: right;
+}
+
+.f-right-nav {
+  float: right;
+}
+
+
+.f-left {
+  float: left;
+}
+
+.clearfix {
+  display: block;
+  clear: both;
+}
+
+.inine-heading {
+  display: inline;
+  width: 50%;
+}
+
+.relative {
+  position: relative;
+  display: block;
+}
+
+.block {
+  display: block;
+}
+
+input.form-control.block {
+  width: 265px;
+  height: 39px;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  color: #6F777B;
+}
+
+.govuk-details__summary-text-amended {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 800;
+  text-transform: none;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 0;
+  color: #005ea5;
+  text-decoration: none;
+}
+
+.accordian-hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.accordian-overview {
+  display: block;
+  width: auto;
+  border: 0px solid grey;
+  border-bottom: 1px solid #BFC1C3;
+  padding: 1rem 0rem;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  color: 	#005ea5;
+  position: relative;
+  padding-right: 5rem;
+}
+
+.accordian-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5rem;
+  height: 100%;
+  background-color: white;
+  background-image: url('/public/images/accordian-open.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.open-all {
+  display: block;
+  width: auto;
+  border: none;
+  border-bottom: 1px solid #BFC1C3;
+  // padding: 1rem 50rem;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: 	#005ea5;
+  position: relative;
+  padding-right: 0rem;
+  padding-left: 55rem;
+}
+
+.navigation-secondary ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.navigation-secondary {
+  border-bottom: 1px solid #bfc1c3;
+  margin: auto;
+  max-width: 960px;
+}
+
+.navigation-secondary ul {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.navigation-secondary li {
+  float: left;
+  list-style-type: none;
+  margin-bottom: auto;
+}
+
+@media (max-width: 640px) {
+  .navigation-secondary li {
+    border: 0;
+    width: 100%;
+  }
+}
+
+.navigation-secondary a {
+  display: block;
+  padding: 15px;
+}
+
+.navigation-secondary a:visited {
+  color: #005ea5;
+}
+
+.navigation-secondary a:hover {
+  background-color: #f8f8f8;
+}
+
+.navigation-secondary .active {
+  box-shadow: inset 0px -5px 0px 0px #005ea5;
+  color: #0b0c0c;
+  text-decoration: none;
+}
+
+.navigation-secondary .active:visited {
+  color: #0b0c0c;
+}
+
+.key-details-bar {
+  background-color: #005ea5;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 20px 30px;
+  color: #ffffff;
+  position: relative;
+  font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+  font-size: 18px;
+}
+
+.key-details-link {
+  margin: 0 auto;
+  max-width: 960px;
+  color: #ffffff;
+  position: relative;
+}
+
+.key-details-ni {
+  margin: 0 auto;
+  color: #ffffff;
+  font-weight: bold;
+  position: relative;
+  font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+  font-size: 38px;
+}
+
+.key-details-claimant-details {
+  margin: 0 auto;
+  color: #ffffff;
+  font-weight: 300;
+  position: relative;
+  font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+  font-size: 20px;
+}
+
+.key-details-working-on {
+  color: #ffffff;
+  font-weight: 300;
+  font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+  margin-top: -20px;
+  font-size: 18px;
+}
+
+.key-details-line {
+  margin: 0 auto;
+  color: #ffffff;
+  display: block;
+  background: #528FC1;
+  border: 0;
+  height: 1px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0;
+}
+
+
+.key-details-link a {
+  color: #ffffff;
+
+}
+
+.key-details-link a:visited {
+  color: #ffffff;
+}
+
+.key-details-link a:hover {
+  color: #99BFDB;
+}
+
+.key-details-tag {
+  background-color: #fff;
+  color: #005ea5;
+  display: inline-block;
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 4px 8px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you

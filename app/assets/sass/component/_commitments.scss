@@ -1,0 +1,28 @@
+.commitments {
+	border-top: 1px solid $border-colour;
+	padding-top: 10px;
+	overflow: hidden;
+}
+
+.commitments:last-of-type {
+	border-bottom: 1px solid $border-colour;
+	margin-bottom: $gutter;
+}
+
+.commitments__heading {
+	@extend .heading-small;
+	margin-top: em(5);
+	margin-bottom: 15px;
+	
+	@include media(tablet) {
+		float: left;
+		width: 24%;
+	}
+}
+
+.commitments__content {
+	@include media(tablet) {
+		float: right;
+		width: 75%;
+	}
+}

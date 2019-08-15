@@ -1,0 +1,16 @@
+.switch-view {
+  margin-top: $gutter-half;
+  float: right;
+}
+
+@media (min-width: 641px) {
+  .switch-view {
+    margin-top: $gutter;
+  }
+}
+
+.switch-view__link {
+  display: block;
+  @include core-16;
+  margin-bottom: 10px;
+}

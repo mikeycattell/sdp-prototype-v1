@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+  .dashboard__metric-value {line-height: 1; padding-right: 50px}
+  a.counter-carer {color: #912b88; text-decoration: none;}
+  a.counter-carer:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+  a.counter-eligibility {text-decoration: none;}
+  a.counter-eligibility:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+  a.counter-pay {color: #85994b; text-decoration: none;}
+  a.counter-pay:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+  a.counter-notify{color: #005ea5; text-decoration: none;}
+  a.counter-notify:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+</style>
+
+<div class="govuk-width-container">
+<main class="govuk-main-wrapper">
+<div id="content">
+    <div class="inner-block cf js-search-filter" style="max-width: 1440px">
+
+      <div id="id-caseload-summary">
+
+
+        <div class="">
+          <div class="">
+            <h1 class="govuk-heading-xl inline-heading f-left">
+                Your cases
+            </h1>
+          </div>
+
+        <div class="clearfix">
+
+        </div>
+
+        <div class="dashboard">
+
+
+        <div class="dashboard__metric dashboard__metric--OUTSTANDING_JOURNAL_ENTRY">
+          <h2 class="dashboard__metric-heading">Assigned cases</h2>
+          <div class="dashboard__metric-value " class="counter-carer">
+              2
+          </div>
+            <a href="../allocator/assigned-1" class="govuk-link">View</a>
+        </div>
+
+
+
+
+        <div class="dashboard__metric dashboard__metric--OUTSTANDING_PAYMENT">
+          <h2 class="dashboard__metric-heading">Unassigned cases</h2>
+
+          <div class="dashboard__metric-value " class="counter-eligibility">
+          8
+          </div>
+            <a href="../allocator/unassigned-1" class="govuk-link">View</a>
+
+        </div>
+
+
+      </div>
+
+      </div>
+      <!-- <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <h3 class="govuk-fieldset__heading">
+        Find a case
+      </h3>
+      </legend>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="national-insurance-number">
+      National Insurance number
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint">
+      <a href="../allocator/check-eligibility-task-list" id="nextpagelink">
+      <button class="govuk-button">Find</button></a></div> -->
+
+    </main>
+
+  </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,155 @@
+.agent-navigation {
+  position: relative;
+  background: $black;
+  width: 100%;
+  float: left;
+}
+
+.agent-navigation__list {
+  border-top: 10px solid $black;
+  margin-bottom:0;
+  clear: both;
+
+  @include media(tablet) {
+    border: 0;
+    clear: none;
+    display: block;
+  }
+}
+
+.agent-navigation__item {
+  &.active {
+    .agent-navigation__link {
+      color:#1d8feb;
+
+      &:focus {
+        color: $dark-blue;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    display: inline-block;
+    padding: 0 0 0 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+}
+
+@include media(tablet) {
+  .agent-navigation__item--sign-out {
+    float:right;
+    padding-right: 15px;
+  }
+}
+
+.agent-navigation__user-name {
+  color:$white;
+  display:none;
+
+  @include media(tablet) {
+    display:inline;
+  }
+}
+
+.agent-navigation__link {
+  font-size:$font-medium;
+  font-weight:700;
+  text-decoration: none;
+  color: $white;
+  display: block;
+  padding: 8px 15px;
+
+  @include media(tablet) {
+    display: inline;
+    padding: 4px 0;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    background-color: $govuk-blue;
+
+    @include media(tablet) {
+      background-color: $black;
+    }
+  }
+
+  &:visited {
+    color: $white;
+  }
+
+  &:link {
+    color: $white;
+  }
+
+  &:focus {
+    background-color: $yellow;
+    color: $black;
+  }
+}
+
+.agent-navigation__menu-button {
+  display: none;
+  text-align: left;
+  background-color:transparent;
+  border-width: 0;
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+  color: $white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 0;
+  text-decoration:underline;
+  float: right;
+  margin-top: 8px;
+  margin-right: 15px;
+
+  &:active {
+    outline: 3px solid $yellow;
+  }
+}
+
+.agent-navigation__menu-button:after {
+  color: $white;
+  content: " \25bc";
+}
+
+.js-enabled {
+  .agent-navigation__list {
+    display: none;
+
+    @include media(tablet) {
+      display: block;
+    }
+  }
+
+  .agent-navigation__menu-button {
+    display: inline-block;
+
+    @include media(tablet) {
+      display:none;
+    }
+  }
+
+  .agent-navigation--mobile-expanded {
+    .agent-navigation__list {
+      display: block;
+    }
+
+    .agent-navigation__menu-button:after {
+        content: " \25b2";
+    }
+  }
+}
+
+@media print {
+  .agent-navigation__menu-button,
+  .agent-navigation__item {
+    display: none;
+  }
+}
+
+

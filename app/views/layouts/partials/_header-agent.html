@@ -1,0 +1,35 @@
+<!-- To set active, on the relevant page add e.g. set nav = "tele-id" -->
+
+<header class="agent-header" data-enable-fix-nav="">
+    <a href="#content" class="skiplink">Skip to main content</a>
+    {% include "layouts/partials/_cookie-banner.html" %}
+    <div class="agent-header__wrapper">
+        <nav class="agent-navigation" aria-label="main menu" data-button-text-accessibility="Toggle navigation" data-button-text="Menu">
+            <a class="agent-header__logo" id="homepage" href="/" title="Universal Credit homepage" data-reset-current-tab="">
+                <img class="agent-header__logo-image" src="/public/images/external/govuk/govuk_logo_crown_print.png" width="35" height="31" alt="">
+                <span class="agent-header__logo-text">Universal Credit</span>
+            </a>
+            <ul class="agent-navigation__list" id="agent-navigation-list">
+                <li class="agent-navigation__item {% if nav == 'todo-list' %} active {% endif %}">
+                    <a class="agent-navigation__link" id="todo-page-link" href="/agent-to-do" data-reset-current-tab="">To-do list</a>
+                </li>
+                <li class="agent-navigation__item {% if nav == 'claimants' %} active {% endif %}">
+                    <a class="agent-navigation__link" id="claimant-list" href="/claimant-list" data-reset-current-tab="">Claimants</a>
+                </li>
+                <li class="agent-navigation__item {% if nav == 'colleagues' %} active {% endif %}">
+                    <a class="agent-navigation__link" id="colleague-list" href="/colleagues" data-reset-current-tab="">Colleagues</a>
+                </li>
+                <li class="agent-navigation__item {% if nav == 'teams' %} active {% endif %}">
+                    <a class="agent-navigation__link" id="team-list" href="/teams" data-reset-current-tab="">Teams</a>
+                </li>
+                <li class="agent-navigation__item {% if nav == 'tele-id' %} active {% endif %}">
+                    <a class="agent-navigation__link" id="telephony-page-link" href="/telephony-authentication/id-check" target="_blank">Telephone ID check</a>
+                </li>
+                <li class="agent-navigation__item agent-navigation__item--sign-out">
+                    <span class="agent-navigation__user-name" id="current-user">User Name:</span>
+                    <a class="agent-navigation__link" id="sign-out-link" href="/clear-data" aria-describedby="current-user">Sign out</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

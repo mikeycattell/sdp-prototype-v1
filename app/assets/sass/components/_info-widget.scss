@@ -1,0 +1,16 @@
+.info-widget {
+  padding: 15px;
+  background: $govuk-blue;
+  color: $white;
+}
+
+.info-widget__heading {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.info-widget__abbr {
+  border-bottom: none !important;
+  cursor: inherit !important;
+  text-decoration: none !important;
+}

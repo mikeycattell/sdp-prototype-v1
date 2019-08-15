@@ -1,0 +1,127 @@
+$card-height:5.34cm;
+$card-width:8.56cm;
+$logo-width:2cm;
+$card-header-height:2cm;
+$card-main-height:2cm;
+$service-width:$card-width - $logo-width - 0.5cm;
+$card-footer-height:$card-height - $card-header-height - $card-main-height;
+
+.inner-block {
+  div.card-panel {
+    width:$card-width;
+    height:$card-height;
+    border: 1px dashed $grey-3;
+    margin:$gutter;
+    box-sizing:border-box;
+    overflow:hidden;
+
+    > * {
+      display:block;
+      overflow:hidden;
+      box-sizing:border-box;
+    }
+
+    .card-header {
+      $header-padding:0.3cm;
+      background-color:$white;
+      height:$card-header-height;
+      color:$black;
+      border-bottom:solid 0.2cm $govuk-blue;
+      box-sizing:border-box;
+      position:relative;
+
+      .logo {
+        position:absolute;
+        top:0;
+        left:0;
+        padding-top:0.3cm;
+        width:$logo-width;
+        height:$card-header-height - $header-padding;
+
+        .logo-text {
+          padding:0;
+          margin:-0.3cm 0 0 0;
+          color:$black;
+          font-size:0.4cm;
+        }
+      }
+
+      .service {
+        position:absolute;
+        top:0;
+        left:$logo-width;
+        height:$card-header-height - $header-padding;
+        color:$black;
+        font-size:0.3cm;
+        padding-top:0.3cm;
+        width:$service-width;
+
+        * {
+          color:$black;
+        }
+      }
+    }
+
+    .card-main {
+      background-color:$white;
+      height:$card-main-height;
+
+      > * {
+        padding:0.3cm 0.2cm;
+        text-align:center;
+      }
+
+      .card-number {
+        display:table;
+        .number-display {
+          display:table-row;
+        }
+        .digit-count .single-number {
+          font-size:0.25cm;
+        }
+        .single-number {
+          display:table-cell;
+          padding:0;
+          border-width:0;
+          &:nth-child(odd) {
+            color: $black;
+          }
+          &:nth-child(even) {
+            color: darken($grey-1, 25%);
+          }
+          &:nth-child(4),
+          &:nth-child(8),
+          &:nth-child(12) {
+            padding-right:0.3cm;
+          }
+        }
+
+        &.js-hidden {
+          display:none;
+        }
+      }
+    }
+
+    .card-footer {
+      background-color:$grey-3;
+      height:$card-footer-height;
+      font-size:0.3cm;
+      box-sizing:border-box;
+      color:$black;
+      text-align:center;
+      position:relative;
+      p {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+      }
+    }
+  }
+}
+
+@media print {
+  .card-panel .card-main .card-number {
+    display:block !important;
+  }
+}

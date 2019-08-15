@@ -1,0 +1,59 @@
+.dashboard {
+  @include contain-floats();
+}
+
+.dashboard__metric {
+    width: 25%;
+    float: left;
+}
+
+.dashboard__metric-heading {
+  @include bold-19();
+  margin-bottom: em(5);
+  @include ellipsies();
+  padding-right: em(5);
+}
+
+.dashboard__metric-value {
+  @include bold-80();
+
+  &.dashboard__metric-value--BLOCKED_CALCULATION {
+    color:$govuk-blue;
+  }
+
+  &.dashboard__metric-value--OUTSTANDING_PAYMENT {
+    color:$pink;
+  }
+
+  &.dashboard__metric-value--OUTSTANDING_JOURNAL_ENTRY {
+    color:$fuschia;
+  }
+
+  &.dashboard__metric-value--PAYMENT_ACCURACY {
+    color:$green;
+  }
+
+  &.dashboard__metric-value--OTHER_ACTIONS {
+    color:$turquoise;
+  }
+}
+
+.dashboard__metric-total {
+  @include bold-19();
+}
+
+.dashboard__metric-link {
+  margin-bottom: em(20, 16);
+  @include bold-19();
+  display: block;
+
+  @include media(tablet) {
+    font-size: em(16);
+    margin-bottom: em(20);
+  }
+
+  @include media(desktop) {
+  }
+}
+
+

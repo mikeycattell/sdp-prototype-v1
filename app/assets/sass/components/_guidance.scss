@@ -1,0 +1,73 @@
+.guidance-tip {
+  padding:$gutter-half;
+  font-size:19px;
+  background-color:$grey-3;
+  display:block;
+  max-width:100%;
+  width:auto;
+  margin:$gutter 0;
+  clear: both;
+  position:relative;
+
+  .guidance-tip__content {
+    margin-left:75px;
+  }
+
+  .guidance-tip__icon {
+    position:absolute;
+    left:20px;
+    top:17px;
+    width:50px;
+    border-radius:5px;
+    border:2px solid #005ea5;
+    color:#005ea5;
+    &:before {
+      content:"TIP";
+      font-size:14px;
+      font-weight:bold;
+      padding-left:15px;
+    }
+  }
+
+  &.guidance-STANDARD_NEW {
+    .guidance-tip__icon {
+      border-color:$grass-green;
+      color:$grass-green;
+      &:before {
+        content:"NEW";
+        padding-left:9px;
+      }
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 1em;
+  }
+
+  blockquote {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  b {
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 1.1em;
+    font-style: initial;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    font-style: initial;
+  }
+
+  ol {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 1em;
+  }
+}

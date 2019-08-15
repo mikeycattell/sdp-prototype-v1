@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<a href="raise-payment-hub" class="govuk-back-link">Back</a>
+
+  <div class="govuk-width-container">
+
+<main class="govuk-main-wrapper">
+<div class="case-header">
+
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+    <span class="govuk-caption-l">Claimant details</span>
+    QQ123456
+  </h1>
+<strong class="govuk-tag">raise single payment</strong>
+<hr>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h2 class="govuk-fieldset__heading">
+      Single payment calculation
+    </h2>
+  </legend>
+
+
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col">SDP rate</th>
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col">First UC claim date</th>
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col">APs since first UC claim date</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="row">£80</th>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1 August 2016</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">27</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+<div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="bold-xxlarge">£2,160</span>
+          <span class="data-item bold-xsmall">Total single payment due</span>
+        </div>
+  </div>
+</div>
+<a href="raise-payment-2" id="nextpagelink">
+  <button class="govuk-button">Continue</button>
+</a>
+      </div>
+
+    </main>
+  </div>
+
+  <script type="text/javascript">
+  function routeYes() {
+    document.getElementById("nextpagelink").href="check-ce-3.html";
+  };
+  function routeNo() {
+    document.getElementById("nextpagelink").href="#";
+  };
+  </script>
+
+{% endblock %}

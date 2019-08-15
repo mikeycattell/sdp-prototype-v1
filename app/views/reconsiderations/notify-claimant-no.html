@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+<main class="govuk-main-wrapper">
+<div class="case-header">
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+    <span class="govuk-caption-l">Claimant details</span>
+    <a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61" target="_blank" class="claimantID">QQ423881A</a>
+  </h1>
+<strong class="govuk-tag">notify claimant</strong>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+  <hr>
+
+  <h2 class="govuk-heading-l">Tell the claimant they are not eligible for SDP</h2>
+  <p class="govuk-body">You need to create a letter to notify the claimant they are not eligible for SDP, and upload it to their journal.</p>
+
+
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h3 class="govuk-fieldset__heading">
+        What are the claimant's contact details in Universal Credit?
+      </h3>
+    </legend>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-1">
+        Full name
+      </label>
+      <input class="govuk-input" id="address-line-1" name="address-line-1" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-1">
+        Building and street
+        <span class="govuk-visually-hidden">line 1 of 2</span>
+      </label>
+      <input class="govuk-input" id="address-line-1" name="address-line-1" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-2">
+        <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+      </label>
+      <input class="govuk-input" id="address-line-2" name="address-line-2" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-town">
+        Town or city
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-county">
+        County
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-postcode">
+        Postcode
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+    </div>
+
+  </fieldset>
+
+  <ul class="govuk-list">
+    <li>
+      <a class="govuk-link" href="letter-preview-notify">Preview letter</a>
+    </li>
+  </ul>
+
+<h3 class="govuk-heading-m">What to do now</h3>
+<p class="govuk-body"><a href="">Download the letter PDF.</p></a>
+<p class="govuk-body">The letter will be saved in your 'downloads' folder.</p>
+<p class="govuk-body">Then copy and paste this text to the claimant's journal and upload the letter.</p>
+
+  <div class="app-tabs__container js-tabs__container app-tabs__container--with-close-button" id="example-default-html" role="tabpanel" aria-hidden="false">
+    <button id="copyButton" onclick="copyGeneratedContent()" class="app-copy-button js-copy-button" aria-live="assertive">Copy</button>
+    <textarea id="genText" rows="4" cols="70" style="resize:none;" class="textarea">
+
+      You are not eligible for additional Universal Credit payments.
+      Please read the attached letter for full details.
+    </textarea>
+  </pre>
+  </div>
+
+<p class="govuk-body govuk-!-margin-top-4">
+  You should notify the claimant when you send them the journal message.</p>
+
+
+  <a href="../ideas/agent-dashboard"><button type="submit" class="govuk-button">
+    I've notified the claimant
+  </button></a>
+
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-body govuk-!-margin-top-6"></p>
+            <div class="app-related-items">
+  <h2 class="govuk-heading-s">
+    Actions
+  </h2>
+  <ul class="govuk-list govuk-body-s">
+      <li><a href="" class="govuk-link"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61">View QQ423881A in Universal Credit</a></li>
+      <li><a href="ce-decision-history" class="govuk-link">Decision history</a></li>
+      </ul>
+
+  <p class="govuk-body govuk-!-margin-top-6"></p>
+
+  </div>
+</div>
+
+</ul>
+
+
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+
+
+{% endblock %}

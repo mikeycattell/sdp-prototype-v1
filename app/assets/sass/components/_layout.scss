@@ -1,0 +1,87 @@
+//Some overrides to proposition header
+
+#proposition-link span,
+#proposition-links span {
+  color: $white;
+  padding-left:$gutter-third;
+  @include core-16;
+  @include media(desktop) {
+    padding-left:0;
+    line-height: 23px;
+  }
+}
+
+#wrapper {
+  display:block; //Fixes issue with IE not having padding
+}
+
+.phase-banner  {
+  @include phase-banner();
+}
+
+.non-live .phase-banner .phase-tag {
+  background-color:$brown;
+}
+
+.agent {
+  #global-header-bar .header-bar {
+    background-color:$turquoise;
+  }
+}
+
+#footer {
+  .footer-wrapper {
+    .footer-meta {
+      .footer-meta-inner {
+        ul {
+          li {
+            &.support-numbers {
+              display: block;
+              margin-right: 0;
+              margin-bottom: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.form-radio-list-with-help-text {
+  clear:both;
+  p {
+    margin-bottom:5px;
+  }
+}
+
+.menu-item nobr {
+  width:100%;
+  display:block;
+  padding:0;
+  margin:0;
+}
+
+.clear-none {
+  clear:none;
+}
+
+.position-relative {
+  position:relative;
+}
+
+.centered-spinner {
+  position:relative;
+  width:100%;
+  min-height:30px;
+  .spinner-icon {
+    position:absolute;
+    left:0;
+    right:0;
+    margin:0 auto;
+  }
+}
+.has-errors-row {
+  border-left:3px solid $mellow-red;
+  background:$error-background;
+  padding:0 0 0 15px;
+}

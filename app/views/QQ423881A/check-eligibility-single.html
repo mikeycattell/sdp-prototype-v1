@@ -1,0 +1,286 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "input/macro.njk" import govukInput %}
+
+{% import "nunjucks/macros/conditionals.njk" as conditionals %}
+
+<div class="govuk-width-container">
+
+<main class="govuk-main-wrapper">
+<div class="key-details-bar">
+<h1 class="key-details-ni">
+
+  <span class="key-details-claimant-ni">QQ423881A</span>
+  <div class="key-details-tag" style="float: right;">CHECK ELIGIBILITY - SINGLE</div>
+  <p class="govuk-body govuk-!-margin-bottom-1"></p>
+</h1>
+
+<hr class="key-details-line">
+<p class="govuk-body govuk-!-margin-bottom-3"></p>
+
+<div class="key-details-link"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61"
+  target="_blank">View claimant in Universal Credit</a>
+</div>
+<!-- <div class="key-details-working-on" style="float: right;"><strong>Working on this case:</strong> You</div> -->
+</div>
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="" class="active" aria-current="section">Next case action</a>
+          </li>
+          <li>
+            <a href="check-eligibility-single-history">Case history</a>
+          </li>
+          <!-- <li>
+            <a href="find-claimant-payment">Payment history</a>
+          </li> -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+</main>
+<p class="govuk-body govuk-!-margin-bottom-8"></p>
+
+
+
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">
+      Check eligibility for single payment
+    </h1>
+    <p class="govuk-body">You need to make some final checks of the claimant's eligibility.</p>
+    <hr>
+
+<form class="" action="/check-eligibility-single" method="post">
+      {{ conditionals.radios('gettingUc', 'Is the claimant getting paid Universal Credit?', [
+    {label: 'No', value: 'No'},
+    {label: 'Yes', value: 'Yes', target: 'aHiddenDiv'}]
+    ) }}
+
+    <div id="aHiddenDiv" class="js-hidden">
+        {{ conditionals.radios('relationShipChanged', 'Is the claimant\'s relationship status in Universal Credit different than it was on their first claim date?', [
+        {label: 'No', value: 'No', target: 'yetAnotherDiv', hide: 'anotherDiv'},
+        {label: 'Yes', value: 'Yes', target: 'anotherDiv', hide: 'yetAnotherDiv'}], "The previous status for QQ423881A was 'single'."
+        ) }}
+
+    </div>
+
+    <div id="anotherDiv" class="js-hidden">
+      {{ conditionals.radios('bereavement', 'Is the claimant in receipt of Bereavement run on?', [
+      {label: 'No', value: 'No'},
+      {label: 'Yes', value: 'Yes', target: 'yetAnotherDiv'}]
+      ) }}
+    </div>
+
+    <div id="yetAnotherDiv" class="js-hidden">
+      {{ conditionals.radios('lcwra', 'Has it been decided the claimant\'s work capability is LCWRA?', [
+      {label: 'No', value: 'No'},
+      {label: 'Yes', value: 'Yes'}], ""
+      ) }}
+    </div>
+
+    <button type="submit" class="govuk-button">
+      Save and continue
+    </button>
+
+  </form>
+
+
+</div>
+</div>
+
+
+
+<!-- <div class="govuk-width-container">
+
+<main class="govuk-main-wrapper">
+<div class="key-details-bar">
+<h1 class="key-details-ni">
+
+  <span class="key-details-claimant-ni">QQ423881A</span>
+  <div class="key-details-tag" style="float: right;">CHECK ELIGIBILITY - SINGLE</div>
+  <p class="govuk-body govuk-!-margin-bottom-1"></p>
+</h1>
+
+<hr class="key-details-line">
+<p class="govuk-body govuk-!-margin-bottom-3"></p>
+
+<div class="key-details-link"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61"
+  target="_blank">View claimant in Universal Credit</a>
+</div>
+<!-- <div class="key-details-working-on" style="float: right;"><strong>Working on this case:</strong> You</div> -->
+<!-- </div>
+
+
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="" class="active" aria-current="section">Next case action</a>
+          </li>
+          <li>
+            <a href="check-eligibility-single-history">Case history</a>
+          </li>
+          <!-- <li>
+            <a href="find-claimant-payment">Payment history</a>
+          </li> -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+</main>
+
+  <!-- <p class="govuk-body govuk-!-margin-bottom-8"></p>
+
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+
+          <h2 class="govuk-heading-xl">Check eligibility for single payment</h2>
+          <p class="govuk-body">You need to make some final checks of the claimant's eligibility.</p>
+
+          <hr>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+              {% set notifyMoneyNo %}
+                {{ govukButton({
+                  text: 'Save and continue',
+                  href: 'notify-claimant-no',
+                  classes: 'govuk-button'
+                }) }}
+
+              {% endset -%}
+
+              {% set workGroup %}
+                {{ govukRadios({
+                  idPrefix: "work-group-conditional",
+                  name: "work-group",
+                  fieldset: {
+                    legend: {
+                      text: "Has it been decided the claimant's work capability is LCWRA?",
+                      isPageHeading: false,
+                      classes: "govuk-fieldset__legend--m govuk-fieldset__heading"
+                    }
+                  },
+                  items: [
+                    {
+                      value: "Yes",
+                      text: "Yes"
+                    },
+                    {
+                      value: "No",
+                      text: "No"
+                    }
+                  ]
+                }) }}
+                <p class="govuk-body govuk-!-margin-top-2"></p>
+                <hr>
+                {{ govukButton({
+                  text: 'Save and continue',
+                  href: '/QQ423881A/raise-payment-single',
+                  classes: 'govuk-button'
+                }) }}
+
+              {% endset -%}
+
+              {% set eligibilityQuestions %}
+                {{ govukRadios({
+                  idPrefix: "couple-status-conditional",
+                  name: "couple-status",
+                  fieldset: {
+                    legend: {
+                      text: "Is the claimant's relationship status in Universal Credit different than it was on their first claim date?",
+                      isPageHeading: true,
+                      classes: "govuk-fieldset__legend--m govuk-fieldset__heading"
+                    }
+                  },
+                  hint: {
+                    text: "The previous status for QQ423881A was 'single'."
+                  },
+                  items: [
+                    {
+                      value: "no",
+                      text: "No",
+                      conditional: {
+                        html: workGroup
+                      }
+                    },
+                    {
+                      value: "yes",
+                      text: "Yes",
+                      conditional: {
+                        html: notifyMoneyNo
+                      }
+                    }
+                  ]
+                }) }}
+              {% endset -%}
+
+              {{ govukRadios({
+                idPrefix: "claimant-uc-conditional",
+                name: "claimant-uc",
+                fieldset: {
+                  legend: {
+                    text: "Is the claimant getting paid Universal Credit?",
+                    isPageHeading: false,
+                    classes: "govuk-fieldset__legend--m"
+                  }
+                },
+
+                items: [
+                  {
+                    value: "no",
+                    text: "No",
+                    conditional: {
+                      html: notifyMoneyNo
+                    }
+                  },
+                  {
+                    value: "yes",
+                    text: "Yes",
+                    conditional: {
+                      html: eligibilityQuestions
+                    }
+                  }
+                ]
+              }) }}
+            </fieldset>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+
+      </div>
+
+            </div>
+
+          </main>
+        </div> -->
+
+
+
+      {% endblock %}

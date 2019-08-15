@@ -1,0 +1,30 @@
+{% extends "layouts/_govuk-layout.html" %}
+
+{% set serviceName = "Design System" %}
+{% set global_header_text = "Universal Credit" %}
+
+{% block head %}
+{% include "layouts/includes/styles/styles.html" %}
+{% endblock %}
+
+{% block body_classes %}claimant{% endblock %}
+
+{% block content %}
+{% include "layouts/partials/_header-claimant.html" %}
+<div class="ucd-version-date">
+  <div>{% if appVersion %}ver: {{appVersion}}{% endif %}</div>
+  <div>{% if buildDate %}{{buildDate}}{% endif %}</div>
+</div>
+<main id="wrapper" data-reset-cookie-tab="">
+  <div id="content">
+    {% include "layouts/partials/uds/_navigation.html" %}
+    {% block page_content %}{% endblock %}
+  </div>
+</main>
+{% endblock %}
+
+{% block body_end %}
+{% include "layouts/includes/scripts/agent.html" %}
+<script src="/scripts/application.js"></script>
+{% endblock %}
+

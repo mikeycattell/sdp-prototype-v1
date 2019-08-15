@@ -1,0 +1,362 @@
+td {
+  vertical-align:top;
+}
+
+.js-enabled tfoot.js-visible {
+ display:table-footer-group;
+}
+
+.claimant-table {
+  thead {
+    th {
+      padding-left:$gutter-half;
+      font-size:$font-big;
+    }
+  }
+  tr.list-item {
+    margin:0;
+    border-bottom:1px solid $grey-2;
+    td {
+      padding:25px 0 25px $gutter-half;
+      .name {
+        line-height:25px;
+        font-size:$font-big;
+
+        a {
+          text-decoration:none;
+        }
+      }
+    }
+  }
+}
+.colleague-table {
+  thead {
+    th {
+      padding:0 0 $gutter-half 0;
+    }
+  }
+  tbody {
+    th, td {
+      padding:$gutter-half 0;
+
+      a.undecorate {
+        text-decoration:none;
+      }
+      a.undecorate:hover .name {
+        text-decoration:underline;
+      }
+    }
+    th {
+      @include core-19;
+    }
+  }
+}
+.top-cell {
+  vertical-align:top;
+}
+.larger-text-table th,
+.larger-text-table td {
+  @include core-19;
+}
+
+table.table-with-checkbox-row {
+  th {
+    padding-left:$gutter-half;
+    font-size:$font-big;
+  }
+  tr {
+    margin:0;
+    border-bottom:1px solid $grey-2;
+    td {
+      padding:25px 0 25px $gutter-half;
+    }
+  }
+}
+
+.table-with-checkbox-row__name {
+  line-height:25px;
+  font-size:$font-big;
+
+  a {
+    text-decoration:none;
+  }
+}
+
+table.table-with-checkbox-row .nasty-hack button {
+  display:none;
+}
+
+.row-with-checkbox--checked {
+  background:$yellow;
+}
+
+.copy-table-to-clipboard__update-status {
+  padding:10px 0 15px 0;
+  display:inline-block;
+}
+
+/* Remove when we replace all Flight JS sortable tables */
+[data-sortable-table] tr th button {
+  text-align: left;
+}
+
+.summary-table[data-sortable-table] tr th button {
+  text-align: right;
+}
+
+.summary-table__footer-row {
+  border-top: 2px solid black;
+}
+
+.summary-table__footer-cell {
+  @include bold-16();
+}
+
+.summary-table__footer-cell--number {
+  text-align: right;
+  padding-right: 50px;
+}
+
+.table-number {
+  text-align: right;
+  padding-right: 50px;
+}
+
+.table-date {
+  text-align: right;
+  font-size: 16px;
+}
+
+.table-date--last {
+  padding-right:0;
+}
+
+.housing-landlord-details {
+  margin-bottom: 30px;
+  width: 60%;
+}
+
+.housing-landlord-details__th {
+  color: #6f777b;
+  font-weight: normal;
+}
+
+.self-employment-summary {
+  margin-bottom: $gutter;
+}
+
+.self-employment-summary__th {
+  font-weight: normal;
+  width: 50%;
+}
+
+.self-employment-summary__amount {
+  width: 35%;
+}
+
+.history-table__heading {
+  border-bottom: none;
+  padding-bottom: 30px;
+  padding-top: 60px;
+  border-bottom: 1px solid #bfc1c3;
+}
+
+.history-table__main-section {
+  @include contain-floats;
+}
+
+.history-table {
+  tbody:first-of-type {
+    .history-table__heading {
+      padding-top: 0;
+    }
+  }
+}
+
+.history-table__column {
+  padding: 15px 15px 15px 0;
+}
+
+.history-table__column--with-date {
+  width: 100px;
+}
+
+.history-table__column--last {
+  padding-right:0;
+}
+
+.history-table__empty-info {
+  border-bottom: none;
+}
+
+.history-table__header-label {
+  @include label($govuk-blue, 0 0 10px 0);
+}
+
+.history-table__header-label--deleted {
+  background-color: $secondary-text-colour;
+}
+
+.history-table__agent-name {
+  float: right;
+  padding-left: 15px;
+  padding-bottom: 15px;
+
+  a {
+    text-decoration: none;
+  }
+
+  .history-table__agent-name-link {
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.history-table__agent-name--with-label {
+  padding-top: 5px;
+  padding-bottom: 0;
+}
+
+.history-table__note {
+  @extend pre.preformatted-paragraph;
+  margin: 0;
+  display: block !important;
+}
+
+.history-table__deleted-entry {
+  margin: 15px 0 0 0;
+}
+
+.history-table__delete {
+  float: right;
+  margin-top: 15px;
+}
+
+.history-table__attachment {
+  border-left: 8px solid $govuk-blue;
+  padding: 10px;
+  @include contain-floats;
+  display: block;
+  margin-top: 15px;
+}
+
+.history-table__datetime--with-label {
+  padding-top: 5px;
+  display: inline-block;
+}
+
+.history-table__description {
+  display: inline;
+}
+
+.history-table__entry--deleted {
+  a {
+    color: $secondary-text-colour;
+    text-decoration: underline;
+
+    &:focus,
+    &:hover,
+    &:active,
+    &:visited {
+      color: $secondary-text-colour;
+    }
+  }
+
+  .history-table__deleted-entry,
+  .history-table__agent-name,
+  .history-table__datetime,
+  .history-table__note {
+    color: $secondary-text-colour;
+  }
+
+  .history-table__attachment {
+    border-color: $secondary-text-colour;
+  }
+}
+
+.todo-table__column {
+  vertical-align: middle;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include core-16;
+}
+
+.todo-table__heading {
+  @include bold-16;
+}
+
+@media (min-width: 1024px) {
+  .table-date,
+  .todo-table__column,
+  .todo-table__heading {
+    font-size: 19px;
+  }
+}
+
+.todo-table__title {
+  font-weight: 700;
+}
+
+.todo-table__content {
+  margin-bottom:5px;
+}
+
+.todo-table__label {
+  @include label;
+  background-color: $red;
+  float:right;
+}
+
+.todo-table__claimant-name {
+  margin:0;
+}
+
+.todo-table__meta {
+  @include important-information;
+  border-left-width: 5px;
+  margin-bottom:0;
+
+  p {
+    margin:0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .history-table__datetime {
+    white-space: nowrap;
+  }
+
+  .history-table__agent-name {
+    padding-bottom: 0;
+  }
+}
+
+.check-answers-table {
+  th {
+    font-weight: normal;
+  }
+  tr:first-child {
+    border-top: 1px solid $grey-2;
+  }
+}
+
+.status-message {
+  font-weight: bold;
+  color: $white;
+  padding: 3px 5px 1px;
+}
+
+.status-message--done {
+  background-color: $govuk-blue;
+}
+
+.status-message--fail {
+  background-color: $red;
+}
+
+.table-column-1-4 {
+  width: 25%;
+}

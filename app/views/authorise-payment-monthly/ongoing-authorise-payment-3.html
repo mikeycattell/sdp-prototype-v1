@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            <br>Payment authorisation recorded
+          </h1>
+          <div class="govuk-panel__body">
+You've authorised a monthly payment
+          </div>
+        </div>
+
+
+        <h3 class="govuk-heading-m">What happens next</h3>
+
+        <p class="govuk-body">You need to create a letter and upload it to the claimant's journal.</p>
+
+
+        <br>
+        <p class="govuk-body">
+          <a href="../notify-monthly/ongoing-payment-first-payment-complete-hub" class="govuk-link">Back to claimant information</a>
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}

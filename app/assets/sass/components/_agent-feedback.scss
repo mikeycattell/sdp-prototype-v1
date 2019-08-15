@@ -1,0 +1,54 @@
+.feedback {
+  margin-top:$gutter*2;
+}
+
+.feedback__form {
+  margin-top: 30px;
+}
+
+.feedback__list {
+  position:relative;
+}
+
+.feedback__expand {
+  @extend .link-style;
+}
+
+.feedback__item {
+  overflow:auto;
+  padding:$gutter-half;
+  margin:$gutter-half 0 0;
+  border-left:3px solid $light-blue;
+  background-color:$light-blue-25;
+}
+
+.feedback__text {
+  padding:$gutter-half 0;
+}
+
+.feedback__votes {
+  font-size: 14px;
+  float: left;
+}
+
+.feedback__vote {
+  @extend .link-style;
+  float: right;
+  font-size: 16px;
+}
+
+.feedback__voted {
+  float: right;
+  font-size: 16px;
+}
+
+.feedback__spinner {
+  position:absolute;
+  top:50px;
+  left:0;
+  right:0;
+  margin:0 auto;
+  background-color:$white;
+  padding:$gutter-half 0;
+  width:80px;
+}

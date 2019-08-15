@@ -1,0 +1,72 @@
+.file-upload__download {
+	margin-bottom: 20px;
+}
+
+.file-upload__submit {
+	@extend .button;
+}
+
+/**
+* File validation on non-ajax forms
+*/
+
+.file-validation {
+  margin-bottom: em(15, 19);
+
+  .file-validation__remove {
+    float: right;
+    @include core-16;
+  }
+}
+
+.file-validation__link {
+  display: none;
+}
+
+.js-enabled {
+  .file-validation__link {
+    display: inline-block;
+  }
+}
+
+/* claimant new upload */
+
+.file-status__table {
+  margin-bottom: 30px;
+}
+
+.file-status__row {
+  border: 0;
+}
+
+.file-status__file-name {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+  word-break: break-word;
+}
+
+.file-status__delete {
+  @extend .link-style;
+  @include core-16;
+}
+
+.file-status__status-message {
+  font-weight: bold;
+  color: $white;
+  padding: 3px 5px 1px;
+}
+
+.file-status__status-message--uploading {
+  font-weight: normal;
+  color: $black;
+}
+
+.file-status__status-message--uploaded {
+  background-color: $govuk-blue;
+}
+
+.file-status__status-message--failed {
+  background-color: $red;
+}
+
