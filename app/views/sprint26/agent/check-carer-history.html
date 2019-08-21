@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "input/macro.njk" import govukInput %}
+
+
+<div class="govuk-width-container">
+
+  <main class="">
+
+        <div class="sdp-claimant-details-large">
+          <div class="sdp-claimant-details-upper-wrapper">
+            <div class="sdp-claimant-details-top-left">
+              <p class="sdp-claimant-details-nino heading-large">SD102287B</p>
+            </div>
+            <div class="sdp-task-type-wrapper sdp-claimant-details-top-right">
+              <span class="sdp-details-task-type">CHECK CARER ELEMENT</span>
+            </div>
+          </div>
+          <hr class="sdp-details-rule">
+          <div class="sdp-uc-link-wrapper">
+            <a class="sdp-uc-link" href="https://agent-training04.ucd.gpn.gov.uk/agent/claimant-actions/68c81b15-2a16-430c-9c94-8483abfd27ac" target="_blank">View claimant in Universal Credit (link opens in new tab)</a>
+
+          </div>
+        </div>
+
+        <ul class="sdp-inner-task-nav">
+
+          <li class="sdp-inner-task-nav-item">
+            <a class="sdp-inner-task-link " href="check-carer-element.html">Next case action</a>
+          </li>
+
+          <li class="sdp-inner-task-nav-item">
+            <a class="sdp-inner-task-link sdp-inner-task-link-active" href="/sdp-agent/case-history/5d397a9ed601800169006813">Case history</a>
+          </li>
+
+        </ul>
+
+        <div class="sdp-case-history-wrapper">
+
+          <h1 class="heading-large reduced-sdp-all-margin-heading">Case history</h1>
+
+          <div class="sdp-case-history-item">
+
+            <h3 class="heading-medium sdp-case-history-heading">Automated initial checks when regulations came in</h3>
+
+
+            <p class="sdp-case-history-date">25 July 2019</p>
+
+            <table class="sdp-case-history-table">
+              <tbody>
+
+                <tr>
+                  <th class="sdp-case-history-table-heading">Claimant has carer who gets carer element</th>
+                  <td class="sdp-case-history-table">Not determined</td>
+                </tr>
+
+                <tr>
+                  <th class="sdp-case-history-table-heading">Claimant has carer who gets carer allowance</th>
+                  <td class="sdp-case-history-table">No</td>
+                </tr>
+
+                <tr>
+                  <th class="sdp-case-history-table-heading">PIP (daily living - standard or enhanced)</th>
+                  <td class="sdp-case-history-table">No</td>
+                </tr>
+
+                <tr>
+                  <th class="sdp-case-history-table-heading">AFIP</th>
+                  <td class="sdp-case-history-table">No</td>
+                </tr>
+
+                <tr>
+                  <th class="sdp-case-history-table-heading">DLA (care component - middle or higher)</th>
+                  <td class="sdp-case-history-table">No</td>
+                </tr>
+
+                <tr>
+                  <th class="sdp-case-history-table-heading">AA or CAA paid with IIDB or WP</th>
+                  <td class="sdp-case-history-table">Yes</td>
+                </tr>
+
+                <tr>
+                  <th class="sdp-case-history-table-heading">Claimant has breaks in UC claim</th>
+                  <td class="sdp-case-history-table">No</td>
+                </tr>
+
+                <tr>
+                  <th class="sdp-case-history-table-heading">UC couple status</th>
+                  <td class="sdp-case-history-table">Single</td>
+                </tr>
+
+                <tr>
+                  <th class="sdp-case-history-table-heading">UC couple status at time of natural migration to UC</th>
+                  <td class="sdp-case-history-table">Single</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+  </main>
+
+
+
+  {% endblock %}

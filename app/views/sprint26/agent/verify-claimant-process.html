@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "input/macro.njk" import govukInput %}
+
+
+<div class="govuk-width-container">
+
+  <main class="">
+
+    <div class="sdp-claimant-details-large">
+      <div class="sdp-claimant-details-upper-wrapper">
+        <div class="sdp-claimant-details-top-left">
+          <p class="sdp-claimant-details-nino heading-large">SD102287B</p>
+        </div>
+        <div class="sdp-task-type-wrapper sdp-claimant-details-top-right">
+          <span class="sdp-details-task-type">VERIFY CLAIMANT DATA</span>
+        </div>
+      </div>
+      <hr class="sdp-details-rule">
+      <div class="sdp-uc-link-wrapper">
+        <a class="sdp-uc-link" href="https://agent-training04.ucd.gpn.gov.uk/agent/claimant-actions/68c81b15-2a16-430c-9c94-8483abfd27ac" target="_blank">View claimant in Universal Credit (link opens in new tab)</a>
+
+      </div>
+    </div>
+
+    <ul class="sdp-inner-task-nav">
+
+      <li class="sdp-inner-task-nav-item">
+        <a class="sdp-inner-task-link  sdp-inner-task-link-active" href="check-carer-element.html">Next case action</a>
+      </li>
+
+      <li class="sdp-inner-task-nav-item">
+        <a class="sdp-inner-task-link" href="check-carer-history">Case history</a>
+      </li>
+
+
+
+    </ul>
+
+    <div class="govuk-form-group">
+
+      <div class="govuk-form-group">
+
+        <form action='/sprint26/agent/verify-claimant' method='post' class='form' autocomplete='off'>
+
+
+        <h1 class="heading-large">Verify that the claimant should be processed</h1>
+
+                <p>You must verify data held for SB109432D to ensure that the claimant should be considered for SDP payments.</p>
+
+
+        <div id="claimantDataHasPassedManualCheck" class=" form-group-related">
+            <fieldset>
+            <legend class="form-label form-label-bold">Is this claimant eligible to continue?</legend>
+
+
+
+            <div class="multiple-choice">
+                <input id="verifyclaimant-1" type="radio" name="verifyclaimant" value="true">
+                <label for="verifyclaimant-1">Yes</label>
+            </div>
+
+            <div class="multiple-choice">
+                <input id="verifyclaimant-2" type="radio" name="verifyclaimant" value="false">
+                <label for="verifyclaimant-2">No, remove them from this system</label>
+            </div>
+
+        </fieldset>
+        </div>
+
+
+
+            <button id="submit" name="submit" class="button " type="submit">Save and continue</button>
+
+        </div>
+
+
+                        </form>
+
+      </div>
+
+
+            </div>
+
+
+
+
+
+
+        </main>
+
+
+
+        {% endblock %}

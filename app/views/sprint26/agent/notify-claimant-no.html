@@ -1,0 +1,142 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "input/macro.njk" import govukInput %}
+
+<main class="govuk-main-wrapper">
+  <div class="key-details-bar">
+    <h1 class="key-details-ni">
+
+      <span class="key-details-claimant-ni">QQ423881A</span>
+      <div class="key-details-tag" style="float: right;">NOTIFY CLAIMANT</div>
+      <p class="govuk-body govuk-!-margin-bottom-1"></p>
+    </h1>
+
+    <hr class="key-details-line">
+    <p class="govuk-body govuk-!-margin-bottom-3"></p>
+
+    <div class="key-details-link"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61" target="_blank">View claimant in Universal Credit</a>
+    </div>
+
+  </div>
+
+  <p class="govuk-body govuk-!-margin-bottom-4"></p>
+
+  <main id="content" role="main">
+    <div class="grid-row">
+      <div class="column-full">
+        <nav class="navigation-secondary">
+          <ul>
+            <li>
+              <a href="" class="active" aria-current="section">Next case action</a>
+            </li>
+            <li>
+              <a href="check-carer-yes-history">Case history</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </main>
+
+  <p class="govuk-body govuk-!-margin-bottom-8"></p>
+
+  <div class="sdp-task-wrapper">
+
+    <form class="" action="/generatePdf" method="post">
+
+      <h1 class="heading-large">Tell the claimant they are not eligible for SDP</h1>
+
+      <p>You need to create a letter to notify the claimant they are not eligible for SDP, and upload it to their journal.</p>
+
+
+      <h2 class="heading-medium">What are the claimant's contact details in Universal Credit?</h2>
+
+
+      <div class="form-group-related">
+        <label class="form-label-bold" for="fullName">Full name
+          <span class="form-hint">
+            Example: Mr Jimmy Hinson
+          </span>
+          <input id="fullName" class="form-control form-control-1-2 block-input" type="text" name="fullName" value="">
+        </label>
+      </div>
+
+
+        <label class="form-label form-label-bold" for="fullAddress">Address and postcode
+
+
+          <span class="form-hint">
+            Example:<br>
+            Address line1<br>
+            Address line2<br>
+            Town or City<br>
+            County<br>
+            Postcode
+          </span>
+
+          <textarea class="sdp-textarea " name="fullAddress" id="fullAddress" rows="8" cols="60"></textarea>
+        </label>
+
+
+
+      <a class="letter-preview-request" href="#">Preview letter</a>
+      <br>
+
+      <h2 class="heading-medium">What to do now</h2>
+
+
+      <button id="submit" name="submit" class="button sdp-secondary-button" type="submit">Download the letter PDF.</button>
+
+      <p>The letter will be saved in your 'downloads' folder.</p>
+
+      <p>Then copy and paste this text to the claimant's journal and upload the letter.</p>
+
+      <div class="sdp-copy-text-wrapper">
+        <button class="sdp-click-to-copy-button" type="button" name="button" data-copytext="toCopy">COPY</button>
+        <p id="toCopy">You are not eligible for additional Universal Credit payments. Please read the attached letter for full details.</p>
+      </div>
+
+      <p>You should notify the claimant when you send them the journal message.</p>
+
+    </form>
+
+    <form class="" action="/sprint26/agent/edit-notify-claimant" method="post">
+
+      <div id="sentLetter" class=" form-group-related">
+        <fieldset>
+          <legend class="form-label form-label-bold">Do you want to edit your responses or notify claimant?</legend>
+
+          <div class="multiple-choice">
+            <input id="sentLetter-1" type="radio" name="editnotifyclaimant" value="true" data-original="">
+            <label for="sentLetter-1">Notify claimant</label>
+          </div>
+
+          <div class="multiple-choice">
+            <input id="sentLetter-2" type="radio" name="editnotifyclaimant" value="false" data-target="messageWrapper" data-original="">
+            <label for="sentLetter-2">Edit responses</label>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <div id="messageWrapper" class="js-hidden">
+        <p class="sdp-strong">You will need to make the eligibility checks again.</p>
+      </div>
+
+      <button id="submit" name="submit" class="button " type="submit">Save and continue</button>
+
+    </form>
+
+  </div>
+
+</main>
+<script src="https://sdp-qa2.service.working-age.digital/scripts/sdp.js"></script>
+
+{% endblock %}

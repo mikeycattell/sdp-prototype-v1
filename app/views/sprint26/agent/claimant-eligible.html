@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "input/macro.njk" import govukInput %}
+
+<main>
+
+  <div class="sdp-claimant-details-large">
+    <div class="sdp-claimant-details-upper-wrapper">
+      <div class="sdp-claimant-details-top-left">
+        <p class="sdp-claimant-details-nino heading-large">SD102287B</p>
+      </div>
+      <div class="sdp-task-type-wrapper sdp-claimant-details-top-right">
+        <span class="sdp-details-task-type">RAISE PAYMENT</span>
+      </div>
+    </div>
+    <hr class="sdp-details-rule">
+    <div class="sdp-uc-link-wrapper">
+      <a class="sdp-uc-link" href="https://agent-training04.ucd.gpn.gov.uk/agent/claimant-actions/68c81b15-2a16-430c-9c94-8483abfd27ac" target="_blank">View claimant in Universal Credit (link opens in new tab)</a>
+
+    </div>
+  </div>
+
+  <ul class="sdp-inner-task-nav">
+
+    <li class="sdp-inner-task-nav-item">
+      <a class="sdp-inner-task-link  sdp-inner-task-link-active" href="check-carer-element.html">Next case action</a>
+    </li>
+
+    <li class="sdp-inner-task-nav-item">
+      <a class="sdp-inner-task-link" href="check-carer-history">Case history</a>
+    </li>
+
+  </ul>
+
+  <div class="sdp-task-wrapper">
+
+    <h1 class="heading-large">The claimant is eligible for a single payment of SDP</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Monthly SDP rate</th>
+          <th>First UC claim date</th>
+          <th>Last AP ended</th>
+          <th>Full APs since first UC claim date</th>
+          <th>Single payment amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>£120.00</td>
+          <td>18 October 2017</td>
+          <td>17 August 2019</td>
+          <td>22</td>
+          <td>£2640.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <h2 class="heading-medium">Raise a single payment of £2640.00 in CPS</h2>
+
+    <p>You'll need to follow the guidance for raising and authorising a payment of SDP in CPS.</p>
+
+    <form action='/sprint26/agent/raise-edit-payment' method='post' class='form' autocomplete='off'>
+
+    <div id="wantsPayment" class=" form-group-related">
+      <fieldset>
+        <legend class="form-label form-label-bold">Do you want to edit your responses or raise payment?</legend>
+
+        <div class="multiple-choice">
+          <input id="wantsPayment-1" type="radio" name="wantsPayment" value="true" data-target="authoriserWrapper" data-original="">
+          <label for="wantsPayment-1">Raise payment</label>
+        </div>
+
+        <div class="multiple-choice">
+          <input id="wantsPayment-2" type="radio" name="wantsPayment" value="false" data-target="messageWrapper" data-original="">
+          <label for="wantsPayment-2">Edit responses</label>
+        </div>
+
+      </fieldset>
+    </div>
+
+    <div id="authoriserWrapper" class="js-hidden">
+
+      <div class="form-group-related">
+        <label class="form-label" for="authoriser">Select payment authoriser</label>
+
+        <select id="authoriser" class="form-control form-control-1-2" name="authoriser" data-original="false">
+          <option value="" disabled="" selected="">Please select</option>
+
+          <option value="5d358013cff47e017667d939">SDPSuperManager JenkinsChatham</option>
+
+          <option value="5d358012cff47e017667d938">SDPManager JenkinsChatham</option>
+
+          <option value="5d358013cff47e017667d93a">SDPManager JenkinsChesterfield</option>
+
+          <option value="5d358013cff47e017667d93b">SDPSuperManager JenkinsChesterfield</option>
+
+          <option value="5d358013cff47e017667d93d">SDPSuperManager JenkinsClydebank</option>
+
+          <option value="5d358013cff47e017667d93c">SDPManager JenkinsClydebank</option>
+
+        </select>
+      </div>
+
+    </div>
+
+    <div id="messageWrapper" class="js-hidden">
+
+      <p class="sdp-strong">You will need to make the eligibility checks again.</p>
+
+    </div>
+
+    <button id="submit" name="submit" class="button " type="submit">Save and continue</button>
+
+    </form>
+
+  </div>
+  <p class="govuk-body govuk-!-margin-bottom-7"></p>
+</main>
+
+<script src="https://sdp-qa2.service.working-age.digital/scripts/sdp.js"></script>
+
+{% endblock %}
