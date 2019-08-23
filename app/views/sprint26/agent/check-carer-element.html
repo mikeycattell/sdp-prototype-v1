@@ -9,93 +9,51 @@
 {% from "radios/macro.njk" import govukRadios %}
 {% from "input/macro.njk" import govukInput %}
 
-  <main class="">
+<main>
 
-    <div class="sdp-claimant-details-large">
-      <div class="sdp-claimant-details-upper-wrapper">
-        <div class="sdp-claimant-details-top-left">
-          <p class="sdp-claimant-details-nino heading-large">SD102287B</p>
-        </div>
-        <div class="sdp-task-type-wrapper sdp-claimant-details-top-right">
-          <span class="sdp-details-task-type">CHECK CARER ELEMENT</span>
-        </div>
+  <div class="sdp-claimant-details-large">
+    <div class="sdp-claimant-details-upper-wrapper">
+      <div class="sdp-claimant-details-top-left">
+        <p class="sdp-claimant-details-nino heading-large">SD102287B</p>
       </div>
-      <hr class="sdp-details-rule">
-      <div class="sdp-uc-link-wrapper">
-        <a class="sdp-uc-link" href="https://agent-training04.ucd.gpn.gov.uk/agent/claimant-actions/68c81b15-2a16-430c-9c94-8483abfd27ac" target="_blank">View claimant in Universal Credit (link opens in new tab)</a>
-
+      <div class="sdp-task-type-wrapper sdp-claimant-details-top-right">
+        <span class="sdp-details-task-type">CHECK CARER ELEMENT</span>
       </div>
     </div>
+    <hr class="sdp-details-rule">
+    <div class="sdp-uc-link-wrapper">
+      <a class="sdp-uc-link" href="https://agent-training04.ucd.gpn.gov.uk/agent/claimant-actions/68c81b15-2a16-430c-9c94-8483abfd27ac" target="_blank">View claimant in Universal Credit (link opens in new tab)</a>
 
-    <ul class="sdp-inner-task-nav">
-
-      <li class="sdp-inner-task-nav-item">
-        <a class="sdp-inner-task-link  sdp-inner-task-link-active" href="check-carer-element.html">Next case action</a>
-      </li>
-
-      <li class="sdp-inner-task-nav-item">
-        <a class="sdp-inner-task-link" href="check-carer-history">Case history</a>
-      </li>
-
-
-
-    </ul>
-
-  <!--  <div class="key-details-bar">
-      <h1 class="key-details-ni">
-
-        <span class="key-details-claimant-ni">QQ423881A</span>
-        <div class="key-details-tag" style="float: right;">CHECK CARER ELEMENT - SINGLE</div>
-        <p class="govuk-body govuk-!-margin-bottom-1"></p>
-      </h1>
-
-      <hr class="key-details-line">
-      <p class="govuk-body govuk-!-margin-bottom-3"></p>
-
-      <div class="key-details-link"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61"
-        target="_blank">View claimant in Universal Credit (link opens in new tab)</a>
-      </div>
-      <!-- <div class="key-details-working-on" style="float: right;"><strong>Working on this case:</strong> You</div>
     </div>
+  </div>
 
+  <ul class="sdp-inner-task-nav">
 
-    <p class="govuk-body govuk-!-margin-bottom-4"></p>
+    <li class="sdp-inner-task-nav-item">
+      <a class="sdp-inner-task-link  sdp-inner-task-link-active" href="check-carer-element.html">Next case action</a>
+    </li>
 
-    <main id="content" role="main">
-      <div class="grid-row">
-        <div class="column-full">
+    <li class="sdp-inner-task-nav-item">
+      <a class="sdp-inner-task-link" href="check-carer-history">Case history</a>
+    </li>
 
-          <nav class="navigation-secondary">
-            <ul>
-              <li>
-                <a href="" class="active" aria-current="section">Next case action</a>
-              </li>
-              <li>
-                <a href="check-carer-history">Case history</a>
-              </li>
-              <!-- <li>
-              <a href="find-claimant-payment">Payment history</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>-->
+  </ul>
+
+  <div class="govuk-form-group">
 
     <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="heading-large">Check for carer element</h1>
+        </legend>
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <h1 class="heading-large">Check for carer element</h1>
-          </legend>
+        <span id="how-contacted-conditional-hint" class="govuk">
+          You must contact SD101452D and ask if they currently have a carer who gets the carer element of Universal Credit.
+        </span>
 
-          <span id="how-contacted-conditional-hint" class="govuk">
-            You must contact SD101452D and ask if they currently have a carer who gets the carer element of Universal Credit.
-          </span>
+        <legend class="form-label form-label-bold"><br>Did you speak to the claimant?</legend>
 
-          <legend class="form-label form-label-bold"><br>Did you speak to the claimant?</legend>
-
-          <form action='/sprint26/agent/confirm-answer' method='post' class='form' autocomplete='off'>
+        <form action='/sprint26/agent/confirm-answer' method='post' class='form' autocomplete='off'>
 
           <div class="govuk-radios govuk-radios--conditional" data-module="radios">
             <div class="govuk-radios__item">
@@ -107,58 +65,53 @@
 
             </div>
 
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
-                <fieldset class="govuk-fieldset" aria-describedby="partner-dob-hint" role="group">
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
+              <fieldset class="govuk-fieldset" aria-describedby="partner-dob-hint" role="group">
 
-                  <br>
-                  <fieldset class="govuk-fieldset" aria-describedby="sex-hint">
+                <br>
+                <fieldset class="govuk-fieldset" aria-describedby="sex-hint">
 
-                    <label class="form-label form-label-bold">Do they currently have a carer who gets the carer element of Universal Credit?</label>
+                  <label class="form-label form-label-bold">Do they currently have a carer who gets the carer element of Universal Credit?</label>
 
-                    <div class="govuk-radios" id="sex-partner">
+                  <div class="govuk-radios" id="sex-partner">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="agent-2" name="agent" type="radio" value="true">
+                      <label class="govuk-label govuk-radios__label" for="agent-2">
+                        Yes
+                      </label></div>
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="agent-2" name="agent" type="radio" value="true">
-                        <label class="govuk-label govuk-radios__label" for="agent-2">
-                          Yes
-                        </label></div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="agent-1" name="agent" type="radio" value="false">
-                          <label class="govuk-label govuk-radios__label" for="agent-1">
-                            No
-                          </label>
-                        </div>
+                        <input class="govuk-radios__input" id="agent-1" name="agent" type="radio" value="false">
+                        <label class="govuk-label govuk-radios__label" for="agent-1">
+                          No
+                        </label>
                       </div>
+                    </div>
 
-                    </fieldset>
+                  </fieldset>
 
-                  </div>
+                </div>
 
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="agent-2" name="agents" type="radio" value="true" data-aria-controls="conditional-citizenship-conditional-2">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="agent-2" name="agents" type="radio" value="true" data-aria-controls="conditional-citizenship-conditional-2">
 
-                    <label class="govuk-label govuk-radios__label" for="agent-2">
-                      No
-                    </label> </div>
+                  <label class="govuk-label govuk-radios__label" for="agent-2">
+                    No
+                  </label> </div>
 
-                  </div>
+                </div>
 
-                </fieldset>
-              </div>
-
-              <div>
-                <button type="submit" class="govuk-button">
-                  Save and continue
-                </button>
-              </div>
-
+              </fieldset>
             </div>
 
+            <div>
+              <button type="submit" class="govuk-button">
+                Save and continue
+              </button>
+            </div>
 
-
-
+          </div>
 
         </main>
-
 
 
         {% endblock %}

@@ -29,7 +29,7 @@
 
 <p class="govuk-body govuk-!-margin-bottom-4"></p>
 
-<main id="content" role="main">
+<main role="main">
   <div class="grid-row">
     <div class="column-full">
 
@@ -50,89 +50,126 @@
   </div>
 </main>
 
-  <p class="govuk-body govuk-!-margin-bottom-8"></p>
+<div class="sdp-task-wrapper">
 
 
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
+            <form class="" action="/generatePdf" method="post">
 
-          <h2 class="govuk-heading-xl">Tell the claimant about a single payment</h2>
-          <p class="govuk-body">You need to create a letter to notify the claimant we've paid them a single amount of SDP, and upload it to their journal.</p>
+<h1 class="heading-large">Tell the claimant about a single payment</h1>
 
-
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h3 class="govuk-fieldset__heading">
-                What are the claimant's contact details in Universal Credit?
-              </h3>
-            </legend>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="full-name">
-                Full name
-              </label>
-              <input class="govuk-input" id="full-name" name="full-name" type="text">
-            </div>
+    <p>You need to create a letter to notify the claimant we've paid them a single amount of SDP, and upload it to their journal.</p>
 
 
+<h2 class="heading-medium">What are the claimant's contact details in Universal Credit?</h2>
 
-            <div class="govuk-form-group">
-    <label class="govuk-label" for="address-postcode">
-      Address and postcode
+
+<div class="form-group-related">
+    <label class="form-label-bold" for="fullName">Full name
+
+            <span class="form-hint">
+                Example: Mr Jimmy Hinson
+            </span>
+
+
+        <input id="fullName" class="form-control form-control-1-2 block-input" type="text" name="fullName" value="">
     </label>
-
-    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-  </div>
+</div>
 
 
 
+<div class="">
+    <label class="form-label form-label-bold" for="fullAddress">Address and postcode
+
+
+        <span class="form-hint">
+            Example:<br>
+Address line1<br>
+Address line2<br>
+Town or City<br>
+County<br>
+Postcode
+        </span>
+
+    <textarea class="sdp-textarea " name="fullAddress" id="fullAddress" rows="8" cols="60"></textarea>
+    </label>
+</div>
+
+
+    <a class="letter-preview-request" href="#">Preview letter</a>
+    <br>
+
+<h2 class="heading-medium">What to do now</h2>
+
+
+    <button id="submit" name="submit" class="button sdp-secondary-button" type="submit">Download the letter PDF.</button>
+
+
+<p>The letter will be saved in your 'downloads' folder.</p>
+
+
+<p>Then copy and paste this text to the claimant's journal and upload the letter.</p>
+
+
+    <div class="sdp-copy-text-wrapper">
+        <button class="sdp-click-to-copy-button" type="button" name="button" data-copytext="toCopy">COPY</button>
+        <p id="toCopy">A single additional payment of £3600 was made on 22 August 2019</p>
+    </div>
+
+
+<p>You should notify the claimant when you send them the journal message.</p>
+
+
+<input id="today" type="hidden" name="today" value="22 August 2019">
+
+
+<input id="lastApEndDate" type="hidden" name="lastApEndDate" value="21 August 2019">
+
+
+<input id="dateOfUcClaim" type="hidden" name="dateOfUcClaim" value="22 February 2017">
+
+
+<input id="monthlyRateInPounds" type="hidden" name="monthlyRateInPounds" value="120">
+
+
+<input id="elapsedAps" type="hidden" name="elapsedAps" value="30">
+
+
+<input id="sdpPaymentAmount" type="hidden" name="sdpPaymentAmount" value="3,600">
+
+
+<input id="letter" type="hidden" name="letter" value="UCSDP06">
+
+
+<input id="_id" type="hidden" name="_id" value="5d5aa7b9d601800169009277">
 
 
 
+<input id="_csrf" type="hidden" name="_csrf" value="4qzteHr7-aiP_7xQnZRnQnKPBl-zQrqeRre8">
 
-          </fieldset>
+</form>
 
-          <ul class="govuk-list">
-            <li>
-              <a class="govuk-link" href="qq423881a-letter-preview" target="_blank">Preview letter</a>
-            </li>
-          </ul>
+<form class="" action="/sdp-agent/task/5d5aa7b9d601800169009277" method="post">
 
-          <h3 class="govuk-heading-m">What to do now</h3>
-          <a href="../public/images/letter-example.png" download role="button" class="govuk-button govuk-button--secondary govuk-button--small">
-  Download the letter PDF</a>
-          <!-- <p class="govuk-body"><a href="../public/images/letter-example.png" download>Download the letter PDF.</p></a> -->
-          <p class="govuk-body">The letter will be saved in your 'downloads' folder.</p>
-          <p class="govuk-body">Then copy and paste this text to the claimant's journal and upload the letter.</p>
-
-          <div class="app-tabs__container js-tabs__container app-tabs__container--with-close-button" id="example-default-html" role="tabpanel" aria-hidden="false">
-            <button id="copyButton" onclick="copyGeneratedContent()" class="app-copy-button js-copy-button" aria-live="assertive">Copy</button>
-            <textarea id="genText" rows="4" cols="70" style="resize:none;" class="textarea">
+<input id="_csrf" type="hidden" name="_csrf" value="4qzteHr7-aiP_7xQnZRnQnKPBl-zQrqeRre8">
 
 
-              A single additional payment of £2,160 was made on 1 September 2018.
-            </textarea>
-          </pre>
-        </div>
-
-        <p class="govuk-body govuk-!-margin-top-4">
-          You should notify the claimant when you send them the journal message.</p>
+<input id="_id" type="hidden" name="_id" value="5d5aa7b9d601800169009277">
 
 
-          <a href="../dashboards/agent-dashboard"><button type="submit" class="govuk-button">
-            I've notified the claimant
-          </button></a>
+<input id="taskType" type="hidden" name="taskType" value="notifyClaimant">
 
-        </div>
 
-      </div>
+    <button id="submit" name="submit" class="button " type="submit">I've notified the claimant</button>
+
+</form>
+
+
+
+</div>
 
     </div>
 
 
-    </div>
-
-          </div>
 
         </main>
       </div>
