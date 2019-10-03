@@ -1,0 +1,228 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="gov-uk-wrapper">
+  <main id="content" role="main" class="">
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+
+
+
+      </div>
+    </div>
+
+    <div class="grid-row">
+
+      <div class="column-full">
+        <div class="sdp-claimant-details-large">
+          <div class="sdp-claimant-details-upper-wrapper">
+            <div class="sdp-claimant-details-top-left">
+              <p class="sdp-claimant-details-nino heading-large">SA108866C</p>
+            </div>
+            <div class="sdp-task-type-wrapper sdp-claimant-details-top-right">
+              <span class="sdp-details-task-type">CHECK ELIGIBILITY</span>
+            </div>
+          </div>
+          <hr class="sdp-details-rule">
+          <div class="sdp-uc-link-wrapper">
+            <a class="sdp-uc-link" href="https://agent-training04.ucd.gpn.gov.uk/agent/claimant-actions/b868a0bb-a29a-45a7-a980-c334a86837d6" target="_blank">View claimant in Universal Credit (link opens in new tab)</a>
+
+            <span class="sdp-case-owner-text">Assigned to: You</span>
+
+          </div>
+        </div>
+
+        <ul class="sdp-inner-task-nav">
+
+          <li class="sdp-inner-task-nav-item">
+            <a class="sdp-inner-task-link" href="check-eligibility">Next case action</a>
+          </li>
+
+          <li class="sdp-inner-task-nav-item">
+            <a class="sdp-inner-task-link " href="case-history.html">Case history</a>
+          </li>
+
+          <li class="sdp-inner-task-nav-item">
+            <a class="sdp-inner-task-link" href="edit-claimant">Edit claimant</a>
+          </li>
+
+          <li class="sdp-inner-task-nav-item">
+            <a class="sdp-inner-task-link sdp-inner-task-link-active" href="payment-page">Payment page</a>
+          </li>
+
+        </ul>
+
+        <div class="sdp-edit-claimant-wrapper">
+
+          <h1 class="heading-large">Payment page</h1>
+
+
+
+          <div class="grid-row">
+            <div class="column-full">
+
+              <form action="/sdp-agent/edit-claimant/5d7bc2f7c9e77c01760529c3" method="post">
+
+                <div class="form-group-related">
+                  <h3 class="heading-medium ">Title of section 2</h3>
+
+
+                  <label class="form-label-bold" for="sdpPaid">Amount of money paid in GBP
+
+                    <span class="form-hint">
+                      For example, 150.50
+                    </span>
+
+
+                    <input id="sdpPaid" class="form-control block-input" type="text" name="sdpPaid" value="">
+                  </label>
+                </div>
+
+
+
+                <div id="confirmPaid" class=" form-group-related">
+                  <fieldset>
+                    <legend class="form-label form-label-bold">Confirm you have paid up to the last AP end date</legend>
+
+
+
+                    <div class="multiple-choice">
+                      <input id="confirmPaid-1" type="radio" name="confirmPaid" value="true" data-original="">
+                      <label for="confirmPaid-1">Yes</label>
+                    </div>
+
+                    <div class="multiple-choice">
+                      <input id="confirmPaid-2" type="radio" name="confirmPaid" value="false" data-original="">
+                      <label for="confirmPaid-2">No</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+
+
+                <div class="form-group-related fallback-date-input">
+                  <fieldset>
+                    <legend>
+                      <span class="form-label form-label-bold">
+                        Date payment was authorised
+                      </span>
+
+
+
+
+                    </legend>
+                    <div class="form-date">
+                      <div class="form-group form-group-day">
+                        <label class="form-label" for="paidOn_day">Day</label>
+
+                        <input class="form-control js-disabled-date" id="paidOn_day" name="paidOn_day" value="" type="number">
+                      </div>
+                      <div class="form-group form-group-month">
+                        <label class="form-label" for="paidOn_month">Month</label>
+                        <input class="form-control js-disabled-date" id="paidOn_month" name="paidOn_month" value="" type="number">
+                      </div>
+                      <div class="form-group form-group-year">
+                        <label class="form-label" for="paidOn_year">Year</label>
+                        <input class="form-control js-disabled-date" id="paidOn_year" name="paidOn_year" value="" type="number">
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+
+
+                <div class="form-group-related">
+                  <label class="form-label-bold" for="cpsRefNum">CPS reference number
+
+
+                    <input id="cpsRefNum" class="form-control block-input" type="text" name="cpsRefNum" value="">
+                  </label>
+                </div>
+
+
+
+                <div id="paidFor" class=" form-group-related">
+                  <fieldset>
+                    <legend class="form-label form-label-bold">Reason for payment</legend>
+
+
+
+                    <div class="multiple-choice">
+                      <input id="paidFor-1" type="radio" name="paidFor" value="eligibility" data-original="">
+                      <label for="paidFor-1">Eligibility</label>
+                    </div>
+
+                    <div class="multiple-choice">
+                      <input id="paidFor-2" type="radio" name="paidFor" value="lcwra" data-original="">
+                      <label for="paidFor-2">LCWRA change</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+
+
+                <hr>
+
+
+
+                <div class="form-group-related fallback-date-input">
+                  <fieldset>
+                    <legend>
+                      <span class="form-label form-label-bold">
+                        UC claim date
+                      </span>
+
+
+                      <span class="form-hint">
+                        The current UC claim date is 28 April 2017
+                      </span>
+
+
+
+                    </legend>
+                    <div class="form-date">
+                      <div class="form-group form-group-day">
+                        <label class="form-label" for="dateOfUcClaim_day">Day</label>
+
+                        <input class="form-control js-disabled-date" id="dateOfUcClaim_day" name="dateOfUcClaim_day" value="" type="number">
+                      </div>
+                      <div class="form-group form-group-month">
+                        <label class="form-label" for="dateOfUcClaim_month">Month</label>
+                        <input class="form-control js-disabled-date" id="dateOfUcClaim_month" name="dateOfUcClaim_month" value="" type="number">
+                      </div>
+                      <div class="form-group form-group-year">
+                        <label class="form-label" for="dateOfUcClaim_year">Year</label>
+                        <input class="form-control js-disabled-date" id="dateOfUcClaim_year" name="dateOfUcClaim_year" value="" type="number">
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+
+                <br \="">
+
+                <button id="submit" name="submit" class="button " type="submit">Complete edit details</button>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+</div>
+
+{% endblock %}

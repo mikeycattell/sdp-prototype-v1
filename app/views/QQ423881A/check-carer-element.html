@@ -6,16 +6,15 @@
 
 {% block content %}
 
-{% from "radios/macro.njk" import govukRadios %}
-{% from "input/macro.njk" import govukInput %}
+
 
 
 <div class="govuk-width-container">
 
-<main class="govuk-main-wrapper">
-<div class="key-details-bar">
+<main>
+<!--<div class="key-details-bar">
 <h1 class="key-details-ni">
-  
+
   <span class="key-details-claimant-ni">QQ423881A</span>
   <div class="key-details-tag" style="float: right;">CHECK CARER ELEMENT - SINGLE</div>
   <p class="govuk-body govuk-!-margin-bottom-1"></p>
@@ -27,13 +26,28 @@
 <div class="key-details-link"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61"
   target="_blank">View claimant in Universal Credit</a>
 </div>
-<!-- <div class="key-details-working-on" style="float: right;"><strong>Working on this case:</strong> You</div> -->
+<!-- <div class="key-details-working-on" style="float: right;"><strong>Working on this case:</strong> You</div>
 </div>
+ -->
+<div class="sdp-claimant-details-large">
+    <div class="sdp-claimant-details-upper-wrapper">
+        <div class="sdp-claimant-details-top-left">
+            <p class="sdp-claimant-details-nino heading-large">QQ423881A</p>
+        </div>
+        <div class="sdp-task-type-wrapper sdp-claimant-details-top-right">
+            <span class="sdp-details-task-type">CHECK CARER ELEMENT - SINGLE</span>
+        </div>
+    </div>
+    <hr class="sdp-details-rule">
+    <div class="sdp-uc-link-wrapper">
+        <a class="sdp-uc-link" href="https://agent-training04.ucd.gpn.gov.uk/agent/claimant-actions/30714c98-e812-4b07-9832-b824f7287337" target="_blank">View claimant in Universal Credit (link opens in new tab)</a>
 
+    </div>
+</div>
 
 <p class="govuk-body govuk-!-margin-bottom-4"></p>
 
-<main id="content" role="main">
+<main role="main">
   <div class="grid-row">
     <div class="column-full">
 

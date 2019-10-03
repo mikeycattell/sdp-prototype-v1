@@ -1,6 +1,14 @@
 <!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
 <!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
 
+
+<!--[if IE 8]><link href="css/govuk-template-ie8.css?0.22.2" media="screen" rel="stylesheet" /><![endif]-->
+<link href="https://sdp-qa2.service.working-age.digital/css/govuk-template-print.css?0.22.2" media="print" rel="stylesheet" />
+<link href="https://sdp-qa2.service.working-age.digital/css/main.css" media="screen" rel="stylesheet" />
+<link href="https://sdp-qa2.service.working-age.digital/css/sdp.css" media="screen" rel="stylesheet" />
+
+<!--[if lte IE 9]><link href="css/ie9.css" media="screen" rel="stylesheet" /><![endif]-->
+
 <header class="govuk-header " role="banner" data-module="header">
   <div class="govuk-header__container govuk-width-container">
 
@@ -18,31 +26,31 @@
             <a class="govuk-header__link" href="../dashboards/agent-dashboard">
               Your cases to process
             </a>
+          </ul>
+        </nav>
+      </div>
+      <div class="f-right-nav">
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item">Switch  role:
+            <a class="govuk-header__link" href="#">
+              SDP Allocator
+            </a>
+          </li><li class="govuk-header__navigation-item govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Sign out
+            </a>
+          </li>
         </ul>
-      </nav>
+      </div>
+
+      <div class="f-right">
+        <p class="govuk-body govuk-!-margin-top-2"></p>
+        <label class="form-label relative block" for="search">
+          <input class="form-control block 100" id="search" type="text" name="search" value=" Find a claimant by NINO" onfocus="this.value = this.value==' Find a claimant by NINO'?'':this.value;" onblur="this.value = this.value==''?' Find a claimant by NINO':this.value;">
+          <a href="../QQ423881A-ongoing/find-claimant-history"><button class="gem-c-search__submit">Search</button></a></label>
+        </div>
+
+      </div>
+
     </div>
-<div class="f-right-nav">
-    <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
-      <li class="govuk-header__navigation-item govuk-header__navigation-item">Switch  role:
-        <a class="govuk-header__link" href="#">
-           SDP Allocator
-        </a>
-      </li><li class="govuk-header__navigation-item govuk-header__navigation-item">
-        <a class="govuk-header__link" href="#">
-          Sign out
-        </a>
-      </li>
-    </ul>
-</div>
-
-              <div class="f-right">
-                <p class="govuk-body govuk-!-margin-top-2"></p>
-                <label class="form-label relative block" for="search">
-                <input class="form-control block 100" id="search" type="text" name="search" value=" Find a claimant by NINO" onfocus="this.value = this.value==' Find a claimant by NINO'?'':this.value;" onblur="this.value = this.value==''?' Find a claimant by NINO':this.value;">
-                <a href="../QQ423881A-ongoing/find-claimant-history"><button class="gem-c-search__submit">Search</button></a></label>
-              </div>
-
-            </div>
-
-  </div>
-</header>
+  </header>
