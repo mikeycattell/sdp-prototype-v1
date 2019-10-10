@@ -13,9 +13,6 @@
     <div class="grid-row">
       <div class="column-two-thirds">
 
-
-
-
       </div>
     </div>
 
@@ -56,7 +53,7 @@
                     <a href="edit-claimant">Edit claimant</a>
                   </li>
                   <li>
-                    <a href="payment-page" class="active" >Payment page</a>
+                    <a href="payment-page" class="active" >Record payment</a>
                   </li>
                   <!-- <li>
                     <a href="find-claimant-payment">Payment history</a>
@@ -67,37 +64,58 @@
           </div>
         </main>
 
+<style>
+  @media (min-width: 641px) {
+  .task-completed {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.govuk-currency-input__inner {
+  position: relative;
+}
+
+.govuk-currency-input__inner__unit {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  font-weight: bold;
+}
+
+.govuk-currency-input__inner__input {
+  padding-left: 25px;
+}
+</style>
+
         <div class="sdp-edit-claimant-wrapper">
 
-          <h1 class="heading-large">Payment page</h1>
-
-
+          <h1 class="heading-large">Record payment</h1>
 
           <div class="grid-row">
             <div class="column-full">
 
               <form action="/sdp-agent/edit-claimant/5d7bc2f7c9e77c01760529c3" method="post">
 
-                <div class="form-group-related">
-                  <h3 class="heading-medium ">Title of section 2</h3>
-
-
-                  <label class="form-label-bold" for="sdpPaid">Amount of money paid in GBP
-
+                <div class="form-group" data-required="Please answer this question">
+                  <label class="form-label-bold" for="sdpPaid">Amount of money paid
                     <span class="form-hint">
                       For example, 150.50
                     </span>
-
-
-                    <input id="sdpPaid" class="form-control block-input" type="text" name="sdpPaid" value="">
                   </label>
-                </div>
-
-
+                   <div class="form-control-3-4">
+                     <div class="govuk-currency-input">
+                       <div class="govuk-currency-input__inner">
+                         <span class="govuk-currency-input__inner__unit">£</span>
+                         <input class="govuk-currency-input__inner__input form-control form-control-1-4" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric="" type="text" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?">
+                       </div>
+                     </div>
+                   </div>
+                 </div>
 
                 <div id="confirmPaid" class=" form-group-related">
                   <fieldset>
-                    <legend class="form-label form-label-bold">Confirm you have paid up to the last AP end date</legend>
+                    <legend class="form-label form-label-bold">Have you paid up to the last full AP end date?</legend>
 
 
 
@@ -218,7 +236,7 @@
 
                 <br \="">
 
-                <button id="submit" name="submit" class="button " type="submit">Complete edit details</button>
+                <button id="submit" name="submit" class="button " type="submit">Save</button>
 
               </form>
             </div>

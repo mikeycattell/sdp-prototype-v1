@@ -5,8 +5,7 @@
 {% endblock %}
 
 {% block content %}
- <link href="https://design-system.service.gov.uk/stylesheets/main-f6bfcc94697eaee2e00b08e160414707.css" rel="stylesheet" media="all" />
-
+<link href="https://design-system.service.gov.uk/stylesheets/main-f6bfcc94697eaee2e00b08e160414707.css" rel="stylesheet" media="all" />
 
 <div class="gov-uk-wrapper">
   <main id="content" role="main" class="">
@@ -73,16 +72,16 @@
             Make this claimant <a href="check-eligibility.html">eligible</a>
           </div>-->
 
-          <h3 class="heading-medium ">Izzy words</h3>
-          <form action='eligible-answer' method='post' class='form' autocomplete='off'>
-          <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-            Make this claimant eligible
-          </button>
-        </form>
-
 
           <div class="grid-row">
             <div class="column-full">
+
+              <h3 class="heading-medium ">Izzy words</h3>
+              <form action='eligible-answer-inelig' method='post' class='form' autocomplete='off'>
+              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Make this claimant ineligible
+              </button>
+            </form>
 
               <form action="/sdp-agent/edit-claimant/5d7bc2f7c9e77c01760529c3" method="post">
 

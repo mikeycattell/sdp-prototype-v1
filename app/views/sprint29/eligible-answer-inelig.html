@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="gov-uk-wrapper">
+  <main id="content" role="main" class="">
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="column-full">
+
+        <div class="sdp-claimant-details-large">
+          <div class="sdp-claimant-details-upper-wrapper">
+            <div class="sdp-claimant-details-top-left">
+              <p class="sdp-claimant-details-nino heading-large">SA108866C</p>
+            </div>
+            <div class="sdp-task-type-wrapper sdp-claimant-details-top-right">
+              <span class="sdp-details-task-type">CHECK ELIGIBILITY</span>
+            </div>
+          </div>
+          <hr class="sdp-details-rule">
+          <div class="sdp-uc-link-wrapper">
+            <a class="sdp-uc-link" href="https://agent-training04.ucd.gpn.gov.uk/agent/claimant-actions/b868a0bb-a29a-45a7-a980-c334a86837d6" target="_blank">View claimant in Universal Credit (link opens in new tab)</a>
+
+            <span class="sdp-case-owner-text">Assigned to: You</span>
+
+          </div>
+        </div>
+
+        <main role="main">
+          <div class="grid-row">
+            <div class="column-full">
+
+              <nav class="navigation-secondary">
+                <ul>
+                  <li>
+                    <a href="check-eligibility" aria-current="section">Next case action</a>
+                  </li>
+                  <li>
+                    <a href="case-history.html">Case history</a>
+                  </li>
+                  <li>
+                    <a href="edit-claimant">Edit claimant</a>
+                  </li>
+                  <li>
+                    <a href="payment-page">Payment page</a>
+                  </li>
+                  <!-- <li>
+                  <a href="find-claimant-payment">Payment history</a>
+                </li> -->
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </main>
+
+
+
+
+
+  <div class="govuk-form-group">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="heading-large">Confirm you want to make SA108866C ineligible for payment?</h1>
+      <div class="govuk-inset-text">
+        Making the claimant ineligible means you will remove them from the system
+      </div>
+    </legend>
+
+    <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+      <div class="govuk-radios" data-module="radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="readytomove-1" name="readytomove" type="radio" value="Ready to move" data-aria-controls="conditional-citizenship-conditional-0" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+          <label class="govuk-label govuk-radios__label" for="readytomove-1">
+            No
+          </label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="readytomove-2" name="readytomove" type="radio" value="Not ready to receive the Migration Notice" data-aria-controls="conditional-citizenship-conditional-1" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+          <label class="govuk-label govuk-radios__label" for="readytomove-2">
+            Yes
+          </label>
+        </div>
+
+        <p class="govuk-body govuk-!-margin-bottom-7"></p>
+        <div  id="conditional-citizenship-conditional-1">
+          <div class="govuk-form-group">
+            <p class="govuk-body govuk-!-margin-bottom-4"></p>
+            <label class="govuk-label" for="contact-by-email">
+              <p class="govuk-body govuk-!-font-weight-bold">Why *izzy*?</p>
+            </label>
+
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="vehicle-type-car" name="vehicle-type" type="radio" value="Health condition" {{ checked("vehicle-type", "Working") }}>
+                <label class="govuk-label govuk-radios__label" for="vehicle-type-car">
+                  Choice 1
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="vehicle-type-lorry" name="vehicle-type" type="radio" value="Domestic violence" {{ checked("vehicle-type", "Not working") }}>
+                <label class="govuk-label govuk-radios__label" for="vehicle-type-lorry">
+                  Choice 2
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="vehicle-type-lorry" name="vehicle-type" type="radio" value="Does not want to move" {{ checked("vehicle-type", "Not working") }}>
+                <label class="govuk-label govuk-radios__label" for="vehicle-type-lorry">
+                  Choice 3
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="migrationnotice-12" name="vehicle-type" type="radio" value="Another reason" data-aria-controls="conditional-migrationnotice-12">
+                <label class="govuk-label govuk-radios__label" for="migrationnotice-12">
+                  Choice 4
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-migrationnotice-12">
+                <div class="govuk-date-input" id="passport-issued">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+            <form action='success-page-inelig' method='post' class='form' autocomplete='off'>
+              <button class="govuk-button" data-module="govuk-button">
+                Make this claimant ineligible
+              </button>
+            </form>
+
+            </main>
+
+
+          <script src="https://design-system.service.gov.uk/javascripts/govuk-frontend-5a043b61d9ca00f1e1fcc0f6c6b0835c.js"></script>
+
+          {% endblock %}
