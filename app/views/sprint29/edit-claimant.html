@@ -71,39 +71,33 @@
 
           <!--<div class="govuk-inset-text">
             Make this claimant <a href="check-eligibility.html">eligible</a>
-          </div>-->
+          </div>
 
-          <h3 class="heading-medium ">Izzy words</h3>
+          <h3 class="heading-medium ">Do you need to change this claimant's status?</h3>
           <form action='eligible-answer' method='post' class='form' autocomplete='off'>
           <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
             Make this claimant eligible
-          </button>
+          </button>-->
+          <form action='eligible-answer' method='post' class='form' autocomplete='off'>
+          <div class="govuk-inset-text">
+            <h3 class="heading-medium ">Do you need to change this claimant's status?</h3>
+            <!--<a href="check-eligibility.html">Make this claimant eligible</a>-->
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Make this claimant eligible
+            </button>
+          </div>
+
         </form>
 
 
           <div class="grid-row">
             <div class="column-full">
 
-              <form action="/sdp-agent/edit-claimant/5d7bc2f7c9e77c01760529c3" method="post">
+              <form action="success-page-edit" method="post">
 
                 <div id="hasUcfsCa" class=" form-group-related">
                   <h3 class="heading-medium ">Carers</h3>
-                  <fieldset>
 
-                    <div class="form-group">
-                      <fieldset>
-                        <legend>
-                          <h3 class="form-label-bold">Verify that the claimant should be processed</h3>
-
-                        </legend>
-                        <div class="multiple-choice form-group-related">
-                          <input id="verifyClaimantData" name="verifyClaimantData" type="checkbox" value="true">
-                          <label for="verifyClaimantData">Yes</label>
-
-                        </div>
-                      </fieldset>
-                    </div>
-                    </fieldset>
                     <fieldset>
                     <legend class="form-label form-label-bold">Does the claimant have a carer who gets UC Carer Element?</legend>
 
@@ -308,8 +302,8 @@
 
                 <br \="">
 
-
-                <button href="success-page" id="submit" name="submit" class="button " type="submit">Save</button>
+                <form action='success-page' method='post' class='form' autocomplete='off'>
+                  <button id="submit" name="submit" class="button " type="submit">Save</button>
 
               </form>
 

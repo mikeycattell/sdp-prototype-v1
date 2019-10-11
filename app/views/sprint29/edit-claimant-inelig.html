@@ -75,34 +75,21 @@
 
           <div class="grid-row">
             <div class="column-full">
-
-              <h3 class="heading-medium ">Izzy words</h3>
+              <form action='eligible-answer-inelig' method='post' class='form' autocomplete='off'>
+                <div class="govuk-inset-text">
+              <h3 class="heading-medium ">Do you need to change this claimant's status?</h3>
               <form action='eligible-answer-inelig' method='post' class='form' autocomplete='off'>
               <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
                 Make this claimant ineligible
               </button>
+              </div>
             </form>
 
               <form action="/sdp-agent/edit-claimant/5d7bc2f7c9e77c01760529c3" method="post">
 
                 <div id="hasUcfsCa" class=" form-group-related">
                   <h3 class="heading-medium ">Carers</h3>
-                  <fieldset>
 
-                    <div class="form-group">
-                      <fieldset>
-                        <legend>
-                          <h3 class="form-label-bold">Verify that the claimant should be processed</h3>
-
-                        </legend>
-                        <div class="multiple-choice form-group-related">
-                          <input id="verifyClaimantData" name="verifyClaimantData" type="checkbox" value="true">
-                          <label for="verifyClaimantData">Yes</label>
-
-                        </div>
-                      </fieldset>
-                    </div>
-                    </fieldset>
                     <fieldset>
                     <legend class="form-label form-label-bold">Does the claimant have a carer who gets UC Carer Element?</legend>
 
