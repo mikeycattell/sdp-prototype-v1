@@ -75,6 +75,7 @@
 
           <div class="grid-row">
             <div class="column-full">
+              <!--
               <form action='eligible-answer-inelig' method='post' class='form' autocomplete='off'>
                 <div class="govuk-inset-text">
               <h3 class="heading-medium ">Do you need to change this claimant's status?</h3>
@@ -84,8 +85,27 @@
               </button>
               </div>
             </form>
+            -->
 
-              <form action="/sdp-agent/edit-claimant/5d7bc2f7c9e77c01760529c3" method="post">
+            <div id="hasUcfsCa" class=" form-group-related">
+
+                <fieldset>
+                <legend class="form-label form-label-bold">Verify that the claimant should be processed</legend>
+
+                <div class="multiple-choice">
+                  <input id="vertifyclaimant-1" type="radio" name="vertifyclaimant" value="true" data-original="false">
+                  <label for="vertifyclaimant-1">Yes</label>
+                </div>
+
+                <div class="multiple-choice">
+                  <input id="vertifyclaimant-2" type="radio" name="vertifyclaimant" value="false" checked="checked" data-original="false">
+                  <label for="vertifyclaimant-2">No</label>
+                </div>
+
+              </fieldset>
+            </div>
+
+              <form action="success-page-inelig" method="post">
 
                 <div id="hasUcfsCa" class=" form-group-related">
                   <h3 class="heading-medium ">Carers</h3>
@@ -289,6 +309,34 @@
                       <label for="isInLcwra-2">No</label>
                     </div>
 
+                  </fieldset>
+                </div>
+
+                <div class="form-group-related fallback-date-input">
+                  <fieldset>
+                    <legend>
+                      <span class="form-label form-label-bold">
+                        UC claim date
+                      </span>
+                      <span class="form-hint">
+                        The current UC claim date is 28 April 2017
+                      </span>
+                    </legend>
+                    <div class="form-date">
+                      <div class="form-group form-group-day">
+                        <label class="form-label" for="dateOfUcClaim_day">Day</label>
+
+                        <input class="form-control js-disabled-date" id="dateOfUcClaim_day" name="dateOfUcClaim_day" value="" type="number">
+                      </div>
+                      <div class="form-group form-group-month">
+                        <label class="form-label" for="dateOfUcClaim_month">Month</label>
+                        <input class="form-control js-disabled-date" id="dateOfUcClaim_month" name="dateOfUcClaim_month" value="" type="number">
+                      </div>
+                      <div class="form-group form-group-year">
+                        <label class="form-label" for="dateOfUcClaim_year">Year</label>
+                        <input class="form-control js-disabled-date" id="dateOfUcClaim_year" name="dateOfUcClaim_year" value="" type="number">
+                      </div>
+                    </div>
                   </fieldset>
                 </div>
 
