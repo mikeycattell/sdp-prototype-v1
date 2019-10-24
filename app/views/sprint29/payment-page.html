@@ -96,7 +96,7 @@
 
           <div class="grid-row">
             <div class="column-full">
-
+<!--
               <div id="confirmPaid" class=" form-group-related">
                   <fieldset>
                   <legend class="form-label form-label-bold">Have you paid up to the last full AP end date?</legend>
@@ -184,11 +184,12 @@
 
 </fieldset>
 </div>
+-->
 
-              <!--<div class="govuk-form-group">
+              <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
                   <fieldset>
-                    <legend class="form-label form-label-bold">Have you paid up to the last full AP end date?</legend>
+                    <legend class="form-label form-label-bold">Confirm you have paid up to the last AP end date</legend>
 
                   <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                     <div class="govuk-radios__item">
@@ -198,7 +199,7 @@
                       </label>
                     </div>
                     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
-                      <form action="/sdp-agent/edit-claimant/5d7bc2f7c9e77c01760529c3" method="post">
+                      <form action="success-page-payment" method="post">
 
                         <div class="form-group" data-required="Please answer this question">
                           <label class="form-label-bold" for="sdpPaid">Amount of money paid
@@ -279,6 +280,9 @@
 
                         <br \="">
 
+                        <form action='success-page-payment' method='post' class='form' autocomplete='off'>
+                          <button id="submit" name="submit" class="button " type="submit">Save</button>
+                        </form>
 
                       </form>
 
@@ -291,16 +295,14 @@
                     </div>
                     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
                       <p>
-                        Making the claimant ineligible means you will remove them from the system
+                        You must have paid up to the last full AP end date to continue.
                       </p>
                     </div>
                   </div>
                 </fieldset>
-              </div>-->
+              </div>
 
-            <form action='success-page-payment' method='post' class='form' autocomplete='off'>
-              <button id="submit" name="submit" class="button " type="submit">Save</button>
-            </form>
+
             </div>
           </div>
 
