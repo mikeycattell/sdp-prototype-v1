@@ -1,0 +1,361 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+<link href="https://design-system.service.gov.uk/stylesheets/main-f6bfcc94697eaee2e00b08e160414707.css" rel="stylesheet" media="all" />
+
+<div class="gov-uk-wrapper">
+  <main id="content" role="main" class="">
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+      </div>
+    </div>
+
+    <div class="grid-row">
+
+      <div class="column-full">
+        <div class="sdp-claimant-details-large">
+          <div class="sdp-claimant-details-upper-wrapper">
+            <div class="sdp-claimant-details-top-left">
+              <p class="sdp-claimant-details-nino heading-large">SA108866C</p>
+            </div>
+            <div class="sdp-task-type-wrapper sdp-claimant-details-top-right">
+              <span class="sdp-details-task-type">CHECK ELIGIBILITY</span>
+            </div>
+          </div>
+          <hr class="sdp-details-rule">
+          <div class="sdp-uc-link-wrapper">
+            <a class="sdp-uc-link" href="https://agent-training04.ucd.gpn.gov.uk/agent/claimant-actions/b868a0bb-a29a-45a7-a980-c334a86837d6" target="_blank">View claimant in Universal Credit (link opens in new tab)</a>
+
+            <span class="sdp-case-owner-text">Assigned to: You</span>
+
+          </div>
+        </div>
+
+        <main role="main">
+          <div class="grid-row">
+            <div class="column-full">
+
+              <nav class="navigation-secondary">
+                <ul>
+                  <li>
+                    <a href="check-eligibility" >Next case action</a>
+                  </li>
+                  <li>
+                    <a href="case-history.html">Case history</a>
+                  </li>
+                  <li>
+                    <a href="edit-claimant" class="active" >Edit claimant</a>
+                  </li>
+                  <li>
+                    <a href="payment-page">Record payment</a>
+                  </li>
+                  <!-- <li>
+                    <a href="find-claimant-payment">Payment history</a>
+                  </li> -->
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </main>
+
+        <div class="sdp-edit-claimant-wrapper">
+
+          <h1 class="heading-large">Edit claimant information</h1>
+
+          <!--<div class="govuk-inset-text">
+            Make this claimant <a href="check-eligibility.html">eligible</a>
+          </div>-->
+
+
+          <div class="grid-row">
+            <div class="column-full">
+              <!--
+              <form action='eligible-answer-inelig' method='post' class='form' autocomplete='off'>
+                <div class="govuk-inset-text">
+              <h3 class="heading-medium ">Do you need to change this claimant's status?</h3>
+              <form action='eligible-answer-inelig' method='post' class='form' autocomplete='off'>
+              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Make this claimant ineligible
+              </button>
+              </div>
+            </form>
+            -->
+
+            <div id="hasUcfsCa" class=" form-group-related">
+
+                <fieldset>
+                <legend class="form-label form-label-bold">Verify that the claimant should be processed</legend>
+
+                <div class="multiple-choice">
+                  <input id="vertifyclaimant-1" type="radio" name="vertifyclaimant" value="true" data-original="false">
+                  <label for="vertifyclaimant-1">Yes</label>
+                </div>
+
+                <div class="multiple-choice">
+                  <input id="vertifyclaimant-2" type="radio" name="vertifyclaimant" value="false" checked="checked" data-original="false">
+                  <label for="vertifyclaimant-2">No</label>
+                </div>
+
+              </fieldset>
+            </div>
+
+              <form action="success-page-inelig" method="post">
+
+                <div id="hasUcfsCa" class=" form-group-related">
+                  <h3 class="heading-medium ">Carers</h3>
+
+                    <fieldset>
+                    <legend class="form-label form-label-bold">Does the claimant have a carer who gets UC Carer Element?</legend>
+
+                    <div class="multiple-choice">
+                      <input id="hasUcfsCa-1" type="radio" name="hasUcfsCa" value="true" data-original="false">
+                      <label for="hasUcfsCa-1">Yes</label>
+                    </div>
+
+                    <div class="multiple-choice">
+                      <input id="hasUcfsCa-2" type="radio" name="hasUcfsCa" value="false" checked="checked" data-original="false">
+                      <label for="hasUcfsCa-2">No</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <div id="caLive" class=" form-group-related">
+                  <fieldset>
+                    <legend class="form-label form-label-bold">Does the claimant have a carer who gets UC Carer Allowance?</legend>
+
+                    <div class="multiple-choice">
+                      <input id="caLive-1" type="radio" name="caLive" value="true" data-original="false">
+                      <label for="caLive-1">Yes</label>
+                    </div>
+
+                    <div class="multiple-choice">
+                      <input id="caLive-2" type="radio" name="caLive" value="false" checked="checked" data-original="false">
+                      <label for="caLive-2">No</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <hr>
+
+                <div id="hasPip" class=" form-group-related">
+                  <h3 class="heading-medium ">Benefits</h3>
+                  <h3 class="heading-medium ">Is the claimant receiving:</h3>
+                  <fieldset>
+                    <legend class="form-label form-label-bold">PIP? (Daily living component at standard or enhanced rate)</legend>
+
+                    <div class="multiple-choice">
+                      <input id="hasPip-1" type="radio" name="hasPip" value="true" data-original="false">
+                      <label for="hasPip-1">Yes</label>
+                    </div>
+
+                    <div class="multiple-choice">
+                      <input id="hasPip-2" type="radio" name="hasPip" value="false" checked="checked" data-original="false">
+                      <label for="hasPip-2">No</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <div id="hasAfip" class=" form-group-related">
+
+                  <fieldset>
+                    <legend class="form-label form-label-bold"> AFIP?</legend>
+
+                    <div class="multiple-choice">
+                      <input id="hasAfip-1" type="radio" name="hasAfip" value="true" checked="checked" data-original="true">
+                      <label for="hasAfip-1">Yes</label>
+                    </div>
+
+                    <div class="multiple-choice">
+                      <input id="hasAfip-2" type="radio" name="hasAfip" value="false" data-original="true">
+                      <label for="hasAfip-2">No</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <div id="hasDla" class=" form-group-related">
+                  <fieldset>
+                    <legend class="form-label form-label-bold">DLA? (Care component at middle or higher rate)</legend>
+
+                    <div class="multiple-choice">
+                      <input id="hasDla-1" type="radio" name="hasDla" value="true" data-original="false">
+                      <label for="hasDla-1">Yes</label>
+                    </div>
+
+                    <div class="multiple-choice">
+                      <input id="hasDla-2" type="radio" name="hasDla" value="false" checked="checked" data-original="false">
+                      <label for="hasDla-2">No</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <div id="hasCaaOrAa" class=" form-group-related">
+                  <fieldset>
+                    <legend class="form-label form-label-bold">AA or CAA paid with IIDB or WP?</legend>
+                    <div class="multiple-choice">
+                      <input id="hasCaaOrAa-1" type="radio" name="hasCaaOrAa" value="true" data-original="false">
+                      <label for="hasCaaOrAa-1">Yes</label>
+                    </div>
+
+                    <div class="multiple-choice">
+                      <input id="hasCaaOrAa-2" type="radio" name="hasCaaOrAa" value="false" checked="checked" data-original="false">
+                      <label for="hasCaaOrAa-2">No</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+                <hr>
+                <div id="ucClaimBreak" class=" form-group-related">
+                  <fieldset>
+                    <legend class="form-label form-label-bold">Has the claimant had breaks in their UC claim?</legend>
+
+                    <div class="multiple-choice">
+                      <input id="ucClaimBreak-1" type="radio" name="ucClaimBreak" value="true" data-original="false">
+                      <label for="ucClaimBreak-1">Yes</label>
+                    </div>
+
+
+                    <div class="multiple-choice">
+                      <input id="ucClaimBreak-2" type="radio" name="ucClaimBreak" value="false" checked="checked" data-original="false">
+                      <label for="ucClaimBreak-2">No</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+                <hr>
+                <div id="relationshipStatusBefore" class=" form-group-related">
+                  <fieldset>
+                    <legend class="form-label form-label-bold">What was their legacy relationship status?</legend>
+
+                    <div class="multiple-choice">
+                      <input id="relationshipStatusBefore-1" type="radio" name="relationshipStatusBefore" value="couple" data-original="single">
+                      <label for="relationshipStatusBefore-1">Couple</label>
+                    </div>
+
+                    <div class="multiple-choice">
+                      <input id="relationshipStatusBefore-2" type="radio" name="relationshipStatusBefore" value="single" checked="checked" data-original="single">
+                      <label for="relationshipStatusBefore-2">Single</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <hr>
+
+                <div id="claimingUC" class=" form-group-related">
+                  <h3 class="heading-medium ">Universal Credit</h3>
+                  <fieldset>
+                    <legend class="form-label form-label-bold">Is the claimant getting paid Universal Credit?</legend>
+
+                    <div class="multiple-choice">
+                      <input id="claimingUC-1" type="radio" name="claimingUC" value="true" data-original="">
+                      <label for="claimingUC-1">Yes</label>
+                    </div>
+
+                    <div class="multiple-choice">
+                      <input id="claimingUC-2" type="radio" name="claimingUC" value="false" data-original="">
+                      <label for="claimingUC-2">No</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <div id="relationshipStatus" class=" form-group-related">
+                  <fieldset>
+                    <legend class="form-label form-label-bold">What is the claimant's UC relationship status?</legend>
+
+                    <span class="form-hint">
+                      The previous status was single
+                    </span>
+
+                    <div class="multiple-choice">
+                      <input id="relationshipStatus-1" type="radio" name="relationshipStatus" value="couple" data-original="single">
+                      <label for="relationshipStatus-1">Couple</label>
+                    </div>
+
+                    <div class="multiple-choice">
+                      <input id="relationshipStatus-2" type="radio" name="relationshipStatus" value="single" checked="checked" data-original="single">
+                      <label for="relationshipStatus-2">Single</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+
+
+                <div id="isInLcwra" class=" form-group-related">
+                  <fieldset>
+                    <legend class="form-label form-label-bold">Has the claimant had a LCWRA decision?</legend>
+
+
+
+                    <div class="multiple-choice">
+                      <input id="isInLcwra-1" type="radio" name="isInLcwra" value="true" data-original="">
+                      <label for="isInLcwra-1">Yes</label>
+                    </div>
+
+                    <div class="multiple-choice">
+                      <input id="isInLcwra-2" type="radio" name="isInLcwra" value="false" data-original="">
+                      <label for="isInLcwra-2">No</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <div class="form-group-related fallback-date-input">
+                  <fieldset>
+                    <legend>
+                      <span class="form-label form-label-bold">
+                        UC claim date
+                      </span>
+                      <span class="form-hint">
+                        The current UC claim date is 28 April 2017
+                      </span>
+                    </legend>
+                    <div class="form-date">
+                      <div class="form-group form-group-day">
+                        <label class="form-label" for="dateOfUcClaim_day">Day</label>
+
+                        <input class="form-control js-disabled-date" id="dateOfUcClaim_day" name="dateOfUcClaim_day" value="" type="number">
+                      </div>
+                      <div class="form-group form-group-month">
+                        <label class="form-label" for="dateOfUcClaim_month">Month</label>
+                        <input class="form-control js-disabled-date" id="dateOfUcClaim_month" name="dateOfUcClaim_month" value="" type="number">
+                      </div>
+                      <div class="form-group form-group-year">
+                        <label class="form-label" for="dateOfUcClaim_year">Year</label>
+                        <input class="form-control js-disabled-date" id="dateOfUcClaim_year" name="dateOfUcClaim_year" value="" type="number">
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <br \="">
+
+
+                <button href="success-page" id="submit" name="submit" class="button " type="submit">Save</button>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+</div>
+
+{% endblock %}
