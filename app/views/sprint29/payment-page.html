@@ -27,7 +27,7 @@
               <p class="sdp-claimant-details-nino heading-large">SA108866C</p>
             </div>
             <div class="sdp-task-type-wrapper sdp-claimant-details-top-right">
-              <span class="sdp-details-task-type">VERIFY CLAIMANT DATA</span>
+              <span class="sdp-details-task-type">CHECK ELIGIBILITY</span>
             </div>
           </div>
           <hr class="sdp-details-rule">
@@ -93,104 +93,17 @@
         <div class="sdp-edit-claimant-wrapper">
 
           <h1 class="heading-large">Record payment</h1>
+          <div class="govuk-inset-text">
+            Make sure you have paid up to the last full AP end date
+          </div>
 
           <div class="grid-row">
             <div class="column-full">
-<!--
-              <div id="confirmPaid" class=" form-group-related">
-                  <fieldset>
-                  <legend class="form-label form-label-bold">Have you paid up to the last full AP end date?</legend>
 
-                  <div class="multiple-choice">
-                      <input id="confirmPaid-1" type="radio" name="confirmPaid" value="true" data-original="">
-                      <label for="confirmPaid-1">Yes</label>
-                  </div>
-
-                  <div class="multiple-choice">
-                      <input id="confirmPaid-2" type="radio" name="confirmPaid" value="false" data-original="">
-                      <label for="confirmPaid-2">No</label>
-                  </div>
-
-              </fieldset>
-              </div>
-
-              <div class="form-group-related">
-    <label class="form-label-bold" for="sdpPaid">Amount of money paid
-
-            <span class="form-hint">
-                For example, 150.50
-            </span>
-
-
-            <div class="govuk-currency-input">
-                                   <div class="govuk-currency-input__inner">
-                                     <span class="govuk-currency-input__inner__unit">£</span>
-                                     <input class="govuk-currency-input__inner__input form-control form-control-1-4" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric="" type="text" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?">
-                                   </div>
-                                 </div>
-    </label>
-</div>
-
-<div class="form-group-related fallback-date-input">
-  <fieldset>
-    <legend>
-      <span class="form-label form-label-bold">
-        Date payment was authorised
-      </span>
-
-
-
-
-    </legend>
-    <div class="form-date">
-      <div class="form-group form-group-day">
-        <label class="form-label" for="paidOn_day">Day</label>
-
-        <input class="form-control js-disabled-date" id="paidOn_day" name="paidOn_day" value="" type="number">
-      </div>
-      <div class="form-group form-group-month">
-        <label class="form-label" for="paidOn_month">Month</label>
-        <input class="form-control js-disabled-date" id="paidOn_month" name="paidOn_month" value="" type="number">
-      </div>
-      <div class="form-group form-group-year">
-        <label class="form-label" for="paidOn_year">Year</label>
-        <input class="form-control js-disabled-date" id="paidOn_year" name="paidOn_year" value="" type="number">
-      </div>
-    </div>
-  </fieldset>
-</div>
-<div class="form-group-related">
-    <label class="form-label-bold" for="cpsRefNum">CPS reference number
-
-
-        <input id="cpsRefNum" class="form-control block-input" type="text" name="cpsRefNum" value="">
-    </label>
-</div>
-<div id="paidFor" class=" form-group-related">
-    <fieldset>
-    <legend class="form-label form-label-bold">Reason for payment</legend>
-
-
-
-    <div class="multiple-choice">
-        <input id="paidFor-1" type="radio" name="paidFor" value="eligibility" data-original="">
-        <label for="paidFor-1">Eligibility</label>
-    </div>
-
-    <div class="multiple-choice">
-        <input id="paidFor-2" type="radio" name="paidFor" value="lcwra" data-original="">
-        <label for="paidFor-2">LCWRA change</label>
-    </div>
-
-</fieldset>
-</div>
--->
-
-              <div class="govuk-form-group">
+              <!--<div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
                   <fieldset>
-                    <legend class="form-label form-label-bold">Confirm you have paid up to the last AP end date</legend>
-
+                    <legend class="form-label form-label-bold">Have you paid up to the last full AP end date?</legend>
                   <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
@@ -199,7 +112,7 @@
                       </label>
                     </div>
                     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
-                      <form action="success-page-payment" method="post">
+                      <form action="/sdp-agent/edit-claimant/5d7bc2f7c9e77c01760529c3" method="post">
 
                         <div class="form-group" data-required="Please answer this question">
                           <label class="form-label-bold" for="sdpPaid">Amount of money paid
@@ -216,6 +129,26 @@
                              </div>
                            </div>
                          </div>
+
+                        <div id="confirmPaid" class=" form-group-related">
+                          <fieldset>
+                            <legend class="form-label form-label-bold">Have you paid up to the last full AP end date?</legend>
+
+
+
+                            <div class="multiple-choice">
+                              <input id="confirmPaid-1" type="radio" name="confirmPaid" value="true" data-original="">
+                              <label for="confirmPaid-1">Yes</label>
+                            </div>
+
+                            <div class="multiple-choice">
+                              <input id="confirmPaid-2" type="radio" name="confirmPaid" value="false" data-original="">
+                              <label for="confirmPaid-2">No</label>
+                            </div>
+
+                          </fieldset>
+                        </div>
+
 
 
                         <div class="form-group-related fallback-date-input">
@@ -280,9 +213,6 @@
 
                         <br \="">
 
-                        <form action='success-page-payment' method='post' class='form' autocomplete='off'>
-                          <button id="submit" name="submit" class="button " type="submit">Save</button>
-                        </form>
 
                       </form>
 
@@ -295,14 +225,107 @@
                     </div>
                     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
                       <p>
-                        You must have paid up to the last full AP end date to continue.
+                        Making the claimant ineligible means you will remove them from the system
                       </p>
                     </div>
                   </div>
                 </fieldset>
+              </div>-->
+
+                            <!--<div id="confirmPaid" class=" form-group-related">
+
+                                <fieldset>
+                                <legend class="form-label form-label-bold">Have you paid up to the last full AP end date?</legend>
+
+                                <div class="multiple-choice">
+                                    <input id="confirmPaid-1" type="radio" name="confirmPaid" value="true" data-original="">
+                                    <label for="confirmPaid-1">Yes</label>
+                                </div>
+
+                                <div class="multiple-choice">
+                                    <input id="confirmPaid-2" type="radio" name="confirmPaid" value="false" data-original="">
+                                    <label for="confirmPaid-2">No</label>
+                                </div>
+
+                            </fieldset>
+                            </div>
+                          -->
+
+                            <div class="form-group-related">
+                  <label class="form-label-bold" for="sdpPaid">Amount of money paid
+
+                          <span class="form-hint">
+                              For example, 150.50
+                          </span>
+
+
+                          <div class="govuk-currency-input">
+                                                 <div class="govuk-currency-input__inner">
+                                                   <span class="govuk-currency-input__inner__unit">£</span>
+                                                   <input class="govuk-currency-input__inner__input form-control form-control-1-4" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric="" type="text" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?">
+                                                 </div>
+                                               </div>
+                  </label>
+              </div>
+
+              <div class="form-group-related fallback-date-input">
+                <fieldset>
+                  <legend>
+                    <span class="form-label form-label-bold">
+                      Date payment was authorised
+                    </span>
+
+
+
+
+                  </legend>
+                  <div class="form-date">
+                    <div class="form-group form-group-day">
+                      <label class="form-label" for="paidOn_day">Day</label>
+
+                      <input class="form-control js-disabled-date" id="paidOn_day" name="paidOn_day" value="" type="number">
+                    </div>
+                    <div class="form-group form-group-month">
+                      <label class="form-label" for="paidOn_month">Month</label>
+                      <input class="form-control js-disabled-date" id="paidOn_month" name="paidOn_month" value="" type="number">
+                    </div>
+                    <div class="form-group form-group-year">
+                      <label class="form-label" for="paidOn_year">Year</label>
+                      <input class="form-control js-disabled-date" id="paidOn_year" name="paidOn_year" value="" type="number">
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="form-group-related">
+                  <label class="form-label-bold" for="cpsRefNum">CPS reference number
+
+
+                      <input id="cpsRefNum" class="form-control block-input" type="text" name="cpsRefNum" value="">
+                  </label>
+              </div>
+              <div id="paidFor" class=" form-group-related">
+                  <fieldset>
+                  <legend class="form-label form-label-bold">Reason for payment</legend>
+
+
+
+                  <div class="multiple-choice">
+                      <input id="paidFor-1" type="radio" name="paidFor" value="eligibility" data-original="">
+                      <label for="paidFor-1">Eligibility</label>
+                  </div>
+
+                  <div class="multiple-choice">
+                      <input id="paidFor-2" type="radio" name="paidFor" value="lcwra" data-original="">
+                      <label for="paidFor-2">LCWRA change</label>
+                  </div>
+
+              </fieldset>
               </div>
 
 
+            <form action='success-page-payment' method='post' class='form' autocomplete='off'>
+              <button id="submit" name="submit" class="button " type="submit">Save</button>
+            </form>
             </div>
           </div>
 
