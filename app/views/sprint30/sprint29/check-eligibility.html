@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="gov-uk-wrapper">
+  <main id="content" role="main" class="">
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+      </div>
+    </div>
+
+    <div class="grid-row">
+
+      <div class="column-full">
+
+        <div class="sdp-claimant-details-large">
+          <div class="sdp-claimant-details-upper-wrapper">
+            <div class="sdp-claimant-details-top-left">
+              <p class="sdp-claimant-details-nino heading-large">SA108866C</p>
+            </div>
+            <div class="sdp-task-type-wrapper sdp-claimant-details-top-right">
+              <span class="sdp-details-task-type">VERIFY CLAIMANT DATA</span>
+            </div>
+          </div>
+          <hr class="sdp-details-rule">
+          <div class="sdp-uc-link-wrapper">
+            <a class="sdp-uc-link" href="https://agent-training04.ucd.gpn.gov.uk/agent/claimant-actions/b868a0bb-a29a-45a7-a980-c334a86837d6" target="_blank">View claimant in Universal Credit (link opens in new tab)</a>
+
+          </div>
+        </div>
+
+        <main role="main">
+          <div class="grid-row">
+            <div class="column-full">
+
+              <nav class="navigation-secondary">
+                <ul>
+                  <li>
+                    <a href="check-eligibility"  class="active">Next case action</a>
+                  </li>
+                  <li>
+                    <a href="case-history.html">Case history</a>
+                  </li>
+                  <li>
+                    <a href="edit-claimant">Edit claimant</a>
+                  </li>
+                  <li>
+                    <a href="payment-page">Record payment</a>
+                  </li>
+                  <!-- <li>
+                    <a href="find-claimant-payment">Payment history</a>
+                  </li> -->
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </main>
+
+        <form class="" action="/sdp-agent/task/5d7bc2f7c9e77c01760529c3" method="post">
+          <input id="_id" type="hidden" name="_id" value="5d7bc2f7c9e77c01760529c3">
+          <input id="taskType" type="hidden" name="taskType" value="checkEligibility">
+          <input id="_csrf" type="hidden" name="_csrf" value="OGl4Td5F-p6q4DWdOrpeHSnSKHw5z5LZLT3I">
+          <div class="sdp-task-wrapper">
+
+            <h1 class="heading-large">Check eligibility for single payment</h1>
+
+            <div id="claimingUC" class=" form-group-related">
+              <fieldset>
+                <legend class="form-label form-label-bold">Is the claimant getting paid Universal Credit?</legend>
+
+                <div class="multiple-choice">
+                  <input id="claimingUC-1" type="radio" name="claimingUC" value="true" data-target="checkEligibilityRelationshipChangeWrapper" data-original="">
+                  <label for="claimingUC-1">Yes</label>
+                </div>
+
+                <div class="multiple-choice">
+                  <input id="claimingUC-2" type="radio" name="claimingUC" value="false" data-original="">
+                  <label for="claimingUC-2">No</label>
+                </div>
+
+              </fieldset>
+            </div>
+
+            <div id="checkEligibilityRelationshipChangeWrapper" class="js-hidden">
+
+              <div id="relationshipChanged" class=" form-group-related">
+                <fieldset>
+                  <legend class="form-label form-label-bold">What is the claimants relationship status in Universal Credit?</legend>
+
+                  <div class="multiple-choice">
+                    <input id="relationshipChanged-1" type="radio" name="relationshipChanged" value="false" data-target="checkEligibilityWorkGroupWrapper" data-original="">
+                    <label for="relationshipChanged-1">Single</label>
+                  </div>
+
+                  <div class="multiple-choice">
+                    <input id="relationshipChanged-2" type="radio" name="relationshipChanged" value="true" data-original="">
+                    <label for="relationshipChanged-2">Couple</label>
+                  </div>
+
+                </fieldset>
+              </div>
+
+              <div id="checkEligibilityWorkGroupWrapper" class="js-hidden">
+
+                <div id="isInLcwra" class=" form-group-related">
+                  <fieldset>
+                    <legend class="form-label form-label-bold">Is the claimant's work capability LCWRA?</legend>
+
+                    <div class="multiple-choice">
+                      <input id="isInLcwra-1" type="radio" name="isInLcwra" value="true" data-original="">
+                      <label for="isInLcwra-1">Yes</label>
+                    </div>
+
+                    <div class="multiple-choice">
+                      <input id="isInLcwra-2" type="radio" name="isInLcwra" value="false" data-original="">
+                      <label for="isInLcwra-2">No</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+              </div>
+
+            </div>
+
+            <button id="submit" name="submit" class="button " type="submit">Save and continue</button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </main>
+</div>
+
+{% endblock %}

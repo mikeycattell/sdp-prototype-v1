@@ -24,7 +24,7 @@
               <p class="sdp-claimant-details-nino heading-large">SA108866C</p>
             </div>
             <div class="sdp-task-type-wrapper sdp-claimant-details-top-right">
-              <span class="sdp-details-task-type">CHECK ELIGIBILITY</span>
+              <span class="sdp-details-task-type">VERIFY CLAIMANT DATA</span>
             </div>
           </div>
           <hr class="sdp-details-rule">
@@ -55,48 +55,49 @@
                     <a href="payment-page">Record payment</a>
                   </li>
                   <!-- <li>
-                  <a href="find-claimant-payment">Payment history</a>
-                </li> -->
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </main>
-
-        <div class="govuk-width-container">
-          <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
-            <div class="govuk-grid-row">
-              <div class="govuk-grid-column-two-thirds">
-                <div class="govuk-panel govuk-panel--confirmation">
-                  <h1 class="govuk-panel__title">
-                    Claimant details saved
-                  </h1>
-                  <div class="govuk-panel__body">
-                    Claimant is now<br><strong style="font-weight: bold;">eligible</strong>
-                  </div>
-                </div>
-                
-                <h2 class="govuk-heading-m">What do you want to do now?</h2>
-
-                <p class="govuk-body">
-                  <a href="payment-page">Record payment</a>
-                </p>
-                <p class="govuk-body">
-                  <a href="edit-claimant">Check claimant details</a>
-                </p>
-                <p class="govuk-body">
-                  <a href="">Dashboard</a>
-                </p>
-              </div>
+                    <a href="find-claimant-payment">Payment history</a>
+                  </li> -->
+                </ul>
+              </nav>
             </div>
-          </main>
+          </div>
+        </main>
+
+        <div class="sdp-case-history-wrapper">
+
+          <h1 class="heading-large">Confirm you want to make SA108866C eligible for payment?</h1>
+
+          <div class="govuk-form-group"><br>
+            <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                          Yes
+                        </label>
+                      </div>
+
+
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-inset-text">
+            You will need to complete the claimant responses to make them eligible
+          </div>
+          <br>
+          <form action='check-eligibility' method='post' class='form' autocomplete='off'>
+          <button class="govuk-button" data-module="govuk-button">
+            Make this claimant eligible
+          </button>
+        </form>
+
         </div>
 
       </div>
 
     </div>
-
-
 
   </main>
 </div>

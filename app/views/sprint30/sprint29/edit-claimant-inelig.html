@@ -5,8 +5,7 @@
 {% endblock %}
 
 {% block content %}
- <link href="https://design-system.service.gov.uk/stylesheets/main-f6bfcc94697eaee2e00b08e160414707.css" rel="stylesheet" media="all" />
-
+<link href="https://design-system.service.gov.uk/stylesheets/main-f6bfcc94697eaee2e00b08e160414707.css" rel="stylesheet" media="all" />
 
 <div class="gov-uk-wrapper">
   <main id="content" role="main" class="">
@@ -69,45 +68,61 @@
 
           <h1 class="heading-large">Edit claimant information</h1>
 
+          <!--<div class="govuk-inset-text">
+            Make this claimant <a href="check-eligibility.html">eligible</a>
+          </div>-->
+
+
           <div class="grid-row">
             <div class="column-full">
+              <!--
+              <form action='eligible-answer-inelig' method='post' class='form' autocomplete='off'>
+                <div class="govuk-inset-text">
+              <h3 class="heading-medium ">Do you need to change this claimant's status?</h3>
+              <form action='eligible-answer-inelig' method='post' class='form' autocomplete='off'>
+              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Make this claimant ineligible
+              </button>
+              </div>
+            </form>
+            -->
 
-              <form action="success-page" method="post">
+            <div id="hasUcfsCa" class=" form-group-related">
 
-                <div id="hasUcfsCa" class=" form-group-related">
+                <fieldset>
+                <legend class="form-label form-label-bold">Is this claimant eligible to continue?</legend>
 
-                    <fieldset>
-                    <legend class="form-label form-label-bold">Is this claimant eligible to continue?</legend>
-
-                    <div class="multiple-choice">
-                      <input id="vertifyclaimant-1" type="radio" name="vertifyclaimant" value="true" data-original="false">
-                      <label for="vertifyclaimant-1">Yes</label>
-                    </div>
-
-                    <div class="multiple-choice">
-                      <input id="vertifyclaimant-2" type="radio" name="vertifyclaimant" value="false" checked="checked" data-original="false">
-                      <label for="vertifyclaimant-2">No</label>
-                    </div>
-
-                  </fieldset>
+                <div class="multiple-choice">
+                  <input id="vertifyclaimant-1" type="radio" name="vertifyclaimant" value="true" data-original="false">
+                  <label for="vertifyclaimant-1">Yes</label>
                 </div>
 
-                <div id="relationshipStatusBefore" class=" form-group-related">
-                  <fieldset>
-                    <legend class="form-label form-label-bold">What was their legacy relationship status?</legend>
-
-                    <div class="multiple-choice">
-                      <input id="relationshipStatusBefore-1" type="radio" name="relationshipStatusBefore" value="couple" data-original="single">
-                      <label for="relationshipStatusBefore-1">Couple</label>
-                    </div>
-
-                    <div class="multiple-choice">
-                      <input id="relationshipStatusBefore-2" type="radio" name="relationshipStatusBefore" value="single" checked="checked" data-original="single">
-                      <label for="relationshipStatusBefore-2">Single</label>
-                    </div>
-
-                  </fieldset>
+                <div class="multiple-choice">
+                  <input id="vertifyclaimant-2" type="radio" name="vertifyclaimant" value="false" checked="checked" data-original="false">
+                  <label for="vertifyclaimant-2">No</label>
                 </div>
+
+              </fieldset>
+            </div>
+
+            <div id="relationshipStatusBefore" class=" form-group-related">
+              <fieldset>
+                <legend class="form-label form-label-bold">What was their legacy relationship status?</legend>
+
+                <div class="multiple-choice">
+                  <input id="relationshipStatusBefore-1" type="radio" name="relationshipStatusBefore" value="couple" data-original="single">
+                  <label for="relationshipStatusBefore-1">Couple</label>
+                </div>
+
+                <div class="multiple-choice">
+                  <input id="relationshipStatusBefore-2" type="radio" name="relationshipStatusBefore" value="single" checked="checked" data-original="single">
+                  <label for="relationshipStatusBefore-2">Single</label>
+                </div>
+
+              </fieldset>
+            </div>
+
+              <form action="success-page-inelig" method="post">
 
                 <div id="hasUcfsCa" class=" form-group-related">
                   <h3 class="heading-medium ">Carers</h3>
@@ -217,6 +232,7 @@
                   </fieldset>
                 </div>
 
+
                 <hr>
 
                 <div id="claimingUC" class=" form-group-related">
@@ -237,7 +253,6 @@
                   </fieldset>
                 </div>
 
-
                 <div id="ucClaimBreak" class=" form-group-related">
                   <fieldset>
                     <legend class="form-label form-label-bold">Has the claimant had breaks in their UC claim?</legend>
@@ -255,7 +270,6 @@
 
                   </fieldset>
                 </div>
-
 
                 <div id="relationshipStatus" class=" form-group-related">
                   <fieldset>
@@ -279,18 +293,21 @@
                 </div>
 
 
+
                 <div id="isInLcwra" class=" form-group-related">
                   <fieldset>
-                    <legend class="form-label form-label-bold">What is the claimant's work capability decision?</legend>
+                    <legend class="form-label form-label-bold">Has it been decided the claimant's work capability is LCWRA?</legend>
+
+
 
                     <div class="multiple-choice">
                       <input id="isInLcwra-1" type="radio" name="isInLcwra" value="true" data-original="">
-                      <label for="isInLcwra-1">LCWRA</label>
+                      <label for="isInLcwra-1">Yes</label>
                     </div>
 
                     <div class="multiple-choice">
                       <input id="isInLcwra-2" type="radio" name="isInLcwra" value="false" data-original="">
-                      <label for="isInLcwra-2">LCW</label>
+                      <label for="isInLcwra-2">No</label>
                     </div>
 
                   </fieldset>
@@ -326,8 +343,9 @@
 
                 <br \="">
 
-                <form action='success-page' method='post' class='form' autocomplete='off'>
-                  <button id="submit" name="submit" class="button " type="submit">Save</button>
+
+                <button href="success-page" id="submit" name="submit" class="button " type="submit">Save</button>
+
               </form>
 
             </div>
