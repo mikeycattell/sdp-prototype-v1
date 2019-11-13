@@ -319,9 +319,16 @@
                       <span id="passport-issued-hint" class="govuk-hint">
                             For example, 12 11 2007
                       </span>
-                      <p><strong class="govuk-tag" style="background:	#6f777b; text-transform: none; font-size: 20px; float: left; margin-bottom: 16px;">
-                        The current UC claim date is 28 April 2017
-                      </strong></p>
+                      <div class="moj-banner">
+
+                      <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                      <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+                      C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" /></svg>
+
+                      <div class="moj-banner__message">
+                      <span class="moj-banner__assistive"></span>The current UC claim date is 28 April 2017.</div>
+
+                      </div>
                     </legend>
                     <div class="form-date">
                       <div class="form-group form-group-day">
@@ -363,5 +370,30 @@
     </div>
   </main>
 </div>
+
+<style>
+  .moj-banner {
+    border: 2px solid #666;
+    color: #666;
+    font-size: 0;
+    margin-bottom: 14px;
+    padding: 10px;
+}
+.moj-banner__message {
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    padding: 4px 0 0 0;
+    color: #0b0c0c;
+    display: block;
+    overflow: hidden;
+}
+.moj-banner__icon {
+    fill: currentColor;
+    float: left;
+    margin-right: 10px;
+}
+</style>
 
 {% endblock %}
