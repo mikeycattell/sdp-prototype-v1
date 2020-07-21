@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+<!-- <a href="check-eligibility-single" class="govuk-back-link">Edit eligibility details</a> -->
+<div class="govuk-width-container">
+
+<main class="govuk-main-wrapper">
+<div class="key-details-bar">
+<h1 class="key-details-ni">
+
+  <span class="key-details-claimant-ni">QQ423881A</span>
+  <div class="key-details-tag" style="float: right;">NOTIFY CLAIMANT - MONTHLY</div>
+  <p class="govuk-body govuk-!-margin-bottom-1"></p>
+</h1>
+
+<hr class="key-details-line">
+<p class="govuk-body govuk-!-margin-bottom-3"></p>
+
+<div class="key-details-link"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61"
+  target="_blank">View claimant in Universal Credit</a>
+</div>
+<!-- <div class="key-details-working-on" style="float: right;"><strong>Working on this case:</strong> You</div> -->
+</div>
+
+
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+
+<main role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="check-eligibility"  class="active">Next case action</a>
+          </li>
+          <li>
+            <a href="case-history.html">Case history</a>
+          </li>
+          <li>
+            <a href="edit-claimant">Edit claimant</a>
+          </li>
+          <li>
+            <a href="payment-page">Record payment</a>
+          </li>
+          <!-- <li>
+            <a href="find-claimant-payment">Payment history</a>
+          </li> -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+</main>
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+
+  <h2 class="govuk-heading-l">Transfer SDP claimant to UCFS</h2>
+  <h3 class="govuk-heading-m">Transfer this claimant to UCFS then save this record as read-only</h3>
+
+
+
+  <span class="govuk-body">You need to:</span>
+  <ul>
+    <li>•	Create and download claimant letter </li>
+    <li>•	Download the claimant case history </li>
+    <li>•	Open the claimant’s record in UCFS</li>
+    <li>•	Create an agent to-do</li>
+    <li>•	Save SDP record as read-only</li>
+    <li>•	Complete the agent to-do in UCFS</li>
+  </ul>
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h3 class="govuk-fieldset__heading">
+        Create claimant letter to upload to UCFS
+      </h3>
+    </legend>
+
+    <div class="govuk-form-group">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+        <h1 class="govuk-fieldset__heading">
+          Full name
+        </h1>
+      </legend>
+      <span id="passport-issued-hint" class="govuk-hint">
+        For example Jimmy Hinson
+      </span>
+      <input class="govuk-input" id="full-name" name="full-name" type="text">
+    </div>
+
+
+
+    <div class="govuk-form-group">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+        <h1 class="govuk-fieldset__heading">
+          Address and postcode
+        </h1>
+      </legend>
+      <span id="passport-issued-hint" class="govuk-hint">
+        Example<br>
+        Address line 1<br>
+        Address line 2<br>
+        Town or City<br>
+        County<br>
+        Postcode
+      </span>
+
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+  </fieldset>
+
+  <ul class="govuk-list">
+    <li>
+      <a class="govuk-link" href="qq423881a-letter-preview" target="_blank">Preview letter</a>
+    </li>
+  </ul>
+  <a href="../public/images/letter-example.png" download role="button" class="govuk-button govuk-button--secondary govuk-button--small">
+  Download letter</a>
+
+  <p class="govuk-body">The letter will save to your computer as isthishappening.pdf</p>
+
+<h3 class="govuk-heading-m">Download case history</h3>
+<ul class="govuk-list">
+  <li>
+    <a class="govuk-link" href="qq423881a-letter-preview" target="_blank">filename info is this still happening?</a>
+  </li>
+</ul>
+<a href="" download role="button" class="govuk-button govuk-button--secondary govuk-button--small">Download case history</a>
+<p class="govuk-body">The file will save to your computer. You will need to upload it to the UCFS claimant journal</p>
+
+<h3 class="govuk-heading-m">Open claimant account in UCFS</h3>
+<p class="govuk-body">The link is in the banner at the top of this page</p>
+
+<h3 class="govuk-heading-m">Create an agent to-do</h3>
+<p class="govuk-body">Create the agent to-do called ‘Transfer an SDP claimant to UCFS'</p>
+
+<h3 class="govuk-heading-m">Complete agent to-do</h3>
+<div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
+        Confirm the to-do has been completed before closing this case down
+      </label>
+        </div>
+  </div>
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+  <a class="govuk-button" data-module="govuk-button">
+  Complete transfer and save as read-only
+</a>
+
+
+  </div>
+
+
+
+  {% endblock %}
