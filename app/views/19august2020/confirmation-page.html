@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="gov-uk-wrapper">
+  <main id="content" role="main" class="">
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="column-full">
+
+        <div class="sdp-claimant-details-large">
+          <div class="sdp-claimant-details-upper-wrapper">
+            <div class="sdp-claimant-details-top-left">
+              <p class="sdp-claimant-details-nino heading-large">QQ423881A</p>
+            </div>
+            <div class="sdp-task-type-wrapper sdp-claimant-details-top-right">
+              <span class="sdp-details-task-type">CLAIMANT TRANSFERRED</span>
+            </div>
+          </div>
+          <hr class="sdp-details-rule">
+          <div class="sdp-uc-link-wrapper">
+            <a class="sdp-uc-link" href="https://sdp-prototype-ucfs.herokuapp.com/" target="_blank">View claimant in Universal Credit (link opens in new tab)</a>
+
+            <span class="sdp-case-owner-text">Assigned to: You</span>
+
+          </div>
+        </div>
+
+        <div class="govuk-width-container">
+          <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-panel govuk-panel--confirmation">
+                  <h1 class="govuk-panel__title">
+                    The claimant has been transferred
+                  </h1>
+
+                  <div class="govuk-panel__body">
+                    This case is now read-only
+                  </div>
+                </div>
+
+                <h2 class="govuk-heading-m">What do you want to do now?</h2>
+
+                <!--<p class="govuk-body">
+                  <a href="case-history.html">See updated case history</a>
+                </p>-->
+                <p class="govuk-body">
+                  <a href="">Return to task list</a>
+                </p>
+
+              </div>
+            </div>
+          </main>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </main>
+</div>
+
+{% endblock %}

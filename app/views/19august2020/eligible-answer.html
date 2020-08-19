@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="gov-uk-wrapper">
+  <main id="content" role="main" class="">
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="column-full">
+
+        <div class="sdp-claimant-details-large">
+          <div class="sdp-claimant-details-upper-wrapper">
+            <div class="sdp-claimant-details-top-left">
+              <p class="sdp-claimant-details-nino heading-large">SA108866C</p>
+            </div>
+            <div class="sdp-task-type-wrapper sdp-claimant-details-top-right">
+              <span class="sdp-details-task-type">CHECK ELIGIBILITY</span>
+            </div>
+          </div>
+          <hr class="sdp-details-rule">
+          <div class="sdp-uc-link-wrapper">
+            <a class="sdp-uc-link" href="https://agent-training04.ucd.gpn.gov.uk/agent/claimant-actions/b868a0bb-a29a-45a7-a980-c334a86837d6" target="_blank">View claimant in Universal Credit (link opens in new tab)</a>
+
+            <span class="sdp-case-owner-text">Assigned to: You</span>
+
+          </div>
+        </div>
+
+        <main role="main">
+          <div class="grid-row">
+            <div class="column-full">
+
+              <nav class="navigation-secondary">
+                <ul>
+                  <li>
+                    <a href="check-eligibility" aria-current="section">Next case action</a>
+                  </li>
+                  <li>
+                    <a href="case-history.html">Case history</a>
+                  </li>
+                  <li>
+                    <a href="edit-claimant">Edit claimant</a>
+                  </li>
+                  <li>
+                    <a href="payment-page">Record payment</a>
+                  </li>
+                  <!-- <li>
+                    <a href="find-claimant-payment">Payment history</a>
+                  </li> -->
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </main>
+
+        <div class="sdp-case-history-wrapper">
+
+          <h1 class="heading-large">Confirm you want to make SA108866C eligible for payment?</h1>
+
+          <div class="govuk-form-group"><br>
+            <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                          Yes
+                        </label>
+                      </div>
+
+
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-inset-text">
+            You will need to complete the claimant responses to make them eligible
+          </div>
+          <br>
+          <form action='check-eligibility' method='post' class='form' autocomplete='off'>
+          <button class="govuk-button" data-module="govuk-button">
+            Make this claimant eligible
+          </button>
+        </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}

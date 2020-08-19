@@ -1,0 +1,247 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+<main class="govuk-main-wrapper">
+<div class="key-details-bar">
+<h1 class="key-details-ni">
+
+  <span class="key-details-claimant-ni">QQ423881A</span>
+  <div class="key-details-tag" style="float: right;">NOTIFY CLAIMANT</div>
+  <p class="govuk-body govuk-!-margin-bottom-1"></p>
+</h1>
+
+<hr class="key-details-line">
+<p class="govuk-body govuk-!-margin-bottom-3"></p>
+
+<div class="sdp-uc-link-wrapper">
+  <a class="sdp-uc-link" href="https://sdp-prototype-ucfs.herokuapp.com/" target="_blank" style="color: white;">View claimant in Universal Credit (link opens in new tab)</a>
+
+  <span class="sdp-case-owner-text">Assigned to: You</span>
+
+</div>
+<!-- <div class="key-details-working-on" style="float: right;"><strong>Working on this case:</strong> You</div> -->
+</div>
+
+
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+
+        <main role="main">
+          <div class="grid-row">
+            <div class="column-full">
+
+              <nav class="navigation-secondary">
+                <ul>
+                  <li>
+                    <a href="nextcase-transferclaimant" aria-current="section">Next case action</a>
+                  </li>
+                  <li>
+                    <a href="case-history.html" class="active">Case history</a>
+                  </li>
+                  <li>
+                    <a href="edit-claimant">Edit claimant</a>
+                  </li>
+                  <li>
+                    <a href="payment-page">Record payment</a>
+                  </li>
+                  <!-- <li>
+                    <a href="find-claimant-payment">Payment history</a>
+                  </li> -->
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </main>
+
+        <div class="sdp-case-history-wrapper">
+
+          <h1 class="heading-large">Case history</h1>
+
+          <!--<div class="sdp-case-history-item">
+
+            <div class="govuk-inset-text" style="border-left: 10px solid #4396CE; background: #EEF5FA;">
+              This case is read-only. It was transferred to UCFS on 23/06/20
+            </div>
+            <h3 class="heading-medium sdp-case-history-heading">Case transferred</h3>
+            <p class="sdp-case-history-date">23rd June 2020</p>
+
+            <table class="sdp-case-history-table">
+              <tbody>
+
+                <tr>
+                  <th class="sdp-case-history-table-heading">UCFS To-do completed</th>
+                  <td class="sdp-case-history-table">Yes</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">Notification issued:</th>
+                  <td class="sdp-case-history-table">UCSDP12</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">Status changed:</th>
+                  <td class="sdp-case-history-table">Claimant transferred</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">Claimant's record:</th>
+                  <td class="sdp-case-history-table">Read-only</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>-->
+
+          <div class="sdp-case-history-item">
+
+            <h3 class="heading-medium sdp-case-history-heading">Claimant notified</h3>
+
+
+            <p class="sdp-case-history-date">27 July 2020</p>
+
+            <table class="sdp-case-history-table">
+              <tbody>
+
+                <tr>
+                  <th class="sdp-case-history-table-heading">Claimant notificated</th>
+                  <td class="sdp-case-history-table">UCSDP06 letter generated</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <div class="sdp-case-history-item">
+
+            <h3 class="heading-medium sdp-case-history-heading">Payment authorised</h3>
+
+            <p class="sdp-case-history-date">27 July 2020</p>
+
+            <table class="sdp-case-history-table">
+              <tbody>
+
+                <tr>
+                  <th class="sdp-case-history-table-heading">CPS reference number</th>
+                  <td class="sdp-case-history-table">43113976</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <div class="sdp-case-history-item">
+            <h3 class="heading-medium sdp-case-history-heading">Payment raised</h3>
+            <p class="sdp-case-history-date">27 July 2020</p>
+            <table class="sdp-case-history-table">
+              <tbody>
+                <tr>
+                  <th class="sdp-case-history-table-heading">Monthly SDP rate</th>
+                  <td class="sdp-case-history-table">£120.00</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">First Universal Credit claim date</th>
+                  <td class="sdp-case-history-table">26 March 2018</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">Last AP ended</th>
+                  <td class="sdp-case-history-table">25 July 2020</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">Full APs since first Universal Credit claim</th>
+                  <td class="sdp-case-history-table">28</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">Single payment amount</th>
+                  <td class="sdp-case-history-table">£7980.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="sdp-case-history-item">
+            <h3 class="heading-medium sdp-case-history-heading">Eligibility checked</h3>
+            <p class="sdp-case-history-date">27 July 2020</p>
+            <table class="sdp-case-history-table">
+              <tbody>
+                <tr>
+                  <th class="sdp-case-history-table-heading">Getting Universal Credit payments</th>
+                  <td class="sdp-case-history-table">Yes</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">Couple status changed</th>
+                  <td class="sdp-case-history-table">No</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">In the 'no work related requirements' work group</th>
+                  <td class="sdp-case-history-table">No</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="sdp-case-history-item">
+            <h3 class="heading-medium sdp-case-history-heading">Claimant data verification</h3>
+            <p class="sdp-case-history-date">27 July 2020</p>
+            <table class="sdp-case-history-table">
+              <tbody>
+                <tr>
+                  <th class="sdp-case-history-table-heading">Claimant data is eligible to continue</th>
+                  <td class="sdp-case-history-table">Yes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="sdp-case-history-item">
+            <h3 class="heading-medium sdp-case-history-heading">Manual entry of initial checks when regulations came in</h3>
+            <p class="sdp-case-history-date">3 July 2020</p>
+            <table class="sdp-case-history-table">
+              <tbody>
+                <tr>
+                  <th class="sdp-case-history-table-heading">Claimant has carer who gets Carer Element</th>
+                  <td class="sdp-case-history-table">No</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">Claimant has carer who gets Carer Allowance</th>
+                  <td class="sdp-case-history-table">No</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">PIP (daily living - standard or enhanced)</th>
+                  <td class="sdp-case-history-table">Yes</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">AFIP</th>
+                  <td class="sdp-case-history-table">No</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">DLA (care component - middle or higher)</th>
+                  <td class="sdp-case-history-table">No</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">AA or CAA paid with IIDB or WP</th>
+                  <td class="sdp-case-history-table">No</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">Claimant has breaks in UC claim</th>
+                  <td class="sdp-case-history-table">No</td>
+                </tr>
+                <tr>
+                  <th class="sdp-case-history-table-heading">Legacy couple status at time of natural migration</th>
+                  <td class="sdp-case-history-table">Single</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}
